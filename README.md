@@ -1,2 +1,3 @@
-# .files
-My personal dotfiles. 
+# **~/.\***
+
+My personal dotfiles and setup files.
