@@ -1,0 +1,45 @@
+[core]
+	fsmonitor = true
+	editor = nano
+[user]
+	email = reis.davi11010@gmail.com
+	name = Davi Reis
+[credential]
+	helper = store
+[alias]
+	st = status -sb # small status
+	sl = show --name-only # show lastest
+	# small log and small graph log
+	lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=25
+	gl = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=25 --graph
+	
+	cs = commit -m # commit staged
+	ca = commit --amend # commit amend past commit
+
+	co = checkout # checkout to branch
+	cm = checkout main # checkout to main
+	cd = checkout develop # checkout to develop
+	cb = checkout -b # create branch and checkout to it
+	db = branch -d # delete branch
+	lb = branch # list branch
+	undo = checkout -- #
+ 
+	pa = push && push --tags
+
+	uf = reset HEAD -- # unstage file
+	uc = reset --soft HEAD~1 # unstage past commit
+	
+	ri = rebase -i # rebase with interactivity
+	ra = rebase --abort # abort rebase
+	rc = rebase --continue # continue rebase
+	td = rebase --edit-todo # edit rebase todo
+
+	flow = flow init # start git flow on git repo
+	nf = flow feature start # start new feature 
+	ef = flow feature finish # end feature
+
+	nv = flow release start # start new release
+	ev = flow release finish # end release
+	
+	nh = flow hotfix start # start new hotfix
+	eh = flow hotfix finish # end hotfix
