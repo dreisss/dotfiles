@@ -1,7 +1,7 @@
 function installFish {
-  sudo apt-add-repository ppa:fish-shell/release-3
-  sudo apt update
-  sudo apt install fish
+  sudo apt-add-repository ppa:fish-shell/release-3 -y
+  sudo apt update -y
+  sudo apt install fish -y
   chsh -s $(which fish)
 
   fish
@@ -23,7 +23,7 @@ function installASDF {
 }
 
 function installGitFlow {
-  sudo apt install git-flow
+  sudo apt install git-flow -y
 }
 
 function getDotFiles {
@@ -34,6 +34,13 @@ function createLinks {
   ln ~/.files/.gitconfig ~/.gitconfig
 }
 
+function updatePackages {
+  sudo apt update -y
+  sudo apt upgrade -y
+  sudo apt install build-essential -y
+  sudo apt autoremove -y
+}
+
 # === === ==== ==== running
 installFish
 installStarship
@@ -42,3 +49,5 @@ installGitFlow
 
 getDotFiles
 createLinks
+
+updatePackages
