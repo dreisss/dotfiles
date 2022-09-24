@@ -27,7 +27,7 @@ function installGitFlow {
 }
 
 function getDotFiles {
-  git clone "https://github.com/dreisss/.files.git" "~/.files"
+  git clone https://github.com/dreisss/.files.git ~/.files
 }
 
 function createLinks {
