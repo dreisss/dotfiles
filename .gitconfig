@@ -1,6 +1,7 @@
 [core]
 	fsmonitor = true
 	editor = nano
+	autocrlf = false
 [user]
 	email = reis.davi11010@gmail.com
 	name = Davi Reis
