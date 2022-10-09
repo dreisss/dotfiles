@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "server"
+name = "serve-files"
 version = "0.0.0"
