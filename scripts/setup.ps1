@@ -5,8 +5,8 @@ function installChocolatey {
 }
 
 function installApps {
-  foreach ($app in @("opera-gx", "winrar", "git", "vscode", "hyper")) {
-    choco.exe install -y -f $app
+  foreach ($app in @("opera-gx", "7zip", "git", "vscode", "hyper")) {
+    choco.exe install -yf $app
   }
 }
 
