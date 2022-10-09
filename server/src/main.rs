@@ -1,16 +1,20 @@
 mod utilities;
+mod input;
 use std::{ io::{ BufReader, BufRead, Write }, net::{ TcpListener, TcpStream }, fs };
 
-use utilities::read_files_paths;
+use input::Input;
 
 fn main() {
-  let routes = read_files_paths();
+  let input: Input = Input::get();
 
-  let listener: TcpListener = TcpListener::bind("localhost:8000").unwrap();
+  let server_address: String = input.get_server_address();
+  let files_to_serve: Vec<String> = input.get_files_to_serve();
+
+  let listener: TcpListener = TcpListener::bind(server_address).unwrap();
 
   let _streams: Vec<_> = listener
     .incoming()
-    .map(|stream| handle_stream(stream.unwrap(), &routes))
+    .map(|stream| handle_stream(stream.unwrap(), &files_to_serve))
     .collect();
 }
 
