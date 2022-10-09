@@ -15,10 +15,10 @@ impl Input {
   }
 
   pub fn get_server_address(&self) -> String {
-    (self.server_address).to_string()
+    self.server_address.to_string()
   }
 
   pub fn get_files_to_serve(&self) -> Vec<String> {
-    (self.files_to_serve).to_vec()
+    self.files_to_serve.to_vec()
   }
 }
