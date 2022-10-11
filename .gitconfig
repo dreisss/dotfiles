@@ -35,7 +35,6 @@
 	rc = rebase --continue # continue rebase
 	td = rebase --edit-todo # edit rebase todo
 
-	flow = flow init # start git flow on git repo
 	nf = flow feature start # start new feature
 	ef = flow feature finish # end feature
 

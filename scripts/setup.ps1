@@ -28,6 +28,10 @@ function createLinks {
   New-Item -ItemType "SymbolicLink" -Path "$env:USERPROFILE/.gitconfig" -Target "$env:USERPROFILE/.files/.gitconfig"
 }
 
+function setPreferences {
+
+}
+
 # === === ==== ==== running
 installChocolatey
 installApps
