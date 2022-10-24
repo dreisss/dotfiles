@@ -78,3 +78,6 @@ shell:
   program: C:\\Program Files\\Git\\bin\\bash.exe
   args:
     - --login
+
+selection:
+  save_to_clipboard: true
