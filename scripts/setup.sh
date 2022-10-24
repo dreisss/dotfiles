@@ -46,6 +46,19 @@ function createCliAliases {
   source ~/.config/fish/config.fish
 }
 
+function installPython {
+  sudo apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+  asdf plugin add python
+  asdf install python latest
+  asdf global python latest
+}
+
+function installNode {
+  asdf plugin add nodejs
+  asdf install nodejs latest
+  asdf global nodejs latest
+}
+
 function getDotFiles {
   git clone https://github.com/dreisss/.files.git ~/.files
 }
@@ -60,14 +73,3 @@ function updatePackages {
   sudo apt install build-essential -y
   sudo apt autoremove -y
 }
-
-# === === ==== ==== running
-installFish
-installStarship
-installASDF
-installGitFlow
-
-getDotFiles
-createLinks
-
-updatePackages
