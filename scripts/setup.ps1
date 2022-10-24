@@ -5,7 +5,7 @@ function installChocolatey {
 }
 
 function installApps {
-  foreach ($app in @("alacritty", "vscode", "firefox", "git", "7zip")) {
+  foreach ($app in @("alacritty", "vscode", "neovim", "firefox", "git", "7zip")) {
     choco.exe install -yf $app
   }
 }
