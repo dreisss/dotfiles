@@ -8,18 +8,18 @@ function installFish {
 }
 
 function installStarship {
-  curl -sS https://starship.rs/install.sh | sh
-  echo "starship init fish | source" >> ~/.config/fish/config.fish
+  curl -sS 'https://starship.rs/install.sh' | sh
+  echo "starship init fish | source" >> ''~/.config/fish/config.fish''
 
-  source ~/.config/fish/config.fish
+  source ''~/.config/fish/config.fish''
 }
 
 function installASDF {
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-  echo "source ~/.asdf/asdf.fish" >> ~/.config/fish/config.fish
-  mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+  git clone 'https://github.com/asdf-vm/asdf.git' '~/.asdf' --branch v0.10.2
+  echo "source ~/.asdf/asdf.fish" >> ''~/.config/fish/config.fish''
+  mkdir -p '~/.config/fish/completions'; and ln -s '~/.asdf/completions/asdf.fish' '~/.config/fish/completions'
 
-  source ~/.config/fish/config.fish
+  source ''~/.config/fish/config.fish''
 }
 
 function installGitFlow {
@@ -30,7 +30,7 @@ function installRust {
   asdf plugin add rust
   asdf install rust latest
   asdf global rust latest
-  fish_add_path ~/.asdf/installs/rust/1.64.0/bin
+  fish_add_path '~/.asdf/installs/rust/1.64.0/bin'
 }
 
 function installCliTools {
@@ -39,11 +39,11 @@ function installCliTools {
 }
 
 function createCliAliases {
-  echo 'alias cat="bat"' >> ~/.config/fish/config.fish
-  echo 'alias ls="exa --icons"' >> ~/.config/fish/config.fish
-  echo 'alias top="ytop"' >> ~/.config/fish/config.fish
+  echo 'alias cat="bat"' >> '~/.config/fish/config.fish'
+  echo 'alias ls="exa --icons"' >> '~/.config/fish/config.fish'
+  echo 'alias top="ytop"' >> '~/.config/fish/config.fish'
 
-  source ~/.config/fish/config.fish
+  source '~/.config/fish/config.fish'
 }
 
 function installPython {
@@ -59,12 +59,22 @@ function installNode {
   asdf global nodejs latest
 }
 
+function installNeoVim {
+  sudo add-apt-repository ppa:neovim-ppa/unstable
+  sudo apt-get update
+  sudo apt-get install neovim -y
+}
+
+function installLunarVim {
+  curl -s 'https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh' | bash
+}
+
 function getDotFiles {
-  git clone https://github.com/dreisss/.files.git ~/.files
+  git clone 'https://github.com/dreisss/.files.git' ~/.files
 }
 
 function createLinks {
-  ln ~/.files/.gitconfig ~/.gitconfig
+  ln '~/.files/.gitconfig' '~/.gitconfig'
 }
 
 function updatePackages {
