@@ -33,6 +33,19 @@ function installRust {
   fish_add_path ~/.asdf/installs/rust/1.64.0/bin
 }
 
+function installCliTools {
+  sudo apt install build-essential -y
+  cargo install bat exa tokei hyperfine ytop
+}
+
+function createCliAliases {
+  echo 'alias cat="bat"' >> ~/.config/fish/config.fish
+  echo 'alias ls="exa --icons"' >> ~/.config/fish/config.fish
+  echo 'alias top="ytop"' >> ~/.config/fish/config.fish
+
+  source ~/.config/fish/config.fish
+}
+
 function getDotFiles {
   git clone https://github.com/dreisss/.files.git ~/.files
 }
