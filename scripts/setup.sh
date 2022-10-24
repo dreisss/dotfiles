@@ -26,6 +26,13 @@ function installGitFlow {
   sudo apt install git-flow -y
 }
 
+function installRust {
+  asdf plugin add rust
+  asdf install rust latest
+  asdf global rust latest
+  fish_add_path ~/.asdf/installs/rust/1.64.0/bin
+}
+
 function getDotFiles {
   git clone https://github.com/dreisss/.files.git ~/.files
 }
