@@ -11,7 +11,7 @@ function installApps {
 }
 
 function installWSL {
-  powershell.exe wsl --install
+  powershell.exe wsl --install -d Ubuntu-20.04
 }
 
 function getDotFiles {
