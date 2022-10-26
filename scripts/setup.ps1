@@ -30,6 +30,25 @@ function createLinks {
   New-Item -ItemType "SymbolicLink" -Path "$env:APPDATA/alacritty/alacritty.yml" -Target "$env:USERPROFILE/.files/alacritty.yml"
 }
 
+function setPreferences {
+  Set-ItemProperty -Force -Type "DWord" -Value 2 -Name "VisualFXSetting" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects"
+  
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "EnableTransparency" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "SystemUsesLightTheme" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "AppsUseLightTheme" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+  Set-ItemProperty -Force -Type "String" -Value 2 -Name "FontSmoothing" "HKCU:\Control Panel\Desktop" 
+  
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "AllowTelemetry" "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection"
+  
+  New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" | Out-Null 
+  Set-ItemProperty -Force -Type "DWord" -Value 2 -Name "LetAppsRunInBackground" "HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy"
+
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "BingSearchEnabled" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search"
+  Set-ItemProperty -Force -Type "DWord" -Value 1 -Name "LaunchTo" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced"
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "ShowRecent" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer"
+  Set-ItemProperty -Force -Type "DWord" -Value 0 -Name "ShowFrequent" "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer"
+}
+
 # === === ==== ==== running
 installChocolatey
 installApps
@@ -39,3 +58,4 @@ getDotFiles
 getFonts
 
 createLinks
+setPreferences
