@@ -4,6 +4,7 @@ vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 
 -- general
+lvim.colorscheme = "afterglow"
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
@@ -19,6 +20,12 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+
+-- user plugins
+lvim.plugins = {
+  { "manzeloth/live-server" },
+  { "danilo-augusto/vim-afterglow" },
+}
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
