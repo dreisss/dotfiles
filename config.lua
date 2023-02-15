@@ -13,6 +13,7 @@ lvim.format_on_save = {
 -- keybinds
 lvim.builtin.terminal.open_mapping = "<leader>t"
 
+-- builtin plugins
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
