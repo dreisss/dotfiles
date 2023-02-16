@@ -33,29 +33,28 @@ cursor:
 selection:
   save_to_clipboard: true
 
-# gruvbox material
+# mayukai dark
 colors:
   primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
+    background: '0x1b1c24'
+    foreground: '0xcbccc6'
 
   normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe78a4e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
+    black: '0x191e2a'
+    red: '0xed8274'
+    green: '0xa6cc70'
+    yellow: '0xfad07b'
+    blue: '0x95e6cb'
+    magenta: '0xcfbafa'
+    cyan: '0x95e6cb'
+    white: '0xc7c7c7'
 
   bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe3a84e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
- 
+    black: '0x686868'
+    red: '0xf28779'
+    green: '0xbae67e'
+    yellow: '0xffd580'
+    blue: '0x95e6cb'
+    magenta: '0xd4bfff'
+    cyan: '0x95e6cb'
+    white: '0xffffff'

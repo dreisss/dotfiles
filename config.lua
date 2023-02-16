@@ -4,7 +4,7 @@ vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 
 -- general
-lvim.colorscheme = "gruvbox-material"
+lvim.colorscheme = "ayu-dark"
 lvim.log.level = "info"
 lvim.format_on_save = {
   enabled = true,
@@ -24,7 +24,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 -- user plugins
 lvim.plugins = {
   { "manzeloth/live-server" },
-  { "sainnhe/gruvbox-material" },
+  { "shatur/neovim-ayu" },
 }
 
 -- Automatically install missing parsers when entering buffer
