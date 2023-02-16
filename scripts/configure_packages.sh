@@ -29,3 +29,5 @@ cargo install bat exa tokei hyperfine ytop
 pacman -Sy neovim
 # 12. install lunarvim
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+# 13. install vscode
+yay -Sy visual-studio-code-bin
