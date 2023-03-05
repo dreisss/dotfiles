@@ -1,6 +1,6 @@
 [core]
 	fsmonitor = true
-	editor = nano
+	editor = helix
 	autocrlf = false
 
 [user]

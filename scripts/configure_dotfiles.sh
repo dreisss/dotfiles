@@ -9,5 +9,5 @@ ln ~/.files/.zshrc ~/.zshrc
 
 ln ~/.files/.p10k.zsh ~/.p10k.zsh
 
-rm -rf ~/.config/lvim/config.lua
-ln ~/.files/config.lua ~/.config/lvim/config.lua
+rm -rf ~/.config/helix/config.toml
+ln ~/.files/config.toml ~/.config/helix/config.toml

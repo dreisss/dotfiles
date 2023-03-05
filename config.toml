@@ -1,0 +1,7 @@
+theme = "ayu_dark"
+
+[editor]
+rulers = [80, 120]
+
+[editor.cursor-shape]
+insert = "bar"

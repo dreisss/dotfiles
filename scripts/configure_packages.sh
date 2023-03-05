@@ -25,9 +25,7 @@ yay -Sy cbqn-git gnu-apl
 pacman -Sy sqlite mysql postgresql
 # 10. install rust alternatives
 cargo install bat exa tokei hyperfine ytop
-# 11. install neovim
-pacman -Sy neovim
-# 12. install lunarvim
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+# 11. install helix
+yay -Sy helix
 # 13. install vscode
 yay -Sy visual-studio-code-bin

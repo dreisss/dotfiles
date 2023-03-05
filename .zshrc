@@ -30,4 +30,4 @@ path+=("/home/dreisss/.cargo/bin")
 alias cat="bat"
 alias ls="exa --icons"
 alias top="ytop"
-
+alias hx="helix"
