@@ -1,0 +1,17 @@
+theme = "ayu_dark"
+
+[editor]
+line-number = "relative"
+auto-format = true
+rulers = [80, 120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true

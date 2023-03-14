@@ -1,3 +1,6 @@
+env:
+  TERM: xterm-256color
+
 window:
   dimensions:
     columns: 100
@@ -27,7 +30,7 @@ font:
 
 cursor:
   style:
-    shape: Beam
+    shape: Underline
     blinking: On
 
 selection:

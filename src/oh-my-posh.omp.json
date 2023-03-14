@@ -1,0 +1,136 @@
+{
+  "palette": {
+    "red": "#f34a4a",
+    "green": "#bae67e",
+    "blue": "#73d0ff",
+    "yellow": "#ffee99",
+    "magenta": "#d4bfff",
+    "cyan": "#83cec6",
+    "ruby": "#cc342d",
+    "rust": "#ea4800",
+    "julia": "#495fa5",
+    "python": "#f2c337",
+    "node": "#7bc326",
+    "deno": "#1c2051"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:blue",
+          "template": "@{{ .UserName }}",
+          "style": "plain",
+          "type": "session"
+        },
+        {
+          "foreground": "p:green",
+          "template": " \u279c ",
+          "style": "plain",
+          "type": "text"
+        },
+        {
+          "foreground": "p:magenta",
+          "properties": {
+            "style": "agnoster_short"
+          },
+          "template": "{{ .Path }}",
+          "style": "plain",
+          "type": "path"
+        },
+        {
+          "foreground": "p:yellow",
+          "template": " \uf119",
+          "style": "plain",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "p:yellow",
+          "template": "{{ .FormattedMs }}",
+          "style": "plain",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "p:cyan",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} {{ .Name }}@{{ if .Version }}{{.Version}}{{ end }}{{ end }}",
+          "style": "plain",
+          "type": "project"
+        },
+        {
+          "foreground": "p:ruby",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .rb@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "ruby"
+        },
+        {
+          "foreground": "p:rust",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .rs@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "rust"
+        },
+        {
+          "foreground": "p:julia",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .jl@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "julia"
+        },
+        {
+          "foreground": "p:python",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .py@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "python"
+        },
+        {
+          "foreground": "p:node",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .js@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "node"
+        },
+        {
+          "foreground": "p:deno",
+          "foreground_templates": [
+            "{{if .Error }}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .ts@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "deno"
+        },
+        {
+          "foreground": "p:yellow",
+          "properties": {
+            "branch_icon": "",
+            "branch_identical_icon": "",
+            "fetch_status": true
+          },
+          "template": " git:(<p:blue>{{ .RepoName }}</>/<p:cyan>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if .BranchStatus }}{{ .BranchStatus }}{{ end }}</>)",
+          "style": "plain",
+          "type": "git"
+        }
+      ],
+      "type": "rprompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

@@ -1,0 +1,17 @@
+default_layout "compact"
+
+themes {
+  default {
+    fg "#e6e1cf"
+    bg "#0f1419"
+    black "#000000"
+    red "#f34a4a"
+    green "#bae67e"
+    yellow "#ffee99"
+    blue "#73d0ff"
+    magenta "#d4bfff"
+    cyan "#83CEC6"
+    white "#f2f2f2"
+    orange "#ff8f40"
+  }
+}
