@@ -123,7 +123,7 @@
             "branch_identical_icon": "",
             "fetch_status": true
           },
-          "template": " git:(<p:blue>{{ .RepoName }}</>/<p:cyan>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if .BranchStatus }}{{ .BranchStatus }}{{ end }}</>)",
+          "template": " git(<p:cyan>{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if .BranchStatus }}{{ .BranchStatus }}{{ end }}</>)",
           "style": "plain",
           "type": "git"
         }
