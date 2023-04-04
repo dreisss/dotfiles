@@ -9,8 +9,9 @@ ln ~/.files/src/alacritty.yml ~/.config/alacritty.yml
 rm -rf  ~/.gitconfig
 ln ~/.files/src/gitconfig.ini ~/.gitconfig
 
-rm -rf  ~/.config/helix/config.toml
+rm -rf  ~/.config/helix/{config,languages}.toml
 ln ~/.files/src/helix.toml ~/.config/helix/config.toml
+ln ~/.files/src/helix-languages.toml ~/.config/helix/languages.toml
 
 rm -rf  ~/.config/zellij/config.kdl
 mkdir -p ~/.config/zellij

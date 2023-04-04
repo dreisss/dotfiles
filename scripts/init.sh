@@ -25,7 +25,7 @@ sudo pacman -Syyu --noconfirm
 sudo pacman -R gnome-terminal gnome-tour yelp gnome-user-docs nano nano-syntax-highlighting vi --noconfirm
 
 # install essential
-sudo pacman -S alacritty base-devel git zellij nushell helix ttf-cascadia-code --noconfirm
+sudo pacman -S alacritty base-devel net-tools git zellij nushell helix ttf-cascadia-code --noconfirm
 git clone https://aur.archlinux.org/yay.git /tmp/yay && cd /tmp/yay && makepkg -si --noconfirm && sudo pacman -R go --noconfirm && cd
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yay -Syyu oh-my-posh-bin --noconfirm
