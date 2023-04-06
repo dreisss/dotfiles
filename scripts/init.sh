@@ -1,10 +1,25 @@
 #!/bin/bash
 
+# configure package manager pacman
+echo "[options]\nParallelDownloads = 5\nILoveCandy" | sudo tee -a /etc/pacman.conf
+sudo pacman-mirrors --fasttrack
+sudo pacman -Syyu --noconfirm
+
+# install packages to configs
+sudo pacman -S yay --noconfirm
+yay -S ttf-cascadia-code montserrat-ttf otf-san-francisco --noconfirm
+
 # some useful configs
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.desktop.session idle-delay 900
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 3600
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 3600
+
+# configure style
+gsettings set org.gnome.desktop.wm.preferences titlebar-font "SF Pro Display 12"
+gsettings set org.gnome.desktop.interface font-name "SF Pro Display 12"
+gsettings set org.gnome.desktop.interface document-font-name "Montserrat 12"
+gsettings set org.gnome.desktop.interface monospace-font-name "Cascadia Code PL 12"
 
 # add useful shortcuts
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
@@ -16,17 +31,11 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'gnome-terminal'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super>t'"
 
-# configure package manager pacman
-echo "[options]\nParallelDownloads = 5\nILoveCandy" | sudo tee -a /etc/pacman.conf 
-sudo pacman-mirrors --fasttrack
-sudo pacman -Syyu --noconfirm
-
 # remove some packages
-sudo pacman -R gnome-terminal gnome-tour yelp gnome-user-docs nano nano-syntax-highlighting vi --noconfirm
+sudo pacman -R gnome-{terminal,hello,tour,user-docs} yelp nano nano-syntax-highlighting vi --noconfirm
 
 # install essential
-sudo pacman -S alacritty base-devel net-tools git zellij nushell helix ttf-cascadia-code --noconfirm
-git clone https://aur.archlinux.org/yay.git /tmp/yay && cd /tmp/yay && makepkg -si --noconfirm && sudo pacman -R go --noconfirm && cd
+sudo pacman -S base-devel net-tools yay git alacritty zellij helix --noconfirm
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yay -Syyu oh-my-posh-bin --noconfirm
 curl https://rtx.pub/install.sh | sh
