@@ -17,7 +17,8 @@ rm -rf  ~/.config/zellij/config.kdl
 mkdir -p ~/.config/zellij
 ln ~/.files/src/zellij.kdl ~/.config/zellij/config.kdl
 
-rm -rf ~/.config/nushell/{env,config}.nu
-ln nushell-env.nu ~/.config/nushell/env.nu                                                            03/12/2023 04:10:20 PM
-ln nushell.nu ~/.config/nushell/config.nu
-  
+rm -rf ~/.config/gtk-3.0/gtk.css
+ln ~/.files/src/gtk.css ~/.config/gtk-3.0/gtk.css
+
+rm -rf ~/.config/pier/config.toml
+ln ~/.files/src/pier.toml ~/.config/pier/config.toml

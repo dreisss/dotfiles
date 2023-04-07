@@ -60,4 +60,3 @@ sudo pacman -Sc --noconfirm
 # todos
 echo "TODO: install gnome extensions: dash-to-dock, blur-my-shell"
 echo "TODO: install firefox theme"
-
