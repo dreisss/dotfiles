@@ -1,0 +1,5 @@
+[scripts.c]
+alias = 'c'
+command = 'gcc $@ && ./a.out'
+
+[default]

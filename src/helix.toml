@@ -1,7 +1,9 @@
-theme = "ayu_dark"
+theme = "catppuccin_macchiato"
 
 [editor]
 line-number = "relative"
+cursorline = true
+color-modes = true
 auto-format = true
 rulers = [80, 120]
 

@@ -1,0 +1,21 @@
+headerbar .close,
+headerbar .minimize,
+headerbar .maximize {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+headerbar {
+  min-height: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 0;
+}
+
+headerbar entry,
+headerbar spinbutton,
+headerbar button,
+headerbar separator {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
