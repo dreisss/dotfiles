@@ -7,7 +7,7 @@ sudo pacman -Syyu --noconfirm
 
 # install packages to configs
 sudo pacman -S yay --noconfirm
-yay -S ttf-cascadia-code montserrat-ttf otf-san-francisco gtk-engine-murrine catppuccin-gtk-theme-macchiato --noconfirm
+yay -S ttf-cascadia-code montserrat-ttf otf-san-francisco noto-fonts-emoji gtk-engine-murrine catppuccin-gtk-theme-macchiato --noconfirm
 
 # some useful configs
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
@@ -41,7 +41,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 sudo pacman -R gnome-{terminal,tour,user-docs} manjaro-hello yelp nano nano-syntax-highlighting vi --noconfirm
 
 # install essential
-sudo pacman -S neofetch base-devel net-tools git alacritty zellij helix discord --noconfirm
+sudo pacman -S neofetch base-devel net-tools git alacritty zellij helix visual-studio-code-bin discord --noconfirm
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yay -Syyu oh-my-posh-bin --noconfirm
 curl https://rtx.pub/install.sh | sh

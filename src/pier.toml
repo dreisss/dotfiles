@@ -1,5 +1,9 @@
 [scripts.c]
 alias = 'c'
-command = 'gcc $@ && ./a.out'
+command = 'gcc $@ && ./a.out && rm ./a.out'
+
+[scripts.color]
+alias = 'color'
+command = 'c=$@ && echo -n "\e[48;2;$(printf "%d;%d;%d" 0x${c:0:2} 0x${c:2:2} 0x${c:4:2})m\e[1m" && echo -n " #$c " && echo "\e[0m"'
 
 [default]

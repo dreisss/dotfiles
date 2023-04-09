@@ -12,3 +12,5 @@ cargo install bat exa tokei hyperfine ytop zoxide xcp rm-improved ripgrep fd-fin
 
 # install lsps
 yay -S {bash,typescript,yaml}-language-server clang vscode-{css,html,json}-languageserver marksman-bin ruby-solargraph rust-analyzer taplo-cli --noconfirm
+pip install -U 'python-lsp-server[all]'
+gem install solargraph

@@ -1,17 +1,17 @@
 {
   "palette": {
-    "red": "#f34a4a",
-    "green": "#bae67e",
-    "blue": "#73d0ff",
-    "yellow": "#ffee99",
-    "magenta": "#d4bfff",
-    "cyan": "#83cec6",
+    "red": "#ed8796",
+    "green": "#a6da95",
+    "blue": "#8aadf4",
+    "yellow": "#eed49f",
+    "magenta": "#c6a0f6",
+    "cyan": "#8bd5ca",
     "ruby": "#cc342d",
     "rust": "#ea4800",
     "julia": "#495fa5",
     "python": "#f2c337",
     "node": "#7bc326",
-    "deno": "#1c2051"
+    "deno": "#1f23af"
   },
   "blocks": [
     {
