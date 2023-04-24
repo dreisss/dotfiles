@@ -27,3 +27,11 @@ alias htop="ytop"
 alias zell="zellij"
 alias hexdump="$(rtx which hx)"
 alias hx="helix"
+
+# pnpm
+export PNPM_HOME="/home/dreisss/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

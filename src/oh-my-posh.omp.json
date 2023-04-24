@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "red": "#ed8796",
     "green": "#a6da95",
@@ -7,6 +8,7 @@
     "magenta": "#c6a0f6",
     "cyan": "#8bd5ca",
     "ruby": "#cc342d",
+    "crystal": "#000000",
     "rust": "#ea4800",
     "julia": "#495fa5",
     "python": "#f2c337",
@@ -58,7 +60,7 @@
         },
         {
           "foreground": "p:cyan",
-          "template": "{{ if .Error }}{{ .Error }}{{ else }} {{ .Name }}@{{ if .Version }}{{.Version}}{{ end }}{{ end }}",
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} {{ .Name }}{{ if eq .Version \"0.0.0\" }}{{ else }}@{{ .Version }}{{ end }}{{ end }}",
           "style": "plain",
           "type": "project"
         },
@@ -70,6 +72,15 @@
           "template": "{{ if .Error }}{{ .Error }}{{ else }} .rb@{{ .Full }}{{ end }}",
           "style": "plain",
           "type": "ruby"
+        },
+        {
+          "foreground": "p:crystal",
+          "foreground_templates": [
+            "{{if .Error}}{{ p:red }}{{ end }}"
+          ],
+          "template": "{{ if .Error }}{{ .Error }}{{ else }} .cr@{{ .Full }}{{ end }}",
+          "style": "plain",
+          "type": "crystal"
         },
         {
           "foreground": "p:rust",
@@ -112,6 +123,9 @@
           "foreground_templates": [
             "{{if .Error }}{{ p:red }}{{ end }}"
           ],
+          "properties": {
+            "display_mode": "environment"
+          },
           "template": "{{ if .Error }}{{ .Error }}{{ else }} .ts@{{ .Full }}{{ end }}",
           "style": "plain",
           "type": "deno"

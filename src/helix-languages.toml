@@ -1,3 +1,17 @@
 [[language]]
+name = "astro"
+auto-format = true
+language-server = { command = "astro-ls", args = ["--stdio"] }
+
+[[language]]
 name = "c"
+auto-format = true
+
+[[language]]
+name = "crystal"
+auto-format = true
+language-server = { command = "crystalline", args = ["--stdio"] }
+
+[[language]]
+name = "svelte"
 auto-format = true
