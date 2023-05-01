@@ -1,15 +1,15 @@
-headerbar .close,
-headerbar .minimize,
-headerbar .maximize {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
 headerbar {
   min-height: 0px;
   padding-left: 4px;
   padding-right: 4px;
   border: 0;
+}
+
+headerbar .close,
+headerbar .minimize,
+headerbar .maximize {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 headerbar entry,

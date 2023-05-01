@@ -1,24 +1,24 @@
 #!/bin/bash
 
 rm -rf  ~/.zshrc
-ln ~/.files/src/zshrc.zsh ~/.zshrc
+ln ~/.dotfiles/src/zshrc.zsh ~/.zshrc
 
 rm -rf  ~/.config/alacritty.yml
-ln ~/.files/src/alacritty.yml ~/.config/alacritty.yml
+ln ~/.dotfiles/src/alacritty.yml ~/.config/alacritty.yml
 
 rm -rf  ~/.gitconfig
-ln ~/.files/src/gitconfig.ini ~/.gitconfig
+ln ~/.dotfiles/src/gitconfig.ini ~/.gitconfig
 
 rm -rf  ~/.config/helix/{config,languages}.toml
-ln ~/.files/src/helix.toml ~/.config/helix/config.toml
-ln ~/.files/src/helix-languages.toml ~/.config/helix/languages.toml
+ln ~/.dotfiles/src/helix.toml ~/.config/helix/config.toml
+ln ~/.dotfiles/src/helix-languages.toml ~/.config/helix/languages.toml
 
 rm -rf  ~/.config/zellij/config.kdl
 mkdir -p ~/.config/zellij
-ln ~/.files/src/zellij.kdl ~/.config/zellij/config.kdl
+ln ~/.dotfiles/src/zellij.kdl ~/.config/zellij/config.kdl
 
 rm -rf ~/.config/gtk-3.0/gtk.css
-ln ~/.files/src/gtk.css ~/.config/gtk-3.0/gtk.css
+ln ~/.dotfiles/src/gtk.css ~/.config/gtk-3.0/gtk.css
 
 rm -rf ~/.config/pier/config.toml
-ln ~/.files/src/pier.toml ~/.config/pier/config.toml
+ln ~/.dotfiles/src/pier.toml ~/.config/pier/config.toml

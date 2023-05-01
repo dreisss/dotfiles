@@ -2,7 +2,7 @@
 
 # install default languages/tools
 for plugin in ruby crystal rust julia python nodejs deno pnpm; do rtx global $plugin@latest; done
-sudo pacman -S postgresql mysql sqlite --noconfirm
+sudo pacman -S sqlite mysql postgresql --noconfirm
 
 # configure installed
 echo "$(rtx ls | sed -E -e 's/⏵ *| *\([a-z ~\/.-]*\)//g')" > ~/.tool-versions
