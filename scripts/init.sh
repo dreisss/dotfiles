@@ -41,7 +41,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 sudo pacman -R gnome-{terminal,tour,user-docs} manjaro-hello yelp nano nano-syntax-highlighting vi --noconfirm
 
 # install essential
-sudo pacman -S neofetch base-devel net-tools git github-cli alacritty zellij helix visual-studio-code-bin discord --noconfirm
+sudo pacman -S neofetch base-devel net-tools git github-cli alacritty tmux helix visual-studio-code-bin discord obsidian --noconfirm
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 yay -Syyu oh-my-posh-bin --noconfirm
 curl https://rtx.pub/install.sh | sh

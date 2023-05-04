@@ -1,17 +1,23 @@
 #!/bin/bash
 
 # install default languages/tools
-for plugin in ruby crystal rust julia python nodejs deno pnpm; do rtx global $plugin@latest; done
-sudo pacman -S sqlite mysql postgresql --noconfirm
+for plugin in ruby crystal rust julia python nodejs deno pnpm go haskell; do rtx global $plugin@latest; done
+sudo pacman -S cbqn-git sqlite mysql postgresql --noconfirm
 
 # configure installed
 echo "$(rtx ls | sed -E -e 's/⏵ *| *\([a-z ~\/.-]*\)//g')" > ~/.tool-versions
+
+# install utils cli tools
+yay -S vhs gum glow slides --noconfirm
+go install github.com/maaslalani/nap@main
+go install github.com/maaslalani/draw@main
+go install github.com/maaslalani/crow@master
 
 # install rust cli-alternatives
 cargo install bat exa tokei hyperfine ytop zoxide xcp rm-improved ripgrep fd-find grex git-delta xh dprint pier hx swc
 
 # install lsps
-yay -S {bash,typescript,yaml,svelte}-language-server vscode-{css,html,json}-languageserver {marksman,crystalline}-bin clang rust-analyzer taplo-cli --noconfirm
+yay -S {bash,typescript,yaml,svelte,haskell}-language-server vscode-{css,html,json}-languageserver {marksman,crystalline}-bin clang rust-analyzer taplo-cli gopls --noconfirm
 pip install -U 'python-lsp-server[all]'
 gem install solargraph
 pnpm add -g @astrojs/language-server
