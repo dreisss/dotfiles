@@ -7,7 +7,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 source ~/.oh-my-zsh/custom/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-eval "$(oh-my-posh init zsh --config '~/.dotfiles/src/oh-my-posh.omp.json')"
+eval "$(oh-my-posh init zsh --config '~/.dotfiles/src/oh-my-posh/oh-my-posh.omp.json')"
 eval "$(~/.local/share/rtx/bin/rtx activate -s zsh)"
 eval "$($(rtx which zoxide) init zsh)"
 
