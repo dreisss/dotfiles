@@ -13,6 +13,9 @@ go install github.com/maaslalani/nap@main
 go install github.com/maaslalani/draw@main
 go install github.com/maaslalani/crow@master
 
+# install TPM
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
 # install rust cli-alternatives
 cargo install bat exa tokei hyperfine ytop zoxide xcp rm-improved ripgrep fd-find grex git-delta xh dprint pier hx swc
 
