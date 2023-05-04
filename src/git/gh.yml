@@ -1,0 +1,6 @@
+git_protocol: ssh
+editor: helix
+prompt: enabled
+pager: delta
+aliases:
+  myrepo: repo clone dreisss/$1

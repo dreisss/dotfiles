@@ -3,11 +3,14 @@
 rm -rf  ~/.zshrc
 ln ~/.dotfiles/src/zsh/zshrc.zsh ~/.zshrc
 
-rm -rf  ~/.config/alacritty.yml
-ln ~/.dotfiles/src/alacritty/alacritty.yml ~/.config/alacritty.yml
-
 rm -rf  ~/.gitconfig
 ln ~/.dotfiles/src/git/gitconfig.ini ~/.gitconfig
+
+rm -rf ~/.config/gh/config.yml
+ln ~/.dotfiles/src/git/gh.yml ~/.config/gh/config.yml
+
+rm -rf  ~/.config/alacritty.yml
+ln ~/.dotfiles/src/alacritty/alacritty.yml ~/.config/alacritty.yml
 
 rm -rf ~/.config/tmux/tmux.conf
 ln ~/.dotfiles/src/tmux/tmux.conf ~/.config/tmux/tmux.conf
