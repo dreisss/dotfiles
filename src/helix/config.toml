@@ -19,5 +19,11 @@ render = true
 [editor.lsp]
 display-messages = true
 
+[keys.normal]
+C-a = "select_all"
+C-r = ":reload"
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
 [keys.normal.space.w]
 h = "hsplit"

@@ -13,5 +13,43 @@ auto-format = true
 language-server = { command = "crystalline", args = ["--stdio"] }
 
 [[language]]
+name = "css"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "css"] }
+
+[[language]]
+name = "html"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "html"] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+
+[[language]]
+name = "prisma"
+auto-format = true
+
+[[language]]
 name = "svelte"
 auto-format = true
+
+[[language]]
+name = "typescript"
+auto-format = true
+
+[[language]]
+name = "tsx"
+auto-format = true
+
+[[language]]
+name = "python"
+auto-format = true
+language-server = { command = "pyright-langserver", args = ["--stdio"]}
+config = {}
