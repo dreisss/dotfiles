@@ -20,14 +20,18 @@ alias rm="rip"
 alias l="exa -l --icons -s type"
 alias ls="exa --icons -s type"
 alias la="exa -la --icons -s type"
+alias lt="exa -T"
 alias cat="bat"
 alias grep="rg"
 alias diff="delta"
 alias find="fd"
-alias zell="zellij"
 alias hexdump="$(rtx which hx)"
 alias hx="helix"
-alias repo="cd ~/repos/\$@"
+alias run="pier run"
+
+function repo() { cd ~/repos/$@ }
+function note() { cd ~/notebooks/$@ }
+function clone() { gh repo clone dreisss/$@ }
 
 # pnpm
 export PNPM_HOME="/home/dreisss/.local/share/pnpm"

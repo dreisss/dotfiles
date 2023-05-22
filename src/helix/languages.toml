@@ -37,11 +37,13 @@ name = "prisma"
 auto-format = true
 
 [[language]]
-name = "svelte"
+name = "python"
 auto-format = true
+language-server = { command = "pyright-langserver", args = ["--stdio"]}
+config = {}
 
 [[language]]
-name = "typescript"
+name = "svelte"
 auto-format = true
 
 [[language]]
@@ -49,7 +51,10 @@ name = "tsx"
 auto-format = true
 
 [[language]]
-name = "python"
+name = "typescript"
 auto-format = true
-language-server = { command = "pyright-langserver", args = ["--stdio"]}
-config = {}
+
+[[language]]
+name = "ruby"
+auto-format = true
+config = { solargraph = { diagnostics = true, formatting = true } }

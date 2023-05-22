@@ -1,4 +1,4 @@
-theme = "catppuccin_macchiato"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
@@ -20,10 +20,9 @@ render = true
 display-messages = true
 
 [keys.normal]
-C-a = "select_all"
-C-r = ":reload"
-C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.normal.space.w]
-h = "hsplit"
+v = ["vsplit", "file_picker"]
+h = ["hsplit", "file_picker"]
