@@ -1,0 +1,126 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "rosewater": "#f5e0dc",
+    "flamingo": "#f2cdcd",
+    "pink": "#f5c2e7",
+    "mauve": "#cba6f7",
+    "red": "#f38ba8",
+    "maroon": "#eba0ac",
+    "peach": "#fab387",
+    "yellow": "#f9e2af",
+    "green": "#a6e3a1",
+    "teal": "#94e2d5",
+    "sky": "#89dceb",
+    "sapphire": "#74c7ec",
+    "blue": "#89b4fa",
+    "lavender": "#b4befe",
+    "base": "#1e1e2e"
+  },
+  "final_space": true,
+  "blocks": [
+    {
+      "alignment": "left",
+      "type": "prompt",
+      "segments": [
+        {
+          "type": "path",
+          "template": "{{ .Path }}",
+          "properties": {
+            "style": "agnoster_short"
+          },
+          "foreground": "p:sapphire"
+        },
+        {
+          "type": "git",
+          "template": " [ {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if .BranchStatus }}{{ .BranchStatus }}{{ end }} ]",
+          "properties": {
+            "branch_icon": "",
+            "branch_identical_icon": "",
+            "fetch_status": true
+          },
+          "foreground": "p:pink"
+        },
+        {
+          "type": "text",
+          "template": " \u279c ",
+          "foreground": "p:green"
+        },
+        {
+          "type": "exit",
+          "template": " \uf119",
+          "foreground": "p:yellow"
+        }
+      ]
+    },
+    {
+      "alignment": "right",
+      "type": "rprompt",
+      "overflow": "break",
+      "segments": [
+        {
+          "type": "executiontime",
+          "template": "{{ .FormattedMs }}",
+          "properties": {
+            "threshold": 50
+          },
+          "foreground": "p:rosewater"
+        },
+        {
+          "type": "project",
+          "template": "[ {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} ]",
+          "foreground": "p:peach"
+        },
+        {
+          "type": "crystal",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#000000"
+        },
+        {
+          "type": "deno",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#007acc"
+        },
+        {
+          "type": "go",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#00acd7"
+        },
+        {
+          "type": "haskell",
+          "foreground": "#5E5187",
+          "template": "[  {{ .Full }} ]"
+        },
+        {
+          "type": "julia",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#4063D8"
+        },
+        {
+          "type": "node",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#83CD29"
+        },
+        {
+          "type": "python",
+          "template": "[  {{ .Full }} ]",
+          "properties": {
+            "display_mode": "context"
+          },
+          "foreground": "#FFD845"
+        },
+        {
+          "type": "ruby",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#D91404"
+        },
+        {
+          "type": "rust",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#f74c00"
+        }
+      ]
+    }
+  ],
+  "version": 2
+}

@@ -7,7 +7,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 source ~/.oh-my-zsh/custom/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-eval "$(oh-my-posh init zsh --config '~/.dotfiles/src/oh-my-posh/oh-my-posh.omp.json')"
+eval "$(oh-my-posh init zsh --config '~/.dotfiles/src/oh-my-posh/style.json')"
 eval "$(~/.local/share/rtx/bin/rtx activate -s zsh)"
 eval "$($(rtx which zoxide) init zsh)"
 
@@ -29,9 +29,29 @@ alias hexdump="$(rtx which hx)"
 alias hx="helix"
 alias run="pier run"
 
-function repo() { cd ~/repos/$@ }
-function note() { cd ~/notebooks/$@ }
-function clone() { gh repo clone dreisss/$@ }
+function repo() {
+  if [[ -z $@ ]]; then
+    cd ~/repos/$(gum choose $(exa ~/repos))
+  else
+    cd ~/repos/$@
+  fi
+}
+
+function note() {
+  if [[ -z $@ ]]; then
+    cd ~/notebooks/$(gum choose $(exa ~/notebooks))
+  else
+    cd ~/notebooks/$@
+  fi
+}
+
+function clone() {
+  if [[ -z $@ ]]; then
+    gh repo clone $(gum choose $(gh repo list | awk '{print $1}'))
+  else
+    gh repo clone dreisss/$@
+  fi
+}
 
 # pnpm
 export PNPM_HOME="/home/dreisss/.local/share/pnpm"
