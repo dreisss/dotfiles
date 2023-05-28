@@ -14,4 +14,8 @@ command = 'crow -w $@ ./$@'
 alias = 'c'
 command = 'gcc $@ && ./a.out && rm ./a.out'
 
+[scripts.rs]
+alias = 'rs'
+command = 'rustc $@ -o a && ./a && rm ./a'
+
 [default]

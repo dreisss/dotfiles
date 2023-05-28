@@ -69,6 +69,3 @@ git clone https://github.com/catppuccin/zsh-syntax-highlighting.git /tmp/zsh-syn
 rm -rf .{bash*,z*,cache,dir_colors,lesshst,Xclients,xinitrc}
 yay -Qtdq | yay -Rs - --noconfirm
 yay -Sc --noconfirm
-
-# todos
-echo "TODO: install gnome extensions: dash-to-dock, blur-my-shell"

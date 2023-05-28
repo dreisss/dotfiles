@@ -28,6 +28,10 @@ auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
 [[language]]
+name = "lua"
+auto-format = true
+
+[[language]]
 name = "markdown"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
@@ -58,3 +62,7 @@ auto-format = true
 name = "ruby"
 auto-format = true
 config = { solargraph = { diagnostics = true, formatting = true } }
+
+[[language]]
+name = "rust"
+auto-format = true

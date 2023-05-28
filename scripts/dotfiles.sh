@@ -13,16 +13,14 @@ ln -sf ~/.dotfiles/src/git/gh.yml ~/.config/gh/config.yml
 rm -rf ~/.config/alacritty.yml
 ln -sf ~/.dotfiles/src/alacritty/alacritty.yml ~/.config/alacritty.yml
 
-mkdir -p ~/.config/tmux
 rm -rf ~/.config/tmux/tmux.conf
 ln -sf ~/.dotfiles/src/tmux/tmux.conf ~/.config/tmux/tmux.conf
 
-mkdir -p ~/.config/helix
-rm -rf  ~/.config/helix/{config,languages}.toml
-ln -sf ~/.dotfiles/src/helix/config.toml ~/.config/helix/config.toml
-ln -sf ~/.dotfiles/src/helix/languages.toml ~/.config/helix/languages.toml
+rm -rf ~/.config/helix
+ln -sf ~/.dotfiles/src/helix ~/.config/helix
 
-mkdir -p ~/.config/pier
-rm -rf ~/.config/pier/config.toml
-ln -sf ~/.dotfiles/src/pier/config.toml ~/.config/pier/config.toml
+rm -rf ~/.config/nvim
+ln -sf ~/.dotfiles/src/neovim ~/.config/nvim
 
+rm -rf ~/.config/pier
+ln -sf ~/.dotfiles/src/pier ~/.config/pier

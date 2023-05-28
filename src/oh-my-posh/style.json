@@ -60,7 +60,7 @@
       "segments": [
         {
           "type": "executiontime",
-          "template": "{{ .FormattedMs }}",
+          "template": "[ {{ .FormattedMs }} ]",
           "properties": {
             "threshold": 50
           },
@@ -95,6 +95,11 @@
           "type": "julia",
           "template": "[  {{ .Full }} ]",
           "foreground": "#4063D8"
+        },
+        {
+          "type": "lua",
+          "template": "[  {{ .Full }} ]",
+          "foreground": "#000080"
         },
         {
           "type": "node",
