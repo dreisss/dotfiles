@@ -27,7 +27,7 @@ alias diff="delta"
 alias find="fd"
 alias hexdump="$(rtx which hx)"
 alias hx="helix"
-alias vi="nvim"
+alias vi="lvim"
 alias run="pier run"
 
 function repo() {

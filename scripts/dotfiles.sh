@@ -19,8 +19,8 @@ ln -sf ~/.dotfiles/src/tmux/tmux.conf ~/.config/tmux/tmux.conf
 rm -rf ~/.config/helix
 ln -sf ~/.dotfiles/src/helix ~/.config/helix
 
-rm -rf ~/.config/nvim
-ln -sf ~/.dotfiles/src/neovim ~/.config/nvim
+rm -rf ~/.config/lvim
+ln -sf ~/.dotfiles/src/lvim ~/.config/lvim
 
 rm -rf ~/.config/pier
 ln -sf ~/.dotfiles/src/pier ~/.config/pier
