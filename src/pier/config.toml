@@ -8,7 +8,7 @@ command = 'c=$@ && echo -n "\e[48;2;$(printf "%d;%d;%d" 0x${c:0:2} 0x${c:2:2} 0x
 
 [scripts.crow]
 alias = 'crow'
-command = 'crow -w $@ ./$@'
+command = 'crow -w $@ $@'
 
 [scripts.c]
 alias = 'c'

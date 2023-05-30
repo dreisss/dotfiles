@@ -1,5 +1,10 @@
+function _note_notebooks() {
+  _files -W ~/notebooks/
+}
+
 function _note() {
-  compadd $(exa ~/notebooks)
+  _arguments -s \
+    '1:notebook:_note_notebooks'
 }
 
 function note() {

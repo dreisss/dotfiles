@@ -1,5 +1,10 @@
+function _repo_repositories() {
+  _files -W ~/repos/
+}
+
 function _repo() {
-  compadd $(exa ~/repos)
+  _arguments -s \
+    '1:repository:_repo_repositories'
 }
 
 function repo() {
