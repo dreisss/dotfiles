@@ -30,29 +30,9 @@ alias hx="helix"
 alias vi="lvim"
 alias run="pier run"
 
-function repo() {
-  if [[ -z $@ ]]; then
-    cd ~/repos/$(gum choose $(exa ~/repos))
-  else
-    cd ~/repos/$@
-  fi
-}
-
-function note() {
-  if [[ -z $@ ]]; then
-    cd ~/notebooks/$(gum choose $(exa ~/notebooks))
-  else
-    cd ~/notebooks/$@
-  fi
-}
-
-function clone() {
-  if [[ -z $@ ]]; then
-    gh repo clone $(gum choose $(gh repo list | awk '{print $1}'))
-  else
-    gh repo clone dreisss/$@
-  fi
-}
+source ~/.dotfiles/src/zsh/functions/clone.zsh
+source ~/.dotfiles/src/zsh/functions/note.zsh
+source ~/.dotfiles/src/zsh/functions/repo.zsh
 
 # pnpm
 export PNPM_HOME="/home/dreisss/.local/share/pnpm"
