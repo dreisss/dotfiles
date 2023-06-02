@@ -51,7 +51,7 @@ yay -R gnome-{terminal,tour,user-docs} manjaro-hello yelp gedit \ # gnome
 
 # install essential  
 yay -S neofetch base-devel net-tools git github-cli \ # basic tools
-  alacritty tmux helix neovim oh-my-posh-bin \ # dev tools
+  alacritty tmux helix neovim visual-studio-code-bin oh-my-posh-bin \ # dev tools
   discord obsidian kooha appimagelauncher gimp \ # other tools
   --noconfirm
  

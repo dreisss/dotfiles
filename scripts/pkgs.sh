@@ -20,7 +20,7 @@ cargo install bat exa tokei hyperfine ytop zoxide xcp rm-improved ripgrep fd-fin
 
 # install lsps and formatters
 yay -S {bash,typescript,yaml,svelte,haskell,lua}-language-server {marksman,crystalline}-bin vscode-langservers-extracted clang gopls zls-bin taplo-cli --noconfirm
-pnpm i -g pyright @astrojs/language-server @prisma/language-server eslint
+pnpm i -g pyright @astrojs/language-server @prisma/language-server eslint unocss-language-server
 gem install solargraph
 rustup component add rust-analyzer
 julia -e 'using Pkg; Pkg.add("LanguageServer")'

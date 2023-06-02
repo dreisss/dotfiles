@@ -68,7 +68,7 @@
         },
         {
           "type": "project",
-          "template": "[ {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }} ]",
+          "template": "[ {{ if .Error }}{{ .Error }}{{ else }}{{ if .Version }} {{.Version}}{{ end }}{{ if .Name }} {{ .Name }}{{ end }}{{ end }} ]",
           "foreground": "p:peach"
         },
         {
