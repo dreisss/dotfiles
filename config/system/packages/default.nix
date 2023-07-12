@@ -1,13 +1,14 @@
 { pkgs, ... }:
 
 {
+  imports = [ ./steam.nix ];
+
   environment.systemPackages = with pkgs; [
     firefox
     discord
     obsidian
     obs-studio
     gimp
-    steam
 
     wget
     unzip
