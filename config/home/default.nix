@@ -23,6 +23,12 @@
         ./tmux
         ./helix
       ];
+
+      home.sessionVariables = {
+        EDITOR = "hx";
+        BROWSER = "firefox";
+        TERMINAL = "alacritty";
+      };
     };
   };
 }
