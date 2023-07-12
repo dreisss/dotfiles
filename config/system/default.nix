@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./users
+    ./debloat
+    ./packages
+  ];
+}
