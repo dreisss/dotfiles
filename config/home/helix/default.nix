@@ -37,5 +37,8 @@
   home.packages = with pkgs; [
     nil
     nixpkgs-fmt
+
+    nodePackages.vscode-langservers-extracted
+    nodePackages.prettier
   ];
 }
