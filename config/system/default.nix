@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -7,11 +7,23 @@
     ./fonts
   ];
 
-  system.autoUpgrade.enable = true;
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+  system = {
+    stateVersion = "23.05";
+    autoUpgrade.enable = true;
   };
+
+  nix = {
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+  };
+
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
 }
