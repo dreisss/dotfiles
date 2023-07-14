@@ -15,11 +15,8 @@
     };
 
     theme = {
-      name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        variant = "mocha";
-      };
+      name = "Yaru-blue-dark";
+      package = pkgs.yaru-theme;
     };
 
     gtk3.extraConfig.Settings = ''
@@ -31,15 +28,15 @@
     '';
   };
 
-  home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+  home.sessionVariables.GTK_THEME = "Yaru-blue-dark";
 
   dconf.settings = {
-    "org/gnome/shell/extensions/user-theme".name = "Catppuccin-Mocha-Standard-Blue-Dark";
+    "org/gnome/shell/extensions/user-theme".name = "Yaru-blue-dark";
 
     "org/gnome/mutter".center-new-windows = true;
     "org/gnome/mutter".dynamic-workspaces = true;
     "org/gnome/shell/app-switcher".current-workspace-only = true;
-    "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
+    "org/gnome/desktop/wm/preferences".button-layout = "appmenu:minimize,maximize,close";
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       clock-show-weekday = true;
@@ -71,6 +68,7 @@
   };
 
   home.packages = with pkgs; [
+    gnomeExtensions.user-themes
     gnomeExtensions.dash-to-dock
     gnomeExtensions.blur-my-shell
     gnomeExtensions.rounded-window-corners

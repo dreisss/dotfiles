@@ -17,7 +17,7 @@
         lines = 32;
       };
 
-      colors = import ./theme.nix { };
+      colors = import ./colors.nix { };
 
       cursor.style = {
         blinking = "Always";

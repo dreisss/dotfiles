@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./steam.nix ];
-
   environment.systemPackages = with pkgs; [
     firefox
     discord
@@ -10,8 +8,6 @@
     obs-studio
     gimp
 
-    wget
-    unzip
     neofetch
     tokei
     hyperfine
@@ -24,5 +20,7 @@
     lazygit
 
     vscode
+
+    gnome.gnome-tweaks
   ];
 }

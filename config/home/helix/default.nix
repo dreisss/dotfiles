@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
+  imports = [
+    ./packages.nix
+  ];
+
   programs.helix = {
     enable = true;
 
@@ -31,14 +35,6 @@
       };
     };
 
-    languages = import ./language.nix { };
+    languages = import ./languages.nix { };
   };
-
-  home.packages = with pkgs; [
-    nil
-    nixpkgs-fmt
-
-    nodePackages.vscode-langservers-extracted
-    nodePackages.prettier
-  ];
 }

@@ -3,7 +3,6 @@
 {
   imports = [
     <home-manager/nixos>
-    ./fonts
   ];
 
   home-manager = {
@@ -12,23 +11,27 @@
 
     users.dreisss = { ... }: {
       programs.home-manager.enable = true;
-      home.stateVersion = "23.05";
+
+      home = {
+        stateVersion = "23.05";
+
+        sessionVariables = {
+          EDITOR = "hx";
+          BROWSER = "firefox";
+          TERMINAL = "alacritty";
+        };
+      };
 
       imports = [
         ./preferences
+        ./alacritty
+        ./tmux
         ./fish
         ./starship
         ./git
-        ./alacritty
-        ./tmux
         ./helix
       ];
-
-      home.sessionVariables = {
-        EDITOR = "hx";
-        BROWSER = "firefox";
-        TERMINAL = "alacritty";
-      };
     };
   };
 }
+
