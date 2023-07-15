@@ -18,6 +18,7 @@
     slides
     httpie
     lazygit
+    xclip
 
     vscode
 

@@ -4,6 +4,7 @@
   imports = [
     ./debloat
     ./packages
+    ./virtualization
     ./fonts
   ];
 
