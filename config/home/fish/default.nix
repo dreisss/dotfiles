@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   programs.fish = {
@@ -26,15 +26,4 @@
       zoxide init fish | source
     '';
   };
-
-  home.packages = with pkgs; [
-    zoxide
-    exa
-    bat
-    xcp
-    rm-improved
-    ripgrep
-    fd
-    delta
-  ];
 }

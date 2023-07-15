@@ -8,6 +8,22 @@
     obs-studio
     gimp
 
+    alacritty
+    tmux
+    fish
+    starship
+    helix
+    git
+
+    zoxide
+    exa
+    bat
+    xcp
+    rm-improved
+    ripgrep
+    fd
+    delta
+
     neofetch
     tokei
     hyperfine
