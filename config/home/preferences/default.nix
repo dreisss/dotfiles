@@ -15,8 +15,11 @@
     };
 
     theme = {
-      name = "Yaru-blue-dark";
-      package = pkgs.yaru-theme;
+      name = "Orchis-Dark";
+      package = pkgs.orchis-theme.override {
+        border-radius = 12;
+        tweaks = [ "macos" "black" ];
+      };
     };
 
     gtk3.extraConfig.Settings = ''
@@ -28,15 +31,15 @@
     '';
   };
 
-  home.sessionVariables.GTK_THEME = "Yaru-blue-dark";
+  home.sessionVariables.GTK_THEME = "Orchis-Dark";
 
   dconf.settings = {
-    "org/gnome/shell/extensions/user-theme".name = "Yaru-blue-dark";
+    "org/gnome/shell/extensions/user-theme".name = "Orchis-Dark";
 
     "org/gnome/mutter".center-new-windows = true;
     "org/gnome/mutter".dynamic-workspaces = true;
     "org/gnome/shell/app-switcher".current-workspace-only = true;
-    "org/gnome/desktop/wm/preferences".button-layout = "appmenu:minimize,maximize,close";
+    "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       clock-show-weekday = true;
