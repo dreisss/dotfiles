@@ -7,7 +7,6 @@
 
   home-manager = {
     useGlobalPkgs = true;
-    useUserPackages = true;
 
     users.dreisss = { ... }: {
       programs.home-manager.enable = true;
