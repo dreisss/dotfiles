@@ -53,12 +53,19 @@
 
     "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
     ];
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Terminal";
       command = "env -u WAYLAND_DISPLAY alacritty";
       binding = "<Super>t";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      name = "Explorer";
+      command = "nautilus";
+      binding = "<Super>e";
     };
 
     "org/gnome/shell".enabled-extensions = [
