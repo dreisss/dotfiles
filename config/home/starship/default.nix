@@ -112,8 +112,8 @@
       };
 
       nix_shell = {
-        format = "[nix-shell $symbol](purple) ";
-        style = "";
+        format = "[nix-shell]($style) ";
+        style = "purple";
       };
 
       character = {
