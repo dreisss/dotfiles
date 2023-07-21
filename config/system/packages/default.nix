@@ -35,6 +35,7 @@
     httpie
     lazygit
     xclip
+    license-generator
 
     vscode
 

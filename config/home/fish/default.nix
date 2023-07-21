@@ -12,6 +12,7 @@
       ls = "exa --icons -s type";
       la = "exa -la --icons -s type";
       lt = "exa -T --git-ignore";
+      lta = "exa -Ta --git-ignore --ignore-glob .git";
       cat = "bat";
       grep = "rg";
       diff = "delta";
