@@ -3,6 +3,7 @@
 {
   imports = [
     ./debloat
+    ./dualboot
     ./packages
     ./virtualization
     ./fonts
