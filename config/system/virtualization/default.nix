@@ -1,11 +1,20 @@
 { pkgs, ... }:
 
 {
-  virtualisation.docker.enable = true;
+  programs.dconf.enable = true;
 
-  users.users.dreisss.extraGroups = [ "docker" ];
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
+
+  users.users.dreisss.extraGroups = [
+    "docker"
+    "libvirtd"
+  ];
 
   environment.systemPackages = with pkgs; [
     distrobox
+    virt-manager
   ];
 }
