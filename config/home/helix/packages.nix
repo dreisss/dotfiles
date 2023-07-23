@@ -6,6 +6,7 @@
     nixpkgs-fmt
 
     marksman
+    rust-analyzer
 
     nodejs_20
   ]) ++ (with pkgs.nodePackages_latest; [

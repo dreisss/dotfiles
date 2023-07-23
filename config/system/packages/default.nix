@@ -38,6 +38,8 @@
     license-generator
 
     vscode
+    rustc
+    cargo
 
     gnome.gnome-tweaks
   ];

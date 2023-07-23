@@ -11,6 +11,10 @@
       auto-format = true;
       formatter.command = "nixpkgs-fmt";
     }
+    {
+      name = "rust";
+      auto-format = true;
+    }
 
 
     # Web
