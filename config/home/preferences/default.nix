@@ -41,8 +41,6 @@
     "org/gnome/shell/app-switcher".current-workspace-only = true;
     "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
     "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
-    "org/gnome/desktop/peripherals/mouse".accel-profile = "flat";
-    "org/gnome/desktop/peripherals/mouse".speed = "0.25";
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
