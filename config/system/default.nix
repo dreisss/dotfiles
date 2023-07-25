@@ -28,4 +28,6 @@
 
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
+
+  time.hardwareClockInLocalTime = true;
 }
