@@ -2,20 +2,21 @@
 
 {
   home.packages = (with pkgs; [
-    nil
-    nixpkgs-fmt
+    nil # nix lsp
+    nixpkgs-fmt # nix formatter
 
-    marksman
-    rust-analyzer
-    black
+    marksman # markdown lsp
+    rust-analyzer # rust lsp
+    black # python formatter
 
     nodejs_20
   ]) ++ (with pkgs.nodePackages_latest; [
-    pnpm
-    prettier
+    pnpm # other packages
+    prettier # general formatter
+    bash-language-server # bash lsp
 
     vscode-langservers-extracted # html, css, json and eslint
     typescript-language-server # js and ts
-    pyright
+    pyright # python lsp
   ]);
 }

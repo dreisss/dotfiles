@@ -2,6 +2,10 @@
   language = [
     # Common
     {
+      name = "bash";
+      auto-format = true;
+    }
+    {
       name = "markdown";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "markdown" ]; };
