@@ -40,7 +40,11 @@
     "org/gnome/mutter".dynamic-workspaces = true;
     "org/gnome/shell/app-switcher".current-workspace-only = true;
     "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
-    "org/gnome/desktop/peripherals/touchpad".tap-to-click = true;
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
+      click-method = "default";
+    };
 
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
