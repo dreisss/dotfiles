@@ -15,6 +15,13 @@
       name = "rust";
       auto-format = true;
     }
+    {
+      name = "python";
+      auto-format = true;
+      formatter = { command = "black"; args = [ "--quiet" "-" ]; };
+      language-server = { command = "pyright-langserver"; args = [ "--stdio" ]; };
+      indent = { tab-width = 2; unit = "  "; };
+    }
 
 
     # Web

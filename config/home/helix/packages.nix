@@ -7,6 +7,7 @@
 
     marksman
     rust-analyzer
+    black
 
     nodejs_20
   ]) ++ (with pkgs.nodePackages_latest; [
@@ -15,5 +16,6 @@
 
     vscode-langservers-extracted # html, css, json and eslint
     typescript-language-server # js and ts
+    pyright
   ]);
 }

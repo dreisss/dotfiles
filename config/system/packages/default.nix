@@ -40,6 +40,7 @@
     vscode
     rustc
     cargo
+    python312
 
     gnome.gnome-tweaks
   ];
