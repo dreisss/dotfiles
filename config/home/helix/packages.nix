@@ -9,9 +9,7 @@
     rust-analyzer # rust lsp
     black # python formatter
 
-    nodejs_20
   ]) ++ (with pkgs.nodePackages_latest; [
-    pnpm # other packages
     prettier # general formatter
     bash-language-server # bash lsp
 

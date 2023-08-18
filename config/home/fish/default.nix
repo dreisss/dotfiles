@@ -8,11 +8,11 @@
       cd = "z";
       cp = "xcp";
       rm = "rip";
-      l = "exa -l --icons -s type";
+      l = "exa --icons -s type -l";
       ls = "exa --icons -s type";
-      la = "exa -la --icons -s type";
-      lt = "exa -T --git-ignore";
-      lta = "exa -Ta --git-ignore --ignore-glob .git";
+      la = "exa --icons -s type -la ";
+      lt = "exa -s type --git-ignore -T";
+      lta = "exa -s type --git-ignore -Ta --ignore-glob .git";
       cat = "bat";
       grep = "rg";
       diff = "delta";
@@ -25,11 +25,6 @@
 
     shellInit = ''
       zoxide init fish | source
-
-      set -x PNPM_HOME "$HOME/.local/share/pnpm"
-      if not contains -- ":"$PNPM_HOME":" $PATH
-          set -x PATH "$PNPM_HOME:$PATH"
-      end
     '';
   };
 }
