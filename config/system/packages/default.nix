@@ -36,6 +36,7 @@
     lazygit
     xclip
     license-generator
+    entr
 
     vscode
     rustc
