@@ -40,7 +40,8 @@
     vscode
     rustc
     cargo
-    python312
+
+    (python3.withPackages (ps: with ps; [ ]))
 
     gnome.gnome-tweaks
   ];
