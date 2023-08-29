@@ -14,6 +14,7 @@
     starship
     helix
     git
+    git-lfs
 
     zoxide
     exa
