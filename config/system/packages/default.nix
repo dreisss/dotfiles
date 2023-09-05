@@ -38,6 +38,7 @@
     xclip
     license-generator
     entr
+    unzip
 
     vscode
     rustc
