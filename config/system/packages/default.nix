@@ -39,6 +39,7 @@
     license-generator
     entr
     unzip
+    unrar
 
     vscode
     rustc
