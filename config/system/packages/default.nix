@@ -44,6 +44,8 @@
     vscode
     rustc
     cargo
+    clippy
+    gcc
 
     (python3.withPackages (ps: with ps; [ ]))
 

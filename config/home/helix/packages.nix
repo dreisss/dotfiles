@@ -7,6 +7,7 @@
 
     marksman # markdown lsp
     rust-analyzer # rust lsp
+    rustfmt # rust formatter
     black # python formatter
 
   ]) ++ (with pkgs.nodePackages_latest; [

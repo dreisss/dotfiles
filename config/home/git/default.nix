@@ -31,6 +31,7 @@
       db = "branch -d";
       lb = "branch";
 
+      first = "push origin main";
       pu = "push";
       pf = "push -f";
       pa = "push && push --tags";
