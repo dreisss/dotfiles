@@ -43,6 +43,8 @@
       ra = "rebase --abort";
       rc = "rebase --continue";
       td = "rebase --edit-todo";
+
+      rt = "restore";
     };
 
     extraConfig = {
