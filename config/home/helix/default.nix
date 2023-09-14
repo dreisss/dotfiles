@@ -24,13 +24,27 @@
         lsp.display-messages = true;
       };
 
-      keys.normal = {
-        A-j = [ "extend_to_line_bounds" "delete_selection" "paste_after" ];
-        A-k = [ "extend_to_line_bounds" "delete_selection" "move_line_up" "paste_before" ];
+      keys = {
+        normal = {
+          A-j = [ "extend_to_line_bounds" "delete_selection" "paste_after" ];
+          A-k = [ "extend_to_line_bounds" "delete_selection" "move_line_up" "paste_before" ];
 
-        space.w = {
-          v = [ "vsplit" "file_picker" ];
-          h = [ "hsplit" "file_picker" ];
+          space.w = {
+            v = [ "vsplit" "file_picker" ];
+            h = [ "hsplit" "file_picker" ];
+          };
+
+          up = [ "no_op" ];
+          down = [ "no_op" ];
+          left = [ "no_op" ];
+          right = [ "no_op" ];
+        };
+
+        insert = {
+          up = [ "no_op" ];
+          down = [ "no_op" ];
+          left = [ "no_op" ];
+          right = [ "no_op" ];
         };
       };
     };
