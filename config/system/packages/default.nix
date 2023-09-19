@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
+let
+  nixos-unstable = import <nixos-unstable> {
+    config = { allowUnfree = true; };
+  };
+in
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     firefox
     discord
     obsidian
@@ -41,14 +46,16 @@
     unzip
     unrar
 
+    gnome.gnome-tweaks
+
+  ]) ++ (with nixos-unstable; [
     vscode
     rustc
     cargo
     clippy
     gcc
+    bun
 
     (python3.withPackages (ps: with ps; [ ]))
-
-    gnome.gnome-tweaks
-  ];
+  ]);
 }
