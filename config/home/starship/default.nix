@@ -5,12 +5,12 @@
     enable = true;
 
     settings = {
-      aws.symbol = "  ";
+      aws.symbol = " ";
       buf.symbol = " ";
       c.symbol = " ";
       conda.symbol = " ";
       dart.symbol = " ";
-      directory.read_only = " 󰌾";
+      directory.read_only = "󰌾 ";
       docker_context.symbol = " ";
       elixir.symbol = " ";
       elm.symbol = " ";
@@ -80,7 +80,7 @@
       scala.symbol = " ";
       spack.symbol = "🅢 ";
 
-      format = "$directory$git_branch$git_state$git_status$all$cmd_duration$line_break$nix_shell$character";
+      format = "$directory$git_branch$git_state$git_status$all $cmd_duration$line_break$nix_shell$character";
 
       directory.style = "blue";
 
@@ -120,6 +120,35 @@
         success_symbol = "[~>](purple)";
         error_symbol = "[~>](red)";
         vimcmd_symbol = "[~>](green)";
+      };
+
+      python = {
+        format = "[\\[\${symbol}\${pyenv_prefix}(\${version})(\($virtualenv\))\\]]($style)";
+        style = "yellow";
+      };
+
+      package = {
+        format = "[\\[$symbol$version\\]]($style)";
+        style = "208";
+      };
+
+      rust = {
+        format = "[\\[$symbol($version)\\]]($style)";
+        style = "red";
+      };
+
+      nodejs = {
+        format = "[\\[$symbol($version)\\]]($style)";
+        style = "green";
+        detect_extensions = [ ];
+        detect_files = [ "package-lock.json" "pnpm-lock.json" ];
+        detect_folders = [ ];
+      };
+
+      bun = {
+        format = "[\\[$symbol($version)\\]]($style)";
+        style = "red";
+        detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
       };
     };
   };

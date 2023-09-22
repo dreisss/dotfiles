@@ -55,6 +55,7 @@ in
     clippy
     gcc
     bun
+    nodejs_20
 
     (python3.withPackages (ps: with ps; [ ]))
   ]);
