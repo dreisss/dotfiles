@@ -8,15 +8,18 @@
       cd = "z";
       cp = "xcp";
       rm = "rip";
-      l = "exa --icons -s type --git -l";
-      ls = "exa --icons -s type";
-      la = "exa --icons -s type --git -la ";
-      lt = "exa -s type --git-ignore -T";
-      lta = "exa -s type --git-ignore -Ta --ignore-glob .git";
       cat = "bat";
       grep = "rg";
       diff = "delta";
       find = "fd";
+
+      exa_ = "exa --icons -s type --git";
+      l = "exa_ -l --git-ignore -I \"*config*\"";
+      la = "exa_ -la";
+      ls = "exa_ --git-ignore -I \"*config*\"";
+      lsa = "exa_ --git-ignore";
+      lt = "exa_ -T --git-ignore -I \"*config*\"";
+      lta = "exa_ -Ta --git-ignore -I .git";
     };
 
     interactiveShellInit = ''
