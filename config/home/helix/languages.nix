@@ -55,8 +55,9 @@
     {
       name = "astro";
       auto-format = true;
-      language-server = { command = "astro-ls"; args = [ "--stdio" ]; };
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
+      language-server = { command = "astro-ls"; args = [ "--stdio" ]; };
+      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
     }
   ];
 }

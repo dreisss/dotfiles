@@ -21,7 +21,11 @@
         cursor-shape.insert = "bar";
         file-picker.hidden = false;
         indent-guides.render = true;
-        lsp.display-messages = true;
+
+        lsp = {
+          display-messages = true;
+          display-inlay-hints = true;
+        };
       };
 
       keys = {
