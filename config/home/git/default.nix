@@ -66,6 +66,11 @@
       interactive.diffFilter = "delta --color-only";
       merge.conflictStyle = "diff3";
       diff.colorMoved = "default";
+
+      http = {
+        postBuffer = 500000000;
+        lowSpeedTime = 600;
+      };
     };
   };
 }
