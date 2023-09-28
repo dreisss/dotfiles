@@ -10,7 +10,8 @@
       c.symbol = " ";
       conda.symbol = " ";
       dart.symbol = " ";
-      directory.read_only = "󰌾 ";
+      # directory.read_only = " 󰌾";
+      directory.read_only = " [r]";
       docker_context.symbol = " ";
       elixir.symbol = " ";
       elm.symbol = " ";
@@ -28,7 +29,8 @@
       memory_usage.symbol = "󰍛 ";
       meson.symbol = "󰔷 ";
       nim.symbol = "󰆥 ";
-      nix_shell.symbol = " ";
+      # nix_shell.symbol = " ";
+      nix_shell.symbol = "nix";
       nodejs.symbol = " ";
       os.symbols = {
         Alpaquita = " ";
@@ -80,7 +82,7 @@
       scala.symbol = " ";
       spack.symbol = "🅢 ";
 
-      format = "$directory$git_branch$git_state$git_status$all $cmd_duration$line_break$nix_shell$character";
+      format = "$\{custom.container\}$directory$git_branch$git_state$git_status$all$cmd_duration$line_break$nix_shell$character";
 
       directory.style = "blue";
 
@@ -95,7 +97,7 @@
       };
 
       git_status = {
-        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed )]($style)";
         style = "cyan";
         conflicted = "​";
         untracked = "​";
@@ -111,10 +113,7 @@
         style = "yellow";
       };
 
-      nix_shell = {
-        format = "[nix-shell]($style) ";
-        style = "purple";
-      };
+      line_break.disabled = true;
 
       character = {
         success_symbol = "[~>](purple)";
@@ -122,33 +121,43 @@
         vimcmd_symbol = "[~>](green)";
       };
 
-      python = {
-        format = "[\\[\${symbol}\${pyenv_prefix}(\${version})(\($virtualenv\))\\]]($style)";
-        style = "yellow";
+      nix_shell.format = "[\\[$symbol:$name\\]]($style) ";
+
+      container.disabled = true;
+      custom.container = {
+        format = "[@$output]($style) ";
+        when = "test $(hostname -s) != $(hostname)";
+        command = "hostname -s";
+        style = "red";
       };
 
       package = {
-        format = "[\\[$symbol$version\\]]($style)";
+        format = "[\\[$symbol$version\\] ]($style)";
         style = "208";
       };
 
       rust = {
-        format = "[\\[$symbol($version)\\]]($style)";
+        format = "[\\[$symbol($version)\\] ]($style)";
         style = "red";
       };
 
+      python = {
+        format = "[\\[\${symbol}\${pyenv_prefix}(\${version})(\($virtualenv\))\\] ]($style)";
+        style = "yellow";
+      };
+
+      bun = {
+        format = "[\\[$symbol($version)\\] ]($style)";
+        style = "red";
+        detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
+      };
+
       nodejs = {
-        format = "[\\[$symbol($version)\\]]($style)";
+        format = "[\\[$symbol($version)\\] ]($style)";
         style = "green";
         detect_extensions = [ ];
         detect_files = [ "package-lock.json" "pnpm-lock.json" ];
         detect_folders = [ ];
-      };
-
-      bun = {
-        format = "[\\[$symbol($version)\\]]($style)";
-        style = "red";
-        detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
       };
     };
   };
