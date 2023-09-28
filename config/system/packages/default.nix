@@ -45,6 +45,7 @@ in
     entr
     unzip
     unrar
+    nodePackages_latest.live-server
 
     gnome.gnome-tweaks
 
