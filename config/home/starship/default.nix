@@ -137,27 +137,32 @@
       };
 
       rust = {
-        format = "[\\[$symbol($version)\\] ]($style)";
+        format = "[\\[$symbol$version\\] ]($style)";
         style = "red";
       };
 
       python = {
-        format = "[\\[\${symbol}\${pyenv_prefix}(\${version})(\($virtualenv\))\\] ]($style)";
+        format = "[\\[$symbol$pyenv_prefix$version\($virtualenv\)\\] ]($style)";
         style = "yellow";
       };
 
       bun = {
-        format = "[\\[$symbol($version)\\] ]($style)";
+        format = "[\\[$symbol$version\\] ]($style)";
         style = "red";
         detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
       };
 
       nodejs = {
-        format = "[\\[$symbol($version)\\] ]($style)";
+        format = "[\\[$symbol$version\\] ]($style)";
         style = "green";
         detect_extensions = [ ];
         detect_files = [ "package-lock.json" "pnpm-lock.json" ];
         detect_folders = [ ];
+      };
+
+      golang = {
+        format = "[\\[$symbol$version\\] ]($style)";
+        style = "cyan";
       };
     };
   };
