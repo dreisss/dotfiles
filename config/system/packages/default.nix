@@ -57,6 +57,7 @@ in
     gcc
     bun
     nodejs_20
+    go
 
     (python3.withPackages (ps: with ps; [ ]))
   ]);

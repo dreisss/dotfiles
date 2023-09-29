@@ -1,21 +1,24 @@
 { pkgs, ... }:
 
+let node = pkgs.nodePackages_latest; in
 {
   home.packages = (with pkgs; [
-    nil # nix lsp
-    nixpkgs-fmt # nix formatter
+    marksman
+    node.bash-language-server
+    node.prettier
 
-    marksman # markdown lsp
-    rust-analyzer # rust lsp
-    rustfmt # rust formatter
-    black # python formatter
+    nil
+    nixpkgs-fmt
 
-  ]) ++ (with pkgs.nodePackages_latest; [
-    prettier # general formatter
-    bash-language-server # bash lsp
+    rust-analyzer
+    rustfmt
 
-    vscode-langservers-extracted # html, css, json and eslint
-    typescript-language-server # js and ts
-    pyright # python lsp
+    black
+    node.pyright
+
+    gopls
+
+    node.vscode-langservers-extracted
+    node.typescript-language-server
   ]);
 }
