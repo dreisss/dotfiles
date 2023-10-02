@@ -14,11 +14,11 @@
       find = "fd";
 
       exa_ = "exa --icons -s type --git";
-      l = "exa_ -l --git-ignore -I \"*config*\"";
+      l = "exa_ -l --git-ignore";
       la = "exa_ -la";
-      ls = "exa_ --git-ignore -I \"*config*\"";
+      ls = "exa_ --git-ignore";
       lsa = "exa_ --git-ignore";
-      lt = "exa_ -T --git-ignore -I \"*config*\"";
+      lt = "exa_ -T --git-ignore";
       lta = "exa_ -Ta --git-ignore -I .git";
     };
 
