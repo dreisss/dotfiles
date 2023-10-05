@@ -4,6 +4,7 @@
     {
       name = "bash";
       auto-format = true;
+      formatter = { command = "shfmt"; args = [ "-s" ]; };
     }
     {
       name = "markdown";

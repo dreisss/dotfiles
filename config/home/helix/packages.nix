@@ -3,9 +3,11 @@
 let node = pkgs.nodePackages_latest; in
 {
   home.packages = (with pkgs; [
-    marksman
-    node.bash-language-server
     node.prettier
+    marksman
+
+    node.bash-language-server
+    shfmt
 
     nil
     nixpkgs-fmt
