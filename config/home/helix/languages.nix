@@ -41,6 +41,11 @@
       formatter = { command = "prettier"; args = [ "--parser" "css" ]; };
     }
     {
+      name = "scss";
+      auto-format = true;
+      formatter = { command = "prettier"; args = [ "--parser" "scss" ]; };
+    }
+    {
       name = "javascript";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
@@ -58,6 +63,13 @@
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
       language-server = { command = "astro-ls"; args = [ "--stdio" ]; };
+      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
+    }
+    {
+      name = "vue";
+      auto-format = true;
+      formatter = { command = "prettier"; args = [ "--parser" "vue" ]; };
+      language-server = { command = "vue-language-server"; args = [ "--stdio" ]; };
       config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
     }
   ];
