@@ -17,6 +17,16 @@
       formatter.command = "nixpkgs-fmt";
     }
     {
+      name = "yaml";
+      auto-format = true;
+      formatter = { command = "prettier"; args = [ "--parser" "yaml" ]; };
+    }
+    {
+      name = "json";
+      auto-format = true;
+      formatter = { command = "prettier"; args = [ "--parser" "json" ]; };
+    }
+    {
       name = "rust";
       auto-format = true;
     }
