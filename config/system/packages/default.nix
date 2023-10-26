@@ -46,6 +46,7 @@ in
     unzip
     unrar
     nodePackages_latest.live-server
+    wget
 
     gnome.gnome-tweaks
 
@@ -59,6 +60,9 @@ in
     nodejs_20
     go_1_21
 
-    (python3.withPackages (ps: with ps; [ ]))
+    (python3.withPackages (ps: with ps; [
+      numpy
+      pandas
+    ]))
   ]);
 }

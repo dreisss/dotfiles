@@ -126,7 +126,7 @@
       container.disabled = true;
       custom.container = {
         format = "[@$output]($style) ";
-        when = "test $(hostname -s) != $(hostname)";
+        when = "test (hostname -s) != (hostname)";
         command = "hostname -s";
         style = "red";
       };
