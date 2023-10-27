@@ -9,7 +9,7 @@
     enable = true;
 
     userName = "Davi Reis";
-    userEmail = "dreisss026@gmail.com";
+    userEmail = "dreisss.dev@gmail.com";
 
     aliases = {
       st = "status -sb";
