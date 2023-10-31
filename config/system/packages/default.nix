@@ -2,10 +2,12 @@
 
 let
   nixos-unstable = import <nixos-unstable> {
-    config = { allowUnfree = true; };
+    config.allowUnfree = true;
   };
 in
 {
+  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
+
   environment.systemPackages = (with pkgs; [
     firefox
     discord
