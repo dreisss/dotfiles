@@ -13,13 +13,13 @@
       diff = "delta";
       find = "fd";
 
-      exa_ = "exa --icons -s type --git";
-      l = "exa_ -l --git-ignore";
-      la = "exa_ -la";
-      ls = "exa_ --git-ignore";
-      lsa = "exa_ --git-ignore";
-      lt = "exa_ -T --git-ignore";
-      lta = "exa_ -Ta --git-ignore -I .git";
+      eza_ = "eza --icons -s type --git";
+      l = "eza_ -l --git-ignore";
+      la = "eza_ -la";
+      ls = "eza_ --git-ignore";
+      lsa = "eza_ --git-ignore";
+      lt = "eza_ -T --git-ignore";
+      lta = "eza_ -Ta --git-ignore -I .git";
     };
 
     interactiveShellInit = ''
