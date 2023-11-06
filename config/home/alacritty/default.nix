@@ -1,11 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
-let unstable-pkgs = import <nixos-unstable> { }; in
 {
   programs.alacritty = {
     enable = true;
 
-    package = unstable-pkgs.alacritty;
+    package = pkgs.unstable.alacritty;
 
     settings = {
       env.TERM = "xterm-256color";

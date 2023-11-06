@@ -1,6 +1,5 @@
-{ ... }:
+{ pkgs, ... }:
 
-let unstable = import <nixos-unstable> { }; in
 {
   imports = [
     ./packages.nix
@@ -8,7 +7,7 @@ let unstable = import <nixos-unstable> { }; in
 
   programs.helix = {
     enable = true;
-    package = unstable.helix;
+    package = pkgs.unstable.helix;
 
     settings = {
       theme = "catppuccin_mocha";

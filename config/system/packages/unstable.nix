@@ -1,12 +1,7 @@
-{ ... }:
+{ pkgs }:
 
-let
-  unstable-pkgs = import <nixos-unstable> {
-    config.allowUnfree = true;
-  };
-in
 {
-  packages = (with unstable-pkgs; [
+  packages = (with pkgs.unstable; [
     vscode
     rustc
     cargo
