@@ -1,23 +1,28 @@
 { ... }:
 
+let unstable-pkgs = import <nixos-unstable> { }; in
 {
   programs.alacritty = {
     enable = true;
 
+    package = unstable-pkgs.alacritty;
+
     settings = {
       env.TERM = "xterm-256color";
 
+      window = {
+        dimensions = {
+          columns = 115;
+          lines = 32;
+        };
+
+        dynamic_padding = true;
+      };
+
       shell = {
-        program = "fish";
+        program = "sh";
         args = [ "-l" "-c" "tmux attach || tmux" ];
       };
-
-      window.dimensions = {
-        columns = 115;
-        lines = 32;
-      };
-
-      colors = import ./colors.nix { };
 
       cursor.style = {
         blinking = "Always";
@@ -29,6 +34,8 @@
         offset.y = 2;
         size = 12;
       };
+
+      colors = import ./colors.nix { };
     };
   };
 }
