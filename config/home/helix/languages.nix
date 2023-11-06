@@ -1,4 +1,11 @@
-{}: {
+{ ... }:
+
+{
+  language-server = {
+    python-lsp = { command = "pyright-langserver"; args = [ "--stdio" ]; config = { }; };
+    astro-lsp = { command = "astro-ls"; args = [ "--stdio" ]; config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/"; };
+  };
+
   language = [
     # Common
     {
@@ -34,8 +41,7 @@
       name = "python";
       auto-format = true;
       formatter = { command = "black"; args = [ "--quiet" "-" ]; };
-      language-server = { command = "pyright-langserver"; args = [ "--stdio" ]; };
-      config = { };
+      language-servers = [ "python-lsp" ];
     }
 
 
@@ -72,15 +78,7 @@
       name = "astro";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
-      language-server = { command = "astro-ls"; args = [ "--stdio" ]; };
-      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
-    }
-    {
-      name = "vue";
-      auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "vue" ]; };
-      language-server = { command = "vue-language-server"; args = [ "--stdio" ]; };
-      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
+      language-servers = [ "astro-lsp" ];
     }
   ];
 }
