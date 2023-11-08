@@ -2,7 +2,7 @@
 
 let node = pkgs.nodePackages_latest; in
 {
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     # language servers
     nil # nix
     marksman # markdown
@@ -20,5 +20,5 @@ let node = pkgs.nodePackages_latest; in
     node.prettier
     rustfmt
     black
-  ]);
+  ];
 }

@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./packages.nix
-  ];
+  imports = [ ./packages.nix ];
 
   programs.helix = {
     enable = true;
@@ -17,11 +15,16 @@
         true-color = true;
         color-modes = true;
         cursorline = true;
+        scrolloff = 15;
         rulers = [ 80 120 ];
 
-        cursor-shape.insert = "bar";
         file-picker.hidden = false;
         indent-guides.render = true;
+
+        cursor-shape = {
+          insert = "bar";
+          select = "underline";
+        };
 
         lsp = {
           display-messages = true;
@@ -31,26 +34,42 @@
 
       keys = {
         normal = {
+          left = [ "no_op" ];
+          down = [ "no_op" ];
+          up = [ "no_op" ];
+          right = [ "no_op" ];
+
+          A-h = [ "unindent" ];
           A-j = [ "extend_to_line_bounds" "delete_selection" "paste_after" ];
           A-k = [ "extend_to_line_bounds" "delete_selection" "move_line_up" "paste_before" ];
+          A-l = [ "indent" ];
+
+          X = [ "extend_line_up" "extend_to_line_bounds" ];
+          A-x = [ "extend_to_line_bounds" ];
 
           space.w = {
-            v = [ "vsplit" "file_picker" ];
-            h = [ "hsplit" "file_picker" ];
+            minus = [ "hsplit" ];
+            "=" = [ "vsplit" ];
           };
-
-          up = [ "no_op" ];
-          down = [ "no_op" ];
-          left = [ "no_op" ];
-          right = [ "no_op" ];
         };
 
         insert = {
-          up = [ "no_op" ];
-          down = [ "no_op" ];
           left = [ "no_op" ];
+          down = [ "no_op" ];
+          up = [ "no_op" ];
           right = [ "no_op" ];
         };
+
+        select = {
+          left = [ "no_op" ];
+          down = [ "no_op" ];
+          up = [ "no_op" ];
+          right = [ "no_op" ];
+
+          X = [ "extend_line_up" "extend_to_line_bounds" ];
+          A-x = [ "extend_to_line_bounds" ];
+        };
+
       };
     };
 

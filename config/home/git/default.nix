@@ -1,9 +1,7 @@
 { ... }:
 
 {
-  imports = [
-    ./gh.nix
-  ];
+  imports = [ ./gh.nix ];
 
   programs.git = {
     enable = true;

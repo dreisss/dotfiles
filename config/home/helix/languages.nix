@@ -2,8 +2,17 @@
 
 {
   language-server = {
-    python-lsp = { command = "pyright-langserver"; args = [ "--stdio" ]; config = { }; };
-    astro-lsp = { command = "astro-ls"; args = [ "--stdio" ]; config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/"; };
+    python-lsp = {
+      command = "pyright-langserver";
+      args = [ "--stdio" ];
+      config = { };
+    };
+
+    astro-lsp = {
+      command = "astro-ls";
+      args = [ "--stdio" ];
+      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
+    };
   };
 
   language = [

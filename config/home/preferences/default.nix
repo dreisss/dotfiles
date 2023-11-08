@@ -51,10 +51,14 @@
       clock-show-weekday = true;
     };
 
+    "org/gnome/settings-daemon/plugins/media-keys".touchpad-toggle = [ "<Super><Shift>t" ];
+
     "org/gnome/desktop/wm/keybindings" = {
       show-desktop = [ "<Super>d" ];
-      maximize = [ "<Super>Up" ];
-      minimize = [ "<Super><Alt>Down" ];
+      minimize = [ "<Super><Shift>j" ];
+
+      unmaximize = [ "<Super>Down" "<Super>j" ];
+      maximize = [ "<Super>Up" "<Super>k" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
@@ -64,7 +68,7 @@
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Terminal";
-      command = "env -u WAYLAND_DISPLAY alacritty";
+      command = "alacritty";
       binding = "<Super>t";
     };
 
@@ -83,11 +87,11 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    gnomeExtensions.user-themes
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.logo-menu
+  home.packages = with pkgs.gnomeExtensions; [
+    user-themes
+    dash-to-dock
+    blur-my-shell
+    rounded-window-corners
+    logo-menu
   ];
 }

@@ -3,24 +3,24 @@
 {
   programs.alacritty = {
     enable = true;
-
     package = pkgs.unstable.alacritty;
 
     settings = {
       env.TERM = "xterm-256color";
 
       window = {
-        dimensions = {
-          columns = 115;
-          lines = 32;
-        };
-
         dynamic_padding = true;
+        decorations = "none";
+
+        dimensions = {
+          columns = 125;
+          lines = 35;
+        };
       };
 
       shell = {
         program = "sh";
-        args = [ "-l" "-c" "tmux attach || tmux" ];
+        args = [ "-l" "-c" "tmux attach" ];
       };
 
       cursor.style = {
