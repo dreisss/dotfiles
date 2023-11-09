@@ -49,6 +49,7 @@
     hyperfine
     license-generator
     nodePackages_latest.live-server
+    ngrok
     entr
   ]) ++ (with pkgs.unstable; [
     vscode
