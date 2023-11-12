@@ -13,6 +13,12 @@
       args = [ "--stdio" ];
       config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
     };
+
+    unocss-lsp = {
+      command = "unocss-language-server";
+      args = [ "--stdio" ];
+      config = { };
+    };
   };
 
   language = [
@@ -59,6 +65,7 @@
       name = "html";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "html" ]; };
+      language-servers = [ "vscode-html-language-server" "unocss-lsp" ];
     }
     {
       name = "css";
@@ -87,7 +94,7 @@
       name = "astro";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
-      language-servers = [ "astro-lsp" ];
+      language-servers = [ "astro-lsp" "unocss-lsp" ];
     }
   ];
 }
