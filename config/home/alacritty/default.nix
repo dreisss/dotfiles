@@ -29,7 +29,7 @@
       };
 
       font = {
-        normal.family = "Cascadia Code PL";
+        normal.family = "Monaspace Neon Medium";
         offset.y = 2;
         size = 12;
       };
