@@ -5,7 +5,7 @@
     gnome-tour
     gnome-text-editor
     gnome-connections
-    gnome-console
+    # gnome-console
     simple-scan
     pantheon.epiphany
   ]) ++ (with pkgs.gnome; [

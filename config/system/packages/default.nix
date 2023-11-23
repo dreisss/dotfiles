@@ -10,6 +10,8 @@
     obsidian
     obs-studio
     gimp
+    tiled
+    libresprite
 
     # terminal apps
     alacritty
