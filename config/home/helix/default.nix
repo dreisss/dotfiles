@@ -73,6 +73,6 @@
       };
     };
 
-    languages = import ./languages.nix { };
+    languages = import ./languages.nix { pkgs = pkgs; };
   };
 }

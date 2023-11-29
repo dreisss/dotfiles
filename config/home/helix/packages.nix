@@ -6,6 +6,7 @@ let node = pkgs.nodePackages_latest; in
     # language servers
     nil # nix
     marksman # markdown
+    pkgs.unstable.emmet-ls
     node.bash-language-server
     node.yaml-language-server
     node.vscode-langservers-extracted # html, css, js, json
@@ -20,5 +21,9 @@ let node = pkgs.nodePackages_latest; in
     node.prettier
     rustfmt
     black
+
+    # other
+    node.typescript
+    node.eslint
   ];
 }

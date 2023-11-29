@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bun i -g @astrojs/language-server unocss-language-server @volar/shared @volar/vue-language-server typescript vscode-languageserver-types
+bun i -g @astrojs/language-server unocss-language-server

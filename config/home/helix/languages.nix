@@ -1,23 +1,39 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   language-server = {
     python-lsp = {
       command = "pyright-langserver";
       args = [ "--stdio" ];
-      config = { };
+    };
+
+    emmet-lsp = {
+      command = "emmet-ls";
+      args = [ "--stdio" ];
+    };
+
+    eslint-lsp = {
+      command = "vscode-eslint-language-server";
+      args = [ "--stdio" ];
+      config = {
+        run = "onType";
+        validate = "on";
+        nodePath = "";
+        rulesCustomizations = [ ];
+        experimental.useFlatConfig = false;
+        workingDirectory.mode = "location";
+      };
     };
 
     astro-lsp = {
       command = "astro-ls";
       args = [ "--stdio" ];
-      config.typescript.tsdk = "/home/dreisss/.bun/install/global/node_modules/typescript/lib/";
+      config.typescript.tsdk = "${pkgs.typescript}/lib/node_modules/typescript/lib/";
     };
 
     unocss-lsp = {
       command = "unocss-language-server";
       args = [ "--stdio" ];
-      config = { };
     };
   };
 
@@ -65,27 +81,31 @@
       name = "html";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "html" ]; };
-      language-servers = [ "vscode-html-language-server" "unocss-lsp" ];
+      language-servers = [ "emmet-lsp" "vscode-html-language-server" ];
     }
     {
       name = "css";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "css" ]; };
+      language-servers = [ "emmet-lsp" "vscode-css-language-server" ];
     }
     {
       name = "scss";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "scss" ]; };
+      language-servers = [ "emmet-lsp" "vscode-css-language-server" ];
     }
     {
       name = "javascript";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
+      language-servers = [ "eslint-lsp" "typescript-language-server" ];
     }
     {
       name = "typescript";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
+      language-servers = [ "eslint-lsp" "typescript-language-server" ];
     }
 
 
@@ -94,7 +114,7 @@
       name = "astro";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
-      language-servers = [ "astro-lsp" "unocss-lsp" ];
+      language-servers = [ "eslint-lsp" "emmet-lsp" "astro-lsp" ];
     }
   ];
 }
