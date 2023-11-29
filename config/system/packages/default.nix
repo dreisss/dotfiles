@@ -36,6 +36,8 @@
     unzip
     unrar
     wget
+    jq
+    httpie
 
     # others terminal apps
     gum
@@ -45,7 +47,6 @@
     tokei
     xclip
     slides
-    httpie
     lazygit
     neofetch
     hyperfine
