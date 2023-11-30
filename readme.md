@@ -1,8 +1,8 @@
-<img height="45px" src=".github/assets/logo.svg" />
+# dotfiles
 
-My personal dotfiles and setup files.
+This repository contains my personal dotfiles and setup files.
 
-To use this configuration in NixOs just follow the guide:
+To utilize this configuration in NixOS, please follow the steps below:
 
 1. Clone the repository to your computer:
 
@@ -10,32 +10,32 @@ To use this configuration in NixOs just follow the guide:
 git clone https://github.com/dreisss/dotfiles.git ~/.dotfiles
 ```
 
-2. Open the main configuration file in the editor:
+2. Open the main configuration file in your preferred text editor with administrative privileges:
 
 ```bash
 sudo nano /etc/nixos/configuration.nix
 ```
 
-3. Find `imports` section and add this:
+3. Locate the `imports` section and append the following line:
 
 ```nix
 imports = [
-  /home/dreisss/.dotfiles/config
+  /home/your_username/.dotfiles/config
 ];
 ```
 
-4. Remember to change all configurations to my user to your specific user: Replace `dreisss` for your user name.
+4. Ensure to customize all configurations for your specific user: Replace `your_username` with your actual username.
 
-5. Now use the init script by running:
+5. Execute the init script to initialize the setup:
 
 ```bash
 ~/.dotfiles/scripts/init.sh
 ```
 
-6. And rebuild the system to update the configuration:
+6. Rebuild the system to apply the updated configuration:
 
 ```bash
 sudo nixos-rebuild switch --upgrade
 ```
 
-7. Now reboot the system to apply changes
+7. Reboot the system to activate the changes.
