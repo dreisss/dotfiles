@@ -25,6 +25,11 @@
         workingDirectory.mode = "location";
         problems.shortenToSingleLine = false;
         experimental.useFlatConfig = false;
+
+        codeAction = {
+          showDocumentation.enable = true;
+          disableRuleComment = { enable = true; location = "separateLine"; };
+        };
       };
     };
 
@@ -101,13 +106,13 @@
     {
       name = "javascript";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
+      # formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
       language-servers = [ "eslint-lsp" "typescript-language-server" ];
     }
     {
       name = "typescript";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
+      # formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
       language-servers = [ "eslint-lsp" "typescript-language-server" ];
     }
 

@@ -24,6 +24,5 @@ let node = pkgs.nodePackages_latest; in
 
     # other
     node.typescript
-    node.eslint
   ];
 }
