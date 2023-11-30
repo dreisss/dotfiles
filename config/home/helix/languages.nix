@@ -15,13 +15,16 @@
     eslint-lsp = {
       command = "vscode-eslint-language-server";
       args = [ "--stdio" ];
+
       config = {
         run = "onType";
         validate = "on";
         nodePath = "";
         rulesCustomizations = [ ];
-        experimental.useFlatConfig = false;
+
         workingDirectory.mode = "location";
+        problems.shortenToSingleLine = false;
+        experimental.useFlatConfig = false;
       };
     };
 
@@ -87,13 +90,13 @@
       name = "css";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "css" ]; };
-      language-servers = [ "emmet-lsp" "vscode-css-language-server" ];
+      language-servers = [ "vscode-css-language-server" ];
     }
     {
       name = "scss";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "scss" ]; };
-      language-servers = [ "emmet-lsp" "vscode-css-language-server" ];
+      language-servers = [ "vscode-css-language-server" ];
     }
     {
       name = "javascript";
