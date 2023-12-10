@@ -10,7 +10,7 @@
       programs.home-manager.enable = true;
 
       home = {
-        stateVersion = "23.05";
+        stateVersion = "23.11";
 
         sessionVariables = {
           EDITOR = "hx";

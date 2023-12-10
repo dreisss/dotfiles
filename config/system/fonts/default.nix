@@ -2,8 +2,7 @@
 
 {
   fonts = {
-    fonts = with pkgs; [
-      cascadia-code
+    packages = with pkgs; [
       unstable.monaspace
 
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
