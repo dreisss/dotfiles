@@ -30,7 +30,7 @@
 
       font = {
         normal.family = "Monaspace Neon Medium";
-        offset.y = 2;
+        offset.y = 0;
         size = 12;
       };
 
