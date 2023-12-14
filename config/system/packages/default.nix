@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.config.permittedInsecurePackages = [ "electron-24.8.6" ];
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
   environment.systemPackages = (with pkgs; [
     # general

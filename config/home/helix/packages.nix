@@ -12,6 +12,7 @@ let node = pkgs.nodePackages_latest; in
     node.vscode-langservers-extracted # html, css, js, json
     node.typescript-language-server
     node.pyright
+    node."@astrojs/language-server"
     gopls
     rust-analyzer
 
