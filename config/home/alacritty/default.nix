@@ -14,7 +14,7 @@
 
         dimensions = {
           columns = 125;
-          lines = 35;
+          lines = 40;
         };
       };
 
