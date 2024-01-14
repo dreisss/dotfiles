@@ -14,7 +14,7 @@
 
         dimensions = {
           columns = 125;
-          lines = 40;
+          lines = 33;
         };
       };
 
@@ -29,12 +29,11 @@
       };
 
       font = {
-        normal.family = "Monaspace Neon Medium";
-        offset.y = 0;
-        size = 12;
+        normal.family = "Zed Mono Medium Extended";
+        size = 13;
       };
 
-      colors = import ./colors.nix { };
+      colors = import ./theme-dark.nix { };
     };
   };
 }
