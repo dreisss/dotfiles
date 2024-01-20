@@ -33,6 +33,11 @@
       };
     };
 
+    biome-lsp = {
+      command = "biome";
+      args = [ "lsp-proxy" ];
+    };
+
     astro-lsp = {
       command = "astro-ls";
       args = [ "--stdio" ];
@@ -70,7 +75,11 @@
     {
       name = "json";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "json" ]; };
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.json" ]; };
+      language-servers = [
+        { name = "vscode-json-language-server"; except-features = [ "format" ]; }
+        "biome-lsp"
+      ];
     }
     {
       name = "rust";
@@ -106,14 +115,20 @@
     {
       name = "javascript";
       auto-format = true;
-      # formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
-      language-servers = [ "eslint-lsp" "typescript-language-server" ];
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
+      language-servers = [
+        { name = "typescript-language-server"; except-features = [ "format" ]; }
+        "biome-lsp"
+      ];
     }
     {
       name = "typescript";
       auto-format = true;
-      # formatter = { command = "prettier"; args = [ "--parser" "typescript" ]; };
-      language-servers = [ "eslint-lsp" "typescript-language-server" ];
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
+      language-servers = [
+        { name = "typescript-language-server"; except-features = [ "format" ]; }
+        "biome-lsp"
+      ];
     }
 
 

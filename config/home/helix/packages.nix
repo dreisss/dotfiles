@@ -20,6 +20,7 @@ let node = pkgs.nodePackages_latest; in
     shfmt
     nixpkgs-fmt
     node.prettier
+    biome
     rustfmt
     black
 
