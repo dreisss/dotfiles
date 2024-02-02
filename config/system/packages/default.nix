@@ -61,6 +61,7 @@
     clippy
     gcc
     bun
+    nodePackages_latest.pnpm
     nodejs_20
     go_1_21
 
