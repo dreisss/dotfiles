@@ -20,7 +20,7 @@
     starship
     helix
 
-    # to fish
+    # to fish / replacements
     zoxide
     xcp
     rm-improved
@@ -28,7 +28,10 @@
     ripgrep
     delta
     fd
-    unstable.eza
+    eza
+    du-dust
+    procs
+    atuin
 
     # must-have
     git
