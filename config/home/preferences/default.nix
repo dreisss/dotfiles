@@ -34,16 +34,6 @@
   home.sessionVariables.GTK_THEME = "Orchis-Dark";
 
   dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      font-name = "Inter Display 11";
-      document-font-name = "Inter Display 11";
-      monospace-font-name = "Zed Mono Extended";
-    };
-
-    "org/gnome/desktop/wm/preferences" = {
-      titlebar-font = "Inter Display 11";
-    };
-
     "org/gnome/shell/extensions/user-theme".name = "Orchis-Dark";
 
     "org/gnome/mutter".center-new-windows = true;

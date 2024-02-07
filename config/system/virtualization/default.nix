@@ -14,6 +14,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    docker-compose
     distrobox
     virt-manager
   ];
