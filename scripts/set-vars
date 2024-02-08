@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set -Ux PRISMA_QUERY_ENGINE_BINARY "$(nix-store -q $(which prisma-fmt))/bin/query-engine"
+set -Ux PRISMA_INTROSPECTION_ENGINE_BINARY "$(nix-store -q $(which prisma-fmt))/bin/introspection-engine"
+set -Ux PRISMA_QUERY_ENGINE_LIBRARY "$(nix-store -q $(which prisma-fmt))/lib/libquery_engine.node"
+set -Ux PRISMA_FMT_BINARY "$(nix-store -q $(which prisma-fmt))/bin/prisma-fmt"
