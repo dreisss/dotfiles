@@ -139,5 +139,11 @@
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
       language-servers = [ "eslint-lsp" "emmet-lsp" "astro-lsp" ];
     }
+
+    # DB
+    {
+      name = "prisma";
+      auto-format = true;
+    }
   ];
 }

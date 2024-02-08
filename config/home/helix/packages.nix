@@ -13,6 +13,7 @@ let node = pkgs.nodePackages_latest; in
     node.typescript-language-server
     node.pyright
     node."@astrojs/language-server"
+    node."@prisma/language-server"
     gopls
     rust-analyzer
 

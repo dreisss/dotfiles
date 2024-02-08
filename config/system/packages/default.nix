@@ -57,6 +57,9 @@
     nodePackages_latest.live-server
     ngrok
     entr
+
+    # other
+    openssl_3_1
   ]) ++ (with pkgs.unstable; [
     vscode
     rustc
@@ -66,6 +69,8 @@
     bun
     nodePackages_latest.pnpm
     nodejs_20
+    nodePackages_latest.prisma
+    prisma-engines
     go_1_21
 
     (python3.withPackages (ps: with ps; [
