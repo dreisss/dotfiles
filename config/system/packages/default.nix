@@ -71,7 +71,7 @@
     nodejs_20
     nodePackages_latest.prisma
     prisma-engines
-    go_1_21
+    go_1_22
 
     (python3.withPackages (ps: with ps; [
       numpy
