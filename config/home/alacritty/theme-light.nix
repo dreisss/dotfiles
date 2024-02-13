@@ -1,78 +1,90 @@
 {}: {
   primary = {
-    background = "#EFF1F5";
-    foreground = "#4C4F69";
-    dim_foreground = "#4C4F69";
-    bright_foreground = "#4C4F69";
+    foreground = "#575279";
+    background = "#faf4ed";
+    dim_foreground = "#797593";
+    bright_foreground = "#575279";
   };
+
   cursor = {
-    text = "#EFF1F5";
-    cursor = "#DC8A78";
+    text = "#575279";
+    cursor = "#cecacd";
   };
+
   vi_mode_cursor = {
-    text = "#EFF1F5";
-    cursor = "#7287FD";
+    text = "#575279";
+    cursor = "#cecacd";
   };
+
   search = {
     matches = {
-      foreground = "#EFF1F5";
-      background = "#6C6F85";
+      foreground = "#797593";
+      background = "#f2e9e1";
     };
+
     focused_match = {
-      foreground = "#EFF1F5";
-      background = "#40A02B";
+      foreground = "#faf4ed";
+      background = "#d7827e";
     };
   };
-  footer_bar = {
-    foreground = "#EFF1F5";
-    background = "#6C6F85";
-  };
+
   hints = {
     start = {
-      foreground = "#EFF1F5";
-      background = "#DF8E1D";
+      foreground = "#797593";
+      background = "#fffaf3";
     };
+
     end = {
-      foreground = "#EFF1F5";
-      background = "#6C6F85";
+      foreground = "#9893a5";
+      background = "#fffaf3";
     };
   };
+
+  line_indicator = {
+    foreground = "None";
+    background = "None";
+  };
+
+  footer_bar = {
+    foreground = "#575279";
+    background = "#fffaf3";
+  };
+
   selection = {
-    text = "#EFF1F5";
-    background = "#DC8A78";
+    text = "#575279";
+    background = "#dfdad9";
   };
+
   normal = {
-    black = "#5C5F77";
-    red = "#D20F39";
-    green = "#40A02B";
-    yellow = "#DF8E1D";
-    blue = "#1E66F5";
-    magenta = "#EA76CB";
-    cyan = "#179299";
-    white = "#ACB0BE";
+    black = "#f2e9e1";
+    red = "#b4637a";
+    green = "#286983";
+    yellow = "#ea9d34";
+    blue = "#56949f";
+    magenta = "#907aa9";
+    cyan = "#d7827e";
+    white = "#575279";
   };
+
   bright = {
-    black = "#6C6F85";
-    red = "#D20F39";
-    green = "#40A02B";
-    yellow = "#DF8E1D";
-    blue = "#1E66F5";
-    magenta = "#EA76CB";
-    cyan = "#179299";
-    white = "#BCC0CC";
+    black = "#9893a5";
+    red = "#b4637a";
+    green = "#286983";
+    yellow = "#ea9d34";
+    blue = "#56949f";
+    magenta = "#907aa9";
+    cyan = "#d7827e";
+    white = "#575279";
   };
+
   dim = {
-    black = "#5C5F77";
-    red = "#D20F39";
-    green = "#40A02B";
-    yellow = "#DF8E1D";
-    blue = "#1E66F5";
-    magenta = "#EA76CB";
-    cyan = "#179299";
-    white = "#ACB0BE";
+    black = "#9893a5";
+    red = "#b4637a";
+    green = "#286983";
+    yellow = "#ea9d34";
+    blue = "#56949f";
+    magenta = "#907aa9";
+    cyan = "#d7827e";
+    white = "#575279";
   };
-  indexed_colors = [
-    { index = 16; color = "#FE640B"; }
-    { index = 17; color = "#DC8A78"; }
-  ];
 }

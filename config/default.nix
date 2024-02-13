@@ -1,4 +1,4 @@
-{ lib, fetchzip, stdenvNoCC, ... }:
+{ ... }:
 
 let
   unstable-pkgs = import <nixos-unstable> {

@@ -8,7 +8,7 @@
     package = pkgs.unstable.helix;
 
     settings = {
-      theme = "catppuccin_mocha";
+      theme = "rose_pine_moon";
 
       editor = {
         line-number = "relative";
@@ -28,7 +28,7 @@
 
         lsp = {
           display-messages = true;
-          display-inlay-hints = true;
+          # display-inlay-hints = true;
         };
       };
 

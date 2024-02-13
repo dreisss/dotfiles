@@ -33,6 +33,7 @@
         size = 13;
       };
 
+      # theme: rose pine
       colors = import ./theme-dark.nix { };
     };
   };
