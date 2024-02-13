@@ -29,7 +29,7 @@ imports = [
 5. Execute the init script to initialize the setup:
 
 ```bash
-~/.dotfiles/scripts/init.sh
+~/.dotfiles/scripts/setup-nixos
 ```
 
 6. Rebuild the system to apply the updated configuration:

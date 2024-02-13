@@ -60,6 +60,7 @@
 
     # other
     openssl_3_1
+    nix-prefetch-github
   ]) ++ (with pkgs.unstable; [
     vscode
     rustc

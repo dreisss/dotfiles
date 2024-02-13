@@ -3,7 +3,7 @@
 {
   fonts = {
     packages = with pkgs; [
-      # zed-mono
+      custom.zed-mono
       inter
 
       (nerdfonts.override { fonts = [ "FiraCode" ]; })

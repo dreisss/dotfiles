@@ -1,10 +1,5 @@
 { ... }:
 
-let
-  unstable-pkgs = import <nixos-unstable> {
-    config.allowUnfree = true;
-  };
-in
 {
   imports = [
     ./home
@@ -13,7 +8,13 @@ in
 
   nixpkgs.overlays = [
     (self: super: {
-      unstable = unstable-pkgs;
+      unstable = import <nixos-unstable> {
+        config.allowUnfree = true;
+      };
+
+      custom = {
+        zed-mono = import ../custom/packages/fonts/zed-mono.nix;
+      };
     })
   ];
 }
