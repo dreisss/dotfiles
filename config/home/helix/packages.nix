@@ -16,6 +16,7 @@ let node = pkgs.nodePackages_latest; in
     node."@prisma/language-server"
     gopls
     rust-analyzer
+    dockerfile-language-server-nodejs
 
     # formatters
     shfmt

@@ -91,6 +91,10 @@
       formatter = { command = "black"; args = [ "--quiet" "-" ]; };
       language-servers = [ "python-lsp" ];
     }
+    {
+      name = "dockerfile";
+      auto-format = true;
+    }
 
 
     # Web
