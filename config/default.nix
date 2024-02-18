@@ -13,7 +13,7 @@
       };
 
       custom = {
-        zed-mono = import ../custom/packages/fonts/zed-mono.nix;
+        zed-mono = import ./custom-packages/fonts/zed-mono.nix;
       };
     })
   ];
