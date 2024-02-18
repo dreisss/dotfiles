@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixos-version, ... }:
 
 {
   imports = [
@@ -9,7 +9,7 @@
   ];
 
   system = {
-    stateVersion = "23.11";
+    stateVersion = nixos-version;
     autoUpgrade.enable = true;
   };
 

@@ -1,4 +1,4 @@
-{ ... }:
+{ nixos-version, ... }:
 
 {
   imports = [ <home-manager/nixos> ];
@@ -10,7 +10,7 @@
       programs.home-manager.enable = true;
 
       home = {
-        stateVersion = "23.11";
+        stateVersion = nixos-version;
 
         sessionVariables = {
           EDITOR = "hx";
