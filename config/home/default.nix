@@ -20,13 +20,10 @@
       };
 
       imports = [
-        ./preferences
-        ./alacritty
-        ./tmux
-        ./fish
-        ./starship
+        ./dev-env
         ./git
-        ./helix
+
+        ./preferences
       ];
     };
   };
