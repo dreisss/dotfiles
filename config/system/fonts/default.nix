@@ -3,10 +3,21 @@
 {
   fonts = {
     packages = with pkgs; [
-      custom.zed-mono
+      # general
       inter
+      openmoji-color
 
+      # development
+      custom.zed-mono
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ];
+
+    fontconfig = {
+      hinting.autohint = true;
+
+      defaultFonts = {
+        emoji = [ "OpenMoji Color" ];
+      };
+    };
   };
 }
