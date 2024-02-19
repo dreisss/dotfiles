@@ -1,24 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  environment.gnome.excludePackages = (with pkgs; [
+  documentation.nixos.enable = false;
+  services.xserver.desktopManager.xterm.enable = false;
+
+  environment.gnome.excludePackages = lib.flatten (with pkgs; [
+    # gnome-console
     gnome-tour
     gnome-text-editor
     gnome-connections
-    # gnome-console
-    simple-scan
     pantheon.epiphany
-  ]) ++ (with pkgs.gnome; [
-    gnome-weather
-    gnome-contacts
-    gnome-maps
-    gnome-logs
-    yelp
-    geary
-    seahorse
+    simple-scan
+
+    (with gnome; [
+      gnome-weather
+      gnome-contacts
+      gnome-maps
+      gnome-logs
+      yelp
+      geary
+      seahorse
+    ])
   ]);
-
-  documentation.nixos.enable = false;
-
-  services.xserver.excludePackages = with pkgs; [ xterm ];
 }
