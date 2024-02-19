@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
 
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = lib.flatten (with pkgs; [
     # general
     firefox
     discord
@@ -61,22 +61,23 @@
     # other
     openssl_3_1
     nix-prefetch-github
-  ]) ++ (with pkgs.unstable; [
-    vscode
-    rustc
-    cargo
-    clippy
-    gcc
-    bun
-    nodePackages_latest.pnpm
-    nodejs_20
-    nodePackages_latest.prisma
-    prisma-engines
-    go_1_22
 
-    (python3.withPackages (ps: with ps; [
-      numpy
-      pandas
-    ]))
+    (with unstable; [
+      rustc
+      cargo
+      clippy
+      gcc
+      bun
+      nodePackages_latest.pnpm
+      nodejs_20
+      nodePackages_latest.prisma
+      prisma-engines
+      go_1_22
+
+      (python3.withPackages (ps: with ps; [
+        numpy
+        pandas
+      ]))
+    ])
   ]);
 }
