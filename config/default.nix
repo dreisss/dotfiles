@@ -13,6 +13,7 @@ let nixos-version = builtins.readFile ../nixos-version; in
 
       custom = {
         zed-mono = import ./custom-packages/fonts/zed-mono.nix;
+        fishPlugins.rose-pine = import ./custom-packages/fish/rose-pine.nix;
       };
     })
   ];
