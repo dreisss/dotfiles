@@ -1,83 +1,92 @@
 { pkgs, lib, ... }:
 
-{
-  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
-
-  environment.systemPackages = lib.flatten (with pkgs; [
-    # general
+let
+  general-use = with pkgs; [
     firefox
     discord
     obsidian
-    obs-studio
     gimp
-    tiled
-    libresprite
-
-    # terminal apps
+    # obs-studio # casual use
+    # tiled # casual use
+    # libresprite # casual use 
+  ];
+  development-environment = lib.flatten (with pkgs; [
     alacritty
     tmux
     fish
     starship
     helix
 
-    # to fish / replacements
-    zoxide
-    xcp
-    rm-improved
-    bat
-    ripgrep
-    delta
-    fd
-    eza
-    du-dust
-    procs
-    atuin
-
-    # must-have
-    git
-    git-lfs
-    unzip
-    unrar
-    wget
-    jq
-    httpie
-
-    # others terminal apps
-    gum
-    glow
-    btop
-    grex
-    tokei
-    xclip
-    slides
-    lazygit
-    neofetch
-    hyperfine
-    license-generator
-    nodePackages_latest.live-server
-    ngrok
-    entr
-
-    # other
-    openssl_3_1
-    nix-prefetch-github
-
     (with unstable; [
+      # rust
       rustc
       cargo
       clippy
       gcc
-      bun
-      nodePackages_latest.pnpm
-      nodejs_20
-      nodePackages_latest.prisma
-      prisma-engines
+
+      # go
       go_1_22
 
+      # js/ts
+      nodejs_20
+      nodePackages_latest.pnpm
+      bun
+
+      nodePackages_latest.prisma
+      prisma-engines
+
+      # python
       (python3.withPackages (ps: with ps; [
         numpy
         pandas
       ]))
     ])
   ]);
+  cli-tools = with pkgs; [
+    # rust replacements
+    eza # ls
+    zoxide # cd
+    xcp # cp
+    rm-improved # rm
+    bat # cat
+    ripgrep # grep
+    delta # diff
+    fd # find
+    btop # top
+    procs # ps
+    du-dust # du
+    # atuin # history
+
+    # common tools
+    git
+    git-lfs
+    unzip
+    unrar
+    curl
+    wget
+    httpie
+    jq
+    xclip
+    entr
+    tokei
+    hyperfine
+    grex
+    neofetch
+    license-generator
+    nodePackages_latest.live-server
+  ];
+  other = with pkgs; [
+    openssl_3_1
+    nix-prefetch-github
+  ];
+in
+{
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
+
+  environment.systemPackages = lib.flatten [
+    general-use
+    development-environment
+    cli-tools
+    other
+  ];
 }
