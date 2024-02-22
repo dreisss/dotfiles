@@ -2,7 +2,7 @@
 
 {
   documentation.nixos.enable = false;
-  services.xserver.desktopManager.xterm.enable = false;
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   environment.gnome.excludePackages = lib.flatten (with pkgs; [
     # gnome-console

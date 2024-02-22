@@ -16,6 +16,7 @@ let
     fish
     starship
     helix
+    vscode
 
     (with unstable; [
       # rust
