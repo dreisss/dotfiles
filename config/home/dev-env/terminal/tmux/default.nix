@@ -18,6 +18,7 @@
     shell = "${pkgs.fish}/bin/fish";
 
     plugins = with pkgs.tmuxPlugins; [
+      # TODO: add rose pine theme and create plugin
       { plugin = catppuccin; }
     ];
 
