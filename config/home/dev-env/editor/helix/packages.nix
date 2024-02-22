@@ -1,22 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
-let node = pkgs.nodePackages_latest; in
+let node = pkgs.unstable.nodePackages_latest; in
 {
-  home.packages = with pkgs; [
+  home.packages = lib.flatten (with pkgs.unstable; [
     # language servers
     nil # nix
     marksman # markdown
-    pkgs.unstable.emmet-ls
-    node.bash-language-server
-    node.yaml-language-server
-    node.vscode-langservers-extracted # html, css, js, json
-    node.typescript-language-server
-    node.pyright
-    node."@astrojs/language-server"
-    node."@prisma/language-server"
+    emmet-ls
     gopls
     rust-analyzer
     dockerfile-language-server-nodejs
+
+    (with nodePackages_latest; [
+      bash-language-server
+      yaml-language-server
+      vscode-langservers-extracted # html, css, js, json
+      typescript-language-server
+      pyright
+    ])
+    node."@astrojs/language-server"
+    node."@prisma/language-server"
 
     # formatters
     shfmt
@@ -28,5 +31,5 @@ let node = pkgs.nodePackages_latest; in
 
     # other
     node.typescript
-  ];
+  ]);
 }

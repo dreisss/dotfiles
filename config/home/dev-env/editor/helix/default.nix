@@ -73,6 +73,6 @@
       };
     };
 
-    languages = import ./languages.nix { pkgs = pkgs; };
+    languages = import ./languages.nix { inherit pkgs; };
   };
 }
