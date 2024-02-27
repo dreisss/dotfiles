@@ -12,27 +12,6 @@
       args = [ "--stdio" ];
     };
 
-    eslint-lsp = {
-      command = "vscode-eslint-language-server";
-      args = [ "--stdio" ];
-
-      config = {
-        run = "onType";
-        validate = "on";
-        nodePath = "";
-        rulesCustomizations = [ ];
-
-        workingDirectory.mode = "location";
-        problems.shortenToSingleLine = false;
-        experimental.useFlatConfig = false;
-
-        codeAction = {
-          showDocumentation.enable = true;
-          disableRuleComment = { enable = true; location = "separateLine"; };
-        };
-      };
-    };
-
     biome-lsp = {
       command = "biome";
       args = [ "lsp-proxy" ];
@@ -44,8 +23,8 @@
       config.typescript.tsdk = "${pkgs.typescript}/lib/node_modules/typescript/lib/";
     };
 
-    unocss-lsp = {
-      command = "unocss-language-server";
+    tailwind-lsp = {
+      command = "tailwindcss-language-server";
       args = [ "--stdio" ];
     };
   };
@@ -140,8 +119,7 @@
     {
       name = "astro";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
-      language-servers = [ "eslint-lsp" "emmet-lsp" "astro-lsp" ];
+      language-servers = [ "astro-lsp" "tailwind-lsp" ];
     }
 
     # DB

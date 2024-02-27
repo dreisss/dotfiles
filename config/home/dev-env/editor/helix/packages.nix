@@ -10,6 +10,7 @@ let node = pkgs.unstable.nodePackages_latest; in
     gopls
     rust-analyzer
     dockerfile-language-server-nodejs
+    tailwindcss-language-server
 
     (with nodePackages_latest; [
       bash-language-server
