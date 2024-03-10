@@ -113,12 +113,22 @@
         "biome-lsp"
       ];
     }
+    {
+      name = "tsx";
+      auto-format = true;
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.tsx" ]; };
+      language-servers = [
+        { name = "typescript-language-server"; except-features = [ "format" ]; }
+        "biome-lsp"
+      ];
+    }
 
 
     # Web Frameworks
     {
       name = "astro";
       auto-format = true;
+      formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
       language-servers = [ "astro-lsp" "tailwind-lsp" ];
     }
 

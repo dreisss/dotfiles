@@ -3,6 +3,7 @@
 let
   general-use = with pkgs; [
     firefox
+    google-chrome
     discord
     obsidian
     gimp
