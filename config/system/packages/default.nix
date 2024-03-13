@@ -20,6 +20,8 @@ let
     vscode
 
     (with unstable; [
+      R
+
       # rust
       rustc
       cargo
@@ -41,6 +43,9 @@ let
       (python3.withPackages (ps: with ps; [
         numpy
         pandas
+        polars
+        xlsx2csv
+        matplotlib
       ]))
     ])
   ]);
@@ -55,8 +60,8 @@ let
     delta # diff
     fd # find
     btop # top
-    procs # ps
     du-dust # du
+    procs # ps
     # atuin # history
 
     # common tools

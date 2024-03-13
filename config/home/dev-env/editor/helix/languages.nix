@@ -5,6 +5,7 @@
     python-lsp = {
       command = "pyright-langserver";
       args = [ "--stdio" ];
+      config = { };
     };
 
     emmet-lsp = {
@@ -47,6 +48,16 @@
       formatter.command = "nixpkgs-fmt";
     }
     {
+      name = "rust";
+      auto-format = true;
+    }
+    {
+      name = "dockerfile";
+      auto-format = true;
+    }
+
+    # Data languages
+    {
       name = "yaml";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "yaml" ]; };
@@ -60,10 +71,8 @@
         "biome-lsp"
       ];
     }
-    {
-      name = "rust";
-      auto-format = true;
-    }
+
+    # Data Science
     {
       name = "python";
       auto-format = true;
@@ -71,10 +80,9 @@
       language-servers = [ "python-lsp" ];
     }
     {
-      name = "dockerfile";
+      name = "r";
       auto-format = true;
     }
-
 
     # Web
     {

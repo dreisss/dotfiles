@@ -29,6 +29,7 @@ let node = pkgs.unstable.nodePackages_latest; in
     biome
     rustfmt
     black
+    rPackages.formatR
 
     # other
     node.typescript
