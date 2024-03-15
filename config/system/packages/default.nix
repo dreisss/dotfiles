@@ -20,7 +20,12 @@ let
     vscode
 
     (with unstable; [
-      R
+      (rWrapper.override {
+        packages = with pkgs; [
+          R
+          rPackages.languageserver
+        ];
+      })
 
       # rust
       rustc
