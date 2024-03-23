@@ -21,10 +21,15 @@ let
 
     (with unstable; [
       (rWrapper.override {
-        packages = with pkgs; [
+        packages = lib.flatten (with pkgs; [
           R
-          rPackages.languageserver
-        ];
+
+          (with rPackages; [
+            languageserver
+            readxl
+            lintr
+          ])
+        ]);
       })
 
       # rust
