@@ -93,7 +93,7 @@ let
     nodePackages_latest.live-server
   ];
   other = with pkgs; [
-    openssl_3_1
+    openssl_3_2
     nix-prefetch-github
   ];
 in

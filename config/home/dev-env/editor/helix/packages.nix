@@ -6,6 +6,7 @@ let node = pkgs.unstable.nodePackages_latest; in
     # language servers
     nil # nix
     marksman # markdown
+    bash-language-server
     emmet-ls
     gopls
     rust-analyzer
@@ -13,7 +14,6 @@ let node = pkgs.unstable.nodePackages_latest; in
     tailwindcss-language-server
 
     (with nodePackages_latest; [
-      bash-language-server
       yaml-language-server
       vscode-langservers-extracted # html, css, js, json
       typescript-language-server
