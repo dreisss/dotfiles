@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+rm ~/.dotfiles/deploy
+mkdir ~/.dotfiles/deploy -p
+
+mkdir ~/.dotfiles/deploy/alacritty -p
+mkdir ~/.dotfiles/deploy/tmux -p
+mkdir ~/.dotfiles/deploy/fish -p
+cp ~/.config/alacritty/alacritty.toml ~/.dotfiles/deploy/alacritty/config.toml -f
+cp ~/.config/tmux/tmux.conf ~/.dotfiles/deploy/tmux/tmux.conf -f
+cp ~/.config/fish/config.fish ~/.dotfiles/deploy/fish/config.fish -f
+
+mkdir ~/.dotfiles/deploy/starship -p
+cp ~/.config/starship.toml ~/.dotfiles/deploy/starship/config.toml -f
+
+mkdir ~/.dotfiles/deploy/gh -p
+mkdir ~/.dotfiles/deploy/git -p
+cp ~/.config/gh/config.yml ~/.dotfiles/deploy/gh/config.yml -f
+cp ~/.config/git/config ~/.dotfiles/deploy/git/config -f
+
+mkdir ~/.dotfiles/deploy/helix -p
+cp ~/.config/helix/config.toml ~/.dotfiles/deploy/helix/config.toml -f
+cp ~/.config/helix/languages.toml ~/.dotfiles/deploy/helix/languages.toml -f
+
+git add deploy
+git cs "deploy: deploy dotfiles"
+git subtree push --prefix deploy origin deploy
