@@ -1,0 +1,198 @@
+format = "${custom.container}$directory$git_branch$git_state$git_status$all$cmd_duration$line_break$nix_shell$character"
+[aws]
+symbol = " "
+
+[buf]
+symbol = " "
+
+[bun]
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+format = "[\\[$symbol$version\\] ]($style)"
+style = "red"
+
+[c]
+symbol = " "
+
+[character]
+error_symbol = "[~>](red)"
+success_symbol = "[~>](purple)"
+vimcmd_symbol = "[~>](green)"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[conda]
+symbol = " "
+
+[container]
+disabled = true
+
+[custom.container]
+command = "hostname -s"
+format = "[@$output]($style) "
+style = "red"
+when = "test (hostname -s) != (hostname)"
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " [r]"
+style = "blue"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+symbol = " "
+
+[git_state]
+format = "([$state( $progress_current/$progress_total)]($style)) "
+style = "bright-black"
+
+[git_status]
+conflicted = "​"
+deleted = "​"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed )]($style)"
+modified = "​"
+renamed = "​"
+staged = "​"
+stashed = "≡"
+style = "cyan"
+untracked = "​"
+
+[golang]
+format = "[\\[$symbol$version\\] ]($style)"
+style = "cyan"
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[line_break]
+disabled = true
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+format = "[\\[$symbol:$name\\]]($style) "
+symbol = "nix"
+
+[nodejs]
+detect_extensions = []
+detect_files = ["package-lock.json", "pnpm-lock.json"]
+detect_folders = []
+format = "[\\[$symbol$version\\] ]($style)"
+style = "green"
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+RedHatEnterprise = " "
+Redhat = " "
+Redox = "󰀘 "
+SUSE = " "
+Solus = "󰠳 "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+openSUSE = " "
+
+[package]
+format = "[\\[$symbol$version\\] ]($style)"
+style = "208"
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = "🪺 "
+
+[python]
+format = "[\\[$symbol$pyenv_prefix$version($virtualenv)\\] ]($style)"
+style = "yellow"
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+format = "[\\[$symbol$version\\] ]($style)"
+style = "red"
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
