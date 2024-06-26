@@ -1,0 +1,67 @@
+[alias]
+	ac = "commit --amend --no-edit"
+	ca = "commit --amend"
+	cb = "checkout -b"
+	cd = "checkout dev"
+	cm = "checkout main"
+	co = "checkout"
+	cs = "commit -m"
+	db = "branch -d"
+	first = "push origin main"
+	gl = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=25 --graph"
+	graph = "log --graph"
+	lb = "branch"
+	lg = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=10"
+	ll = "log --oneline"
+	pa = "push && push --tags"
+	pf = "push -f"
+	pu = "push"
+	ra = "rebase --abort"
+	rc = "rebase --continue"
+	ri = "rebase -i"
+	rt = "restore"
+	sl = "show --name-only"
+	st = "status -sb"
+	td = "rebase --edit-todo"
+	uc = "reset --soft HEAD~1"
+	ud = "checkout --"
+	uf = "reset HEAD --"
+
+[core]
+	autocrlf = false
+	editor = "hx"
+	fsmonitor = true
+	pager = "delta"
+
+[credential]
+	helper = "store"
+
+[credential "https://gist.github.com"]
+	helper = "/nix/store/aa0kd17cjag4j4jfjdyiq1f1rf9nk2gm-gh-2.49.2/bin/gh auth git-credential"
+
+[credential "https://github.com"]
+	helper = "/nix/store/aa0kd17cjag4j4jfjdyiq1f1rf9nk2gm-gh-2.49.2/bin/gh auth git-credential"
+
+[delta]
+	light = false
+	navigate = true
+
+[diff]
+	colorMoved = "default"
+
+[http]
+	lowSpeedTime = 600
+	postBuffer = 500000000
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	diffFilter = "delta --color-only"
+
+[merge]
+	conflictStyle = "diff3"
+
+[user]
+	email = "dreisss.dev@gmail.com"
+	name = "Davi Reis"
