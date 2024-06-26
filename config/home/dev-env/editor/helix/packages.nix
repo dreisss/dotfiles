@@ -18,6 +18,7 @@ let node = pkgs.unstable.nodePackages_latest; in
       vscode-langservers-extracted # html, css, js, json
       typescript-language-server
       pyright
+      svelte-language-server
     ])
     node."@astrojs/language-server"
     node."@prisma/language-server"
