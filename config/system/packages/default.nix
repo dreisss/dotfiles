@@ -84,6 +84,7 @@ let
     httpie
     jq
     xclip
+    xsel
     entr
     tokei
     hyperfine

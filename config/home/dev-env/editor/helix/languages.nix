@@ -134,10 +134,8 @@
       name = "svelte";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "svelte" ]; };
-      language-servers = [
-        "svelteserver"
-        "tailwind-lsp"
-      ];
+      block-comment-tokens = { start = "<!--"; end = "-->"; };
+      language-servers = [ "svelteserver" "tailwind-lsp" ];
     }
 
     # Web Frameworks
