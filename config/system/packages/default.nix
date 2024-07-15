@@ -7,6 +7,7 @@ let
     discord
     obsidian
     gimp
+    vlc
     # obs-studio # casual use
     # tiled # casual use
     # libresprite # casual use 
@@ -69,6 +70,7 @@ let
     ripgrep # grep
     delta # diff
     fd # find
+    sd # sed
     btop # top
     du-dust # du
     procs # ps

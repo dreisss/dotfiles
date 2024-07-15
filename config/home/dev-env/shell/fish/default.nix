@@ -20,6 +20,7 @@
       grep = "rg";
       diff = "delta";
       find = "fd";
+      sed = "sd";
       top = "btop";
       ps = "procs";
       du = "dust";
