@@ -130,13 +130,6 @@
         "biome-lsp"
       ];
     }
-    {
-      name = "svelte";
-      auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "svelte" ]; };
-      block-comment-tokens = { start = "<!--"; end = "-->"; };
-      language-servers = [ "svelteserver" "tailwind-lsp" ];
-    }
 
     # Web Frameworks
     {
