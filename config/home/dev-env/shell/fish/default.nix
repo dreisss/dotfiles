@@ -30,17 +30,7 @@
     shellInit = ''
       set fish_greeting
       fish_config theme choose "Rosé Pine Moon"
-      zoxide init fish | source
-      
-      set -e PRISMA_QUERY_ENGINE_BINARY
-      set -e PRISMA_INTROSPECTION_ENGINE_BINARY
-      set -e PRISMA_QUERY_ENGINE_LIBRARY
-      set -e PRISMA_FMT_BINARY
-
-      set -xU PRISMA_QUERY_ENGINE_BINARY "${pkgs.unstable.prisma-engines}/bin/query-engine"
-      set -xU PRISMA_INTROSPECTION_ENGINE_BINARY "${pkgs.unstable.prisma-engines}/bin/introspection-engine"
-      set -xU PRISMA_QUERY_ENGINE_LIBRARY "${pkgs.unstable.prisma-engines}/lib/libquery_engine.node"
-      set -xU PRISMA_FMT_BINARY "${pkgs.unstable.prisma-engines}/bin/prisma-fmt"
+      zoxide init fish | source    
     '';
   };
 

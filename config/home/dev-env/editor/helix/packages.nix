@@ -21,7 +21,6 @@ let node = pkgs.unstable.nodePackages_latest; in
       svelte-language-server
     ])
     node."@astrojs/language-server"
-    node."@prisma/language-server"
 
     # formatters
     shfmt

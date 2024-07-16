@@ -145,11 +145,5 @@
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
       language-servers = [ "astro-lsp" "tailwind-lsp" ];
     }
-
-    # DB
-    {
-      name = "prisma";
-      auto-format = true;
-    }
   ];
 }

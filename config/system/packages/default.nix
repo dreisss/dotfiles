@@ -47,9 +47,6 @@ let
       nodePackages_latest.pnpm
       bun
 
-      nodePackages_latest.prisma
-      prisma-engines
-
       # python
       (python3.withPackages (ps: with ps; [
         numpy
