@@ -79,10 +79,6 @@
       formatter = { command = "black"; args = [ "--quiet" "-" ]; };
       language-servers = [ "python-lsp" ];
     }
-    {
-      name = "r";
-      auto-format = true;
-    }
 
     # Web
     {

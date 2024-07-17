@@ -21,18 +21,6 @@ let
     vscode
 
     (with unstable; [
-      (rWrapper.override {
-        packages = lib.flatten (with pkgs; [
-          R
-
-          (with rPackages; [
-            languageserver
-            readxl
-            lintr
-          ])
-        ]);
-      })
-
       # rust
       rustc
       cargo
