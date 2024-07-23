@@ -25,5 +25,8 @@ cp ~/.config/helix/languages.toml ~/.dotfiles/helix/languages.toml -f
 ls -R >index.html
 
 git add .
-git cs "deploy: deploy dotfiles ($(date))"
+git commit -m "deploy: deploy dotfiles ($(date))"
 git push -u origin deploy
+
+git checkout main
+git stash apply 0
