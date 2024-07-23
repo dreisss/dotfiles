@@ -13,6 +13,12 @@
       args = [ "--stdio" ];
     };
 
+    typescript-lsp = {
+      command = "typescript-language-server";
+      args = [ "--stdio" ];
+      config.tsserver.path = "${pkgs.typescript}/lib/node_modules/typescript/lib/";
+    };
+
     biome-lsp = {
       command = "biome";
       args = [ "lsp-proxy" ];
@@ -103,28 +109,19 @@
       name = "javascript";
       auto-format = true;
       formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
-      language-servers = [
-        { name = "typescript-language-server"; except-features = [ "format" ]; }
-        "biome-lsp"
-      ];
+      language-servers = [ "typescript-lsp" "biome-lsp" ];
     }
     {
       name = "typescript";
       auto-format = true;
       formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
-      language-servers = [
-        { name = "typescript-language-server"; except-features = [ "format" ]; }
-        "biome-lsp"
-      ];
+      language-servers = [ "typescript-lsp" "biome-lsp" ];
     }
     {
       name = "tsx";
       auto-format = true;
       formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.tsx" ]; };
-      language-servers = [
-        { name = "typescript-language-server"; except-features = [ "format" ]; }
-        "biome-lsp"
-      ];
+      language-servers = [ "typescript-lsp" "biome-lsp" ];
     }
 
     # Web Frameworks
