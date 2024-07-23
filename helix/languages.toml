@@ -57,10 +57,6 @@ command = "black"
 
 [[language]]
 auto-format = true
-name = "r"
-
-[[language]]
-auto-format = true
 language-servers = ["emmet-lsp", "vscode-html-language-server"]
 name = "html"
 
@@ -115,15 +111,6 @@ command = "biome"
 
 [[language]]
 auto-format = true
-language-servers = ["svelteserver", "tailwind-lsp"]
-name = "svelte"
-
-[language.formatter]
-args = ["--parser", "svelte"]
-command = "prettier"
-
-[[language]]
-auto-format = true
 language-servers = ["astro-lsp", "tailwind-lsp"]
 name = "astro"
 
@@ -131,17 +118,13 @@ name = "astro"
 args = ["--parser", "astro"]
 command = "prettier"
 
-[[language]]
-auto-format = true
-name = "prisma"
-
 [language-server]
 [language-server.astro-lsp]
 args = ["--stdio"]
 command = "astro-ls"
 
 [language-server.astro-lsp.config.typescript]
-tsdk = "/nix/store/5vp84z1qx1nv65vq99xgj9my9psqg5zm-typescript-5.4.5/lib/node_modules/typescript/lib/"
+tsdk = "/nix/store/qb7qbjdcfsjbwbzmhh0y98fiiadlql1a-typescript-5.4.5/lib/node_modules/typescript/lib/"
 
 [language-server.biome-lsp]
 args = ["lsp-proxy"]

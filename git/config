@@ -37,10 +37,10 @@
 	helper = "store"
 
 [credential "https://gist.github.com"]
-	helper = "/nix/store/aa0kd17cjag4j4jfjdyiq1f1rf9nk2gm-gh-2.49.2/bin/gh auth git-credential"
+	helper = "/nix/store/n5n5ksn2pykk9a2y50zsv0znw0jly2mc-gh-2.49.2/bin/gh auth git-credential"
 
 [credential "https://github.com"]
-	helper = "/nix/store/aa0kd17cjag4j4jfjdyiq1f1rf9nk2gm-gh-2.49.2/bin/gh auth git-credential"
+	helper = "/nix/store/n5n5ksn2pykk9a2y50zsv0znw0jly2mc-gh-2.49.2/bin/gh auth git-credential"
 
 [delta]
 	light = false

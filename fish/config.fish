@@ -5,21 +5,11 @@
 set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
 
-source /nix/store/yj718yniagg1b6fn03bavlpwcrgl6c8n-hm-session-vars.fish
+source /nix/store/hf2jws9gbi7cynkh1mbyhy21ad2f63cg-hm-session-vars.fish
 
 set fish_greeting
 fish_config theme choose "Rosé Pine Moon"
 zoxide init fish | source
-
-set -e PRISMA_QUERY_ENGINE_BINARY
-set -e PRISMA_INTROSPECTION_ENGINE_BINARY
-set -e PRISMA_QUERY_ENGINE_LIBRARY
-set -e PRISMA_FMT_BINARY
-
-set -xU PRISMA_QUERY_ENGINE_BINARY "/nix/store/7zh2yrsx0k4b4ycvlx1y0fwd15yl86vk-prisma-engines-5.12.1/bin/query-engine"
-set -xU PRISMA_INTROSPECTION_ENGINE_BINARY "/nix/store/7zh2yrsx0k4b4ycvlx1y0fwd15yl86vk-prisma-engines-5.12.1/bin/introspection-engine"
-set -xU PRISMA_QUERY_ENGINE_LIBRARY "/nix/store/7zh2yrsx0k4b4ycvlx1y0fwd15yl86vk-prisma-engines-5.12.1/lib/libquery_engine.node"
-set -xU PRISMA_FMT_BINARY "/nix/store/7zh2yrsx0k4b4ycvlx1y0fwd15yl86vk-prisma-engines-5.12.1/bin/prisma-fmt"
 
 
 status is-login; and begin
@@ -51,6 +41,7 @@ status is-interactive; and begin
     alias lta 'eza_ -Ta --git-ignore -I .git'
     alias ps procs
     alias rm rip
+    alias sed sd
     alias top btop
 
     # Interactive shell initialisation
@@ -69,7 +60,7 @@ status is-interactive; and begin
         set fish_complete_path $prev "/home/dreisss/.local/share/fish/home-manager_generated_completions" $post
     end
 
-    /nix/store/81cqmrlp1x77139nsx0s5jjqk6jxxxxw-direnv-2.34.0/bin/direnv hook fish | source
+    /nix/store/s6w85517i1a8habjim1725jmk7vdqxmi-direnv-2.34.0/bin/direnv hook fish | source
 
 
 end
