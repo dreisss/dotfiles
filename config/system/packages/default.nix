@@ -8,9 +8,11 @@ let
     obsidian
     gimp
     vlc
-    # obs-studio # casual use
-    # tiled # casual use
-    # libresprite # casual use 
+
+    # ===> casual use
+    # obs-studio
+    # tiled
+    # libresprite
   ];
   development-environment = lib.flatten (with pkgs; [
     alacritty
@@ -39,7 +41,7 @@ let
       (python3.withPackages (ps: with ps; [
         numpy
         pandas
-        polars
+        # polars
         xlsx2csv
         matplotlib
       ]))
