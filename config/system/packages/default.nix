@@ -85,6 +85,7 @@ let
   other = with pkgs; [
     openssl_3_2
     nix-prefetch-github
+    prefetch-npm-deps
   ];
 in
 {
