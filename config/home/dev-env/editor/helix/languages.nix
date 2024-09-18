@@ -96,13 +96,13 @@
     {
       name = "css";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "css" "--plugin" "${pkgs.custom.prettier-plugin-css-order}/src/main.mjs" ]; };
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
       language-servers = [ "vscode-css-language-server" ];
     }
     {
       name = "scss";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "scss" ]; };
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
       language-servers = [ "vscode-css-language-server" ];
     }
     {
