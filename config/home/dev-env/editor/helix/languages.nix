@@ -129,7 +129,7 @@
       name = "astro";
       auto-format = true;
       formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
-      language-servers = [ "astro-lsp" "tailwind-lsp" ];
+      language-servers = [ "astro-lsp" "biome-lsp" "tailwind-lsp" ];
     }
   ];
 }
