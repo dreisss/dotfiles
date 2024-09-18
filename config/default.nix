@@ -15,6 +15,7 @@ let nixos-version = builtins.readFile ../nixos-version; in
         zed-mono = import ./custom-packages/fonts/zed-mono.nix;
         alacritty-rose-pine = import ./custom-packages/alacritty/rose-pine.nix;
         fishPlugins.rose-pine = import ./custom-packages/fish/rose-pine.nix;
+        prettier-plugin-css-order = import ./custom-packages/other/prettier-plugin-css-order.nix;
       };
     })
   ];

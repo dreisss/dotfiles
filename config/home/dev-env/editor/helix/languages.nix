@@ -96,7 +96,7 @@
     {
       name = "css";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "css" ]; };
+      formatter = { command = "prettier"; args = [ "--parser" "css" "--plugin" "${pkgs.custom.prettier-plugin-css-order}/src/main.mjs" ]; };
       language-servers = [ "vscode-css-language-server" ];
     }
     {
