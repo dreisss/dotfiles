@@ -18,7 +18,7 @@
         };
       };
 
-      shell = {
+      terminal.shell = {
         program = "sh";
         args = [ "-l" "-c" "tmux attach" ];
       };

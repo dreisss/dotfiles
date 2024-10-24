@@ -16,7 +16,7 @@
         color-modes = true;
         cursorline = true;
         scrolloff = 15;
-        rulers = [ 80 120 ];
+        rulers = [ 80 120 160 ];
 
         file-picker.hidden = false;
         indent-guides.render = true;
