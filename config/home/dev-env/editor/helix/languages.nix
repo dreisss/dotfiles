@@ -34,6 +34,13 @@
       command = "tailwindcss-language-server";
       args = [ "--stdio" ];
     };
+
+    # TODO: change to biome when css linter is finished https://github.com/biomejs/biome/issues/2511
+    stylelint-lsp = {
+      command = "stylelint-lsp";
+      args = [ "--stdio" ];
+      config = { };
+    };
   };
 
   language = [
@@ -96,8 +103,8 @@
     {
       name = "css";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
-      language-servers = [ "vscode-css-language-server" ];
+      formatter = { command = "stylelint"; args = [ "--stdin" "--fix" ]; };
+      language-servers = [ "vscode-css-language-server" "stylelint-lsp" ];
     }
     {
       name = "scss";
