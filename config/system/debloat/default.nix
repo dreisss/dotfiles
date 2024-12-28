@@ -11,15 +11,12 @@
     gnome-connections
     pantheon.epiphany
     simple-scan
-
-    (with gnome; [
-      gnome-weather
-      gnome-contacts
-      gnome-maps
-      gnome-logs
-      yelp
-      geary
-      seahorse
-    ])
+    gnome-weather
+    gnome-contacts
+    gnome-maps
+    gnome-logs
+    yelp
+    geary
+    seahorse
   ]);
 }

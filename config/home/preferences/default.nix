@@ -91,7 +91,6 @@
     user-themes
     dash-to-dock
     blur-my-shell
-    rounded-window-corners
     logo-menu
   ];
 }

@@ -1,11 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
-let nixos-version = builtins.readFile ../nixos-version; in
+let nixos-version = lib.strings.trim (builtins.readFile ../nixos-version); in
 {
   imports = [
     (import ./home { inherit nixos-version; })
     (import ./system { inherit pkgs nixos-version; })
   ];
+  
+  nixpkgs.config.allowUnfree = true;
 
   nixpkgs.overlays = [
     (self: super: {
