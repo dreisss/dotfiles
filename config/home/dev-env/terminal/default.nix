@@ -1,8 +1,0 @@
-{ ... }:
-
-{
-  imports = [
-    ./alacritty
-    ./tmux
-  ];
-}

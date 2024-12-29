@@ -6,17 +6,18 @@
 
   environment.gnome.excludePackages = lib.flatten (with pkgs; [
     # gnome-console
-    gnome-tour
-    gnome-text-editor
     gnome-connections
+    gnome-contacts
+    gnome-logs
+    gnome-maps
+    gnome-text-editor
+    gnome-tour
+    gnome-weather
+
     pantheon.epiphany
     simple-scan
-    gnome-weather
-    gnome-contacts
-    gnome-maps
-    gnome-logs
-    yelp
     geary
     seahorse
+    yelp
   ]);
 }

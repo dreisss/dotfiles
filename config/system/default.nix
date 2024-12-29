@@ -1,4 +1,4 @@
-{ pkgs, nixos-version, ... }:
+{ pkgs, version, ... }:
 
 {
   imports = [
@@ -9,7 +9,7 @@
   ];
 
   system = {
-    stateVersion = nixos-version;
+    stateVersion = version;
     autoUpgrade.enable = true;
   };
 
@@ -26,8 +26,7 @@
     };
   };
 
-  programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
+  # users.defaultUserShell = pkgs.nushell;
 
   time.hardwareClockInLocalTime = true;
 }
