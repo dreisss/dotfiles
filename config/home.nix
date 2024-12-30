@@ -1,5 +1,9 @@
-{ pkgs, version, ... }:
+{ lib, ... }:
 
+let
+  file = builtins.readFile;
+  trim = lib.strings.trim;
+  version = trim (file ../nixos-version); in
 {
   imports = [ <home-manager/nixos> ];
 
@@ -13,8 +17,8 @@
       };
 
       imports = [
-        (import ./preferences { inherit pkgs; })
-        (import ./dev {})
+        ./preferences
+        ./dev
       ];
     };
   };

@@ -1,5 +1,9 @@
-{ pkgs, version, ... }:
+{ pkgs, lib, ... }:
 
+let
+  file = builtins.readFile;
+  trim = lib.strings.trim;
+  version = trim (file ../../nixos-version); in
 {
   imports = [
     ./debloat

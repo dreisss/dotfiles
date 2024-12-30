@@ -26,7 +26,7 @@
     gtk4.extraConfig.Settings = ''gtk-application-prefer-dark-theme=1'';
   };
 
-  dconf.settings = import ./gsettings.nix { };
+  dconf.settings = import ./gsettings.nix;
 
   home.packages = with pkgs.gnomeExtensions; [
     user-themes

@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   "org/gnome/shell/extensions/user-theme".name = "Orchis-Dark";
 
