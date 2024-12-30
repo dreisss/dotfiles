@@ -1,68 +1,72 @@
+{ ... }:
+
 {
-  enable = true;
+  programs.git = {
+    enable = true;
 
-  userName = "Davi Reis";
-  userEmail = "dreisss.dev@gmail.com";
+    userName = "Davi Reis";
+    userEmail = "dreisss.dev@gmail.com";
 
-  aliases = {
-    st = "status -sb";
-    sl = "show --name-only";
+    aliases = {
+      st = "status -sb";
+      sl = "show --name-only";
 
-    ll = "log --oneline";
-    lg = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=10";
-    gl = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=25 --graph";
-    graph = "log --graph";
+      ll = "log --oneline";
+      lg = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=10";
+      gl = "log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=25 --graph";
+      graph = "log --graph";
 
-    cs = "commit -m";
-    ca = "commit --amend";
-    ac = "commit --amend --no-edit";
+      cs = "commit -m";
+      ca = "commit --amend";
+      ac = "commit --amend --no-edit";
 
-    co = "checkout";
-    cm = "checkout main";
-    cd = "checkout dev";
-    cb = "checkout -b";
-    db = "branch -d";
-    lb = "branch";
+      co = "checkout";
+      cm = "checkout main";
+      cd = "checkout dev";
+      cb = "checkout -b";
+      db = "branch -d";
+      lb = "branch";
 
-    first = "push origin main";
-    pu = "push";
-    pf = "push -f";
-    pa = "push && push --tags";
+      first = "push origin main";
+      pu = "push";
+      pf = "push -f";
+      pa = "push && push --tags";
 
-    ud = "checkout --";
-    uf = "reset HEAD --";
-    uc = "reset --soft HEAD~1";
+      ud = "checkout --";
+      uf = "reset HEAD --";
+      uc = "reset --soft HEAD~1";
 
-    ri = "rebase -i";
-    ra = "rebase --abort";
-    rc = "rebase --continue";
-    td = "rebase --edit-todo";
+      ri = "rebase -i";
+      ra = "rebase --abort";
+      rc = "rebase --continue";
+      td = "rebase --edit-todo";
 
-    rt = "restore";
-  };
-
-  extraConfig = {
-    core = {
-      fsmonitor = true;
-      autocrlf = false;
-      editor = "hx";
-      pager = "delta";
+      rt = "restore";
     };
 
-    delta = {
-      navigate = true;
-      light = false;
-    };
+    extraConfig = {
+      core = {
+        fsmonitor = true;
+        autocrlf = false;
+        editor = "hx";
+        pager = "delta";
+      };
 
-    init.defaultBranch = "main";
-    credential.helper = "store";
-    interactive.diffFilter = "delta --color-only";
-    merge.conflictStyle = "diff3";
-    diff.colorMoved = "default";
+      delta = {
+        navigate = true;
+        light = false;
+      };
 
-    http = {
-      postBuffer = 500000000;
-      lowSpeedTime = 600;
+      init.defaultBranch = "main";
+      credential.helper = "store";
+      interactive.diffFilter = "delta --color-only";
+      merge.conflictStyle = "diff3";
+      diff.colorMoved = "default";
+
+      http = {
+        postBuffer = 500000000;
+        lowSpeedTime = 600;
+      };
     };
   };
 }

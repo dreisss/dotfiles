@@ -1,6 +1,10 @@
 { ... }:
 
 {
-  programs.git = import ./othertools/git.nix;
-  programs.gh = import ./othertools/gh.nix;
+  imports = [
+    ./editor/helix.nix
+    ./editor/packages.nix
+    ./othertools/git.nix
+    ./othertools/gh.nix
+  ];
 }

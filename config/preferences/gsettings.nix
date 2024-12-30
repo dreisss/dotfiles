@@ -48,5 +48,5 @@
     "dash-to-dock@micxgx.gmail.com"
     "blur-my-shell@aunetx"
     "logomenu@aryan_k"
-  ];  
+  ];
 }
