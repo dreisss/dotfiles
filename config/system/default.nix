@@ -3,10 +3,14 @@
 {
   imports = [
     ./debloat
-    ./packages
     ./virtualization
     ./fonts
   ];
+
+  services.xserver.xkb = {
+    layout = "us,br";
+    options = "compose:ins,";
+  };
 
   system = {
     stateVersion = version;
@@ -25,8 +29,6 @@
       options = "--delete-older-than 7d";
     };
   };
-
-  # users.defaultUserShell = pkgs.nushell;
 
   time.hardwareClockInLocalTime = true;
 }
