@@ -44,11 +44,6 @@
 
           X = [ "extend_line_up" "extend_to_line_bounds" ];
           A-x = [ "extend_to_line_bounds" ];
-
-          space.w = {
-            minus = [ "hsplit" ];
-            "=" = [ "vsplit" ];
-          };
         };
 
         insert = {

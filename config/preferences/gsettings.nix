@@ -21,9 +21,13 @@
   "org/gnome/desktop/wm/keybindings" = {
     show-desktop = [ "<Super>d" ];
     minimize = [ "<Super><Shift>j" ];
-
     unmaximize = [ "<Super>Down" "<Super>j" ];
     maximize = [ "<Super>Up" "<Super>k" ];
+
+    switch-to-workspace-right = [ "<Super><Ctrl>Right" "<Super><Ctrl>l" ];
+    switch-to-workspace-left = [ "<Super><Ctrl>Left" "<Super><Ctrl>h" ];
+    move-to-workspace-right = [ "<Super><Ctrl><Alt>Right" "<Super><Ctrl><Alt>l" ];
+    move-to-workspace-left = [ "<Super><Ctrl><Alt>Left" "<Super><Ctrl><Alt>h" ];
   };
 
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
@@ -31,11 +35,11 @@
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
   ];
 
-  # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-  #   name = "Terminal";
-  #   command = "alacritty";
-  #   binding = "<Super>t";
-  # };
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+    name = "Terminal";
+    command = "ghostty";
+    binding = "<Super>t";
+  };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
     name = "Explorer";

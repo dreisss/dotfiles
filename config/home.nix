@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ pkgs, lib, ... }:
 
 let
   file = builtins.readFile;
@@ -8,13 +8,23 @@ in
 {
   imports = [ <home-manager/nixos> ];
 
+  programs.fish.enable = true;
+  users.defaultUserShell = pkgs.fish;
+
+  environment.variables = {
+    EDITOR = "${pkgs.helix}/bin/hx";
+  };
+
   home-manager = {
     useGlobalPkgs = true;
 
     users.dreisss = { ... }: {
       home = {
         stateVersion = version;
-        sessionVariables.GTK_THEME = "Orchis-Dark";
+        sessionVariables = {
+          EDITOR = "${pkgs.helix}/bin/hx";
+          GTK_THEME = "Orchis-Dark";
+        };
       };
 
       imports = [
