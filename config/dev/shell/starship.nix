@@ -5,7 +5,47 @@
     enable = true;
 
     settings = {
-      format = "$all";
+      line_break.disabled = true;
+
+      format = ''$nix_shell([\(](bright-black)$git_branch$git_status[\)](bright-black) )$directory$character'';
+
+      character = {
+        success_symbol = "[>](bold cyan)";
+        error_symbol = "[>](bold red)";
+      };
+
+      directory = {
+        format = "[$read_only]($read_only_style)[$path]($style)";
+        style = "purple";
+      };
+
+      git_status = {
+        format = "[(*$conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)";
+        conflicted = "​";
+        untracked = "​";
+        modified = "​";
+        staged = "​";
+        renamed = "​";
+        deleted = "​";
+        stashed = "≡";
+      };
+
+      git_branch = {
+        format = "[$branch(:$remote_branch)]($style)";
+        style = "bright-black";
+      };
+
+      nix_shell.format = ''[\[$symbol:$name\]]($style) '';
+
+      right_format = "$cmd_duration$all";
+
+      cmd_duration = {
+        format = "[$duration](218)";
+      };
+
+      battery = {
+        format = " [$symbol$percentage]($style)";
+      };
 
       # ----------------
       aws.symbol = " ";
@@ -14,7 +54,7 @@
       conda.symbol = " ";
       dart.symbol = " ";
       # directory.read_only = " 󰌾";
-      directory.read_only = " [r]";
+      directory.read_only = "[r] ";
       docker_context.symbol = " ";
       elixir.symbol = " ";
       elm.symbol = " ";
@@ -32,8 +72,8 @@
       memory_usage.symbol = "󰍛 ";
       meson.symbol = "󰔷 ";
       nim.symbol = "󰆥 ";
-      # nix_shell.symbol = " ";
-      nix_shell.symbol = "nix";
+      nix_shell.symbol = " ";
+      # nix_shell.symbol = "nix";
       nodejs.symbol = " ";
       os.symbols = {
         Alpaquita = " ";

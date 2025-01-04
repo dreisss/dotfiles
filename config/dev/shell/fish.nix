@@ -28,11 +28,18 @@
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
       clean = "sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot";
+      temp = "nix-shell --run fish -p";
     };
 
     shellInit = ''
       set fish_greeting
       zoxide init fish | source    
+
+      # fix cursor on exit helix
+      function hx
+        command hx $argv
+        printf '\033[0 q'
+      end
     '';
   };
 }

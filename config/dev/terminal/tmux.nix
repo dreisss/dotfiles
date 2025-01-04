@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.tmux = {
+  programs.tmux = rec {
     enable = true;
 
     newSession = true;
@@ -17,31 +17,31 @@
     terminal = "ghostty";
     shell = "${pkgs.fish}/bin/fish";
 
-    plugins = with pkgs.tmuxPlugins; [
-      { plugin = tokyo-night-tmux; }
+    plugins = [
+      { plugin = (builtins.getFlake "github:niksingh710/minimal-tmux-status").packages.${pkgs.system}.default; }
     ];
 
     sensibleOnTop = false;
+
     extraConfig = ''
       # general
-      # set -ag terminal-overrides ",xterm*:Tc,xterm*:Se=\e[0 q" # fix color and cursor
-
+      set -ag terminal-overrides ",xterm*:Tc,xterm*:Se=\e[0 q" # fix color and cursor
+      set -g renumber-windows on
       set -g mouse on
-
-      set-option -g renumber-windows on
-
       set -g repeat-time 10
       set -g focus-events on
 
       # keybinds
       bind q kill-pane
       bind w select-pane -t :.+ 
-      
-      bind = split-window -h -c "#{pane_current_path}"
-      bind - split-window -v -c "#{pane_current_path}"
+      bind Space set-option status
 
       bind v split-window -h -c "#{pane_current_path}"
       bind s split-window -v -c "#{pane_current_path}"
+
+      # theme
+      set -g @minimal-tmux-indicator-str " "
+      run-shell ${(builtins.elemAt plugins 0).plugin}/share/tmux-plugins/minimal-tmux-status/minimal.tmux
     '';
   };
 }

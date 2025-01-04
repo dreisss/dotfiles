@@ -30,6 +30,8 @@
     move-to-workspace-left = [ "<Super><Ctrl><Alt>Left" "<Super><Ctrl><Alt>h" ];
   };
 
+  "org/gnome/shell/keybindings".show-screenshot-ui = [ "<Super><Shift>s" ];
+
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
