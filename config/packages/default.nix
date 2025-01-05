@@ -1,7 +1,9 @@
 { pkgs, lib, ... }:
 
 with pkgs; let
-  general = [ firefox ];
+  general = [
+    (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
+  ];
   dev = [
     unstable.ghostty
     helix
@@ -20,6 +22,7 @@ with pkgs; let
     btop # top
     du-dust # du
     procs # ps
+    tlrc # man
 
     # common tools
     git
@@ -36,6 +39,7 @@ with pkgs; let
     tokei
     hyperfine
     grex
+    fzf
     neofetch
     license-generator
     nodePackages_latest.live-server
