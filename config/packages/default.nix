@@ -6,7 +6,32 @@ with pkgs; let
   ];
   dev = [
     unstable.ghostty
+    tmux
+    fish
+    starship
     helix
+
+    (with unstable; [
+      # rust
+      rustc
+      cargo
+      clippy
+      gcc
+      # go
+      go_1_22
+      # js/ts
+      nodejs_20
+      nodePackages_latest.pnpm
+      bun
+      # python
+      (python3.withPackages (ps: with ps; [
+        numpy
+        pandas
+        # polars
+        xlsx2csv
+        matplotlib
+      ]))
+    ])
   ];
   cli-tools = [
     # rust replacements

@@ -27,7 +27,7 @@
       # general
       set -ag terminal-overrides ",xterm*:Tc,xterm*:Se=\e[0 q" # fix color and cursor
       set -g renumber-windows on
-      set -g mouse on
+      # set -g mouse on
       set -g repeat-time 10
       set -g focus-events on
 
