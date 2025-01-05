@@ -5,18 +5,32 @@
     enable = true;
 
     settings = {
+      format = ''$nix_shell([\(](bright-black)$git_branch$git_status[\)](bright-black) )($package )$directory$character'';
+      right_format = "$cmd_duration$all";
       line_break.disabled = true;
 
-      format = ''$nix_shell([\(](bright-black)$git_branch$git_status[\)](bright-black) )$directory$character'';
+      battery.format = " [$symbol$percentage]($style)";
+      cmd_duration.format = "[$duration](218)";
+      directory.format = "[$read_only]($read_only_style)[$path](purple)";
+      git_branch.format = "[$branch(:$remote_branch)](bright-black)";
+      nix_shell.format = ''[\[$symbol:$name\]](blue) '';
+      package.format = "[$version](yellow)";
+
+      bun = {
+        format = " [\\[bun $version\\]](red)";
+        detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
+      };
+
+      nodejs = {
+        format = "[\\[node $version\\] ]($green)";
+        detect_extensions = [ ];
+        detect_files = [ "package-lock.json" "pnpm-lock.json" ];
+        detect_folders = [ ];
+      };
 
       character = {
         success_symbol = "[>](bold cyan)";
         error_symbol = "[>](bold red)";
-      };
-
-      directory = {
-        format = "[$read_only]($read_only_style)[$path]($style)";
-        style = "purple";
       };
 
       git_status = {
@@ -28,23 +42,6 @@
         renamed = "​";
         deleted = "​";
         stashed = "≡";
-      };
-
-      git_branch = {
-        format = "[$branch(:$remote_branch)]($style)";
-        style = "bright-black";
-      };
-
-      nix_shell.format = ''[\[$symbol:$name\]]($style) '';
-
-      right_format = "$cmd_duration$all";
-
-      cmd_duration = {
-        format = "[$duration](218)";
-      };
-
-      battery = {
-        format = " [$symbol$percentage]($style)";
       };
 
       # ----------------
