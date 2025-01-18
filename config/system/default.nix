@@ -12,6 +12,8 @@ in
     ./fonts
   ];
 
+  console.keyMap = "br-abnt2";
+
   services.xserver.xkb = {
     layout = "us,br";
     options = "compose:ins,";

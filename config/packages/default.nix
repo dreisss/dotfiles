@@ -17,12 +17,15 @@ with pkgs; let
       cargo
       clippy
       gcc
+
       # go
       go_1_22
+
       # js/ts
       nodejs_20
       nodePackages_latest.pnpm
       bun
+
       # python
       (python3.withPackages (ps: with ps; [
         numpy
@@ -67,7 +70,7 @@ with pkgs; let
     fzf
     neofetch
     license-generator
-    nodePackages_latest.live-server
+    live-server
   ];
 in
 {
