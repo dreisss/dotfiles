@@ -25,11 +25,13 @@
       ps = "procs";
       du = "dust";
       man = "tlrc";
+      see = "viu";
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
       clean = "sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot";
       temp = "nix-shell --run fish -p";
+      dev = "nix-shell";
     };
 
     shellInit = ''

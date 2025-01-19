@@ -51,6 +51,7 @@ with pkgs; let
     du-dust # du
     procs # ps
     tlrc # man
+    viu # see images in terminal
 
     # common tools
     git

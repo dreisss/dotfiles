@@ -133,7 +133,7 @@
       name = "tsx";
       auto-format = true;
       formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.tsx" ]; };
-      language-servers = [ "typescript-lsp" "biome-lsp" ];
+      language-servers = [ "typescript-lsp" "biome-lsp" "emmet-lsp" "tailwind-lsp" ];
     }
 
     # Web Frameworks
