@@ -26,8 +26,8 @@
 
     switch-to-workspace-right = [ "<Super><Ctrl>Right" "<Super><Ctrl>l" ];
     switch-to-workspace-left = [ "<Super><Ctrl>Left" "<Super><Ctrl>h" ];
-    move-to-workspace-right = [ "<Super><Ctrl><Alt>Right" "<Super><Ctrl><Alt>l" ];
-    move-to-workspace-left = [ "<Super><Ctrl><Alt>Left" "<Super><Ctrl><Alt>h" ];
+    move-to-workspace-right = [ "<Super><Ctrl><Shift>Right" "<Super><Ctrl><Shift>l" ];
+    move-to-workspace-left = [ "<Super><Ctrl><Shift>Left" "<Super><Ctrl><Shift>h" ];
   };
 
   "org/gnome/shell/keybindings".show-screenshot-ui = [ "<Super><Shift>s" ];
