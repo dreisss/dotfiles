@@ -8,6 +8,8 @@ let node = pkgs.unstable.nodePackages_latest; in
     nixd
     marksman # markdown
     bash-language-server
+    texlab
+    tex-fmt
     emmet-ls
     gopls
     rust-analyzer

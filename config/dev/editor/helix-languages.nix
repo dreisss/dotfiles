@@ -66,6 +66,11 @@
       formatter.command = "nixpkgs-fmt";
     }
     {
+      name = "latex";
+      auto-format = true;
+      formatter = { command = "tex-fmt"; args = [ "--stdin" ]; };
+    }
+    {
       name = "rust";
       auto-format = true;
     }

@@ -52,6 +52,8 @@
         pager = "delta";
       };
 
+      pull.rebase = true;
+
       delta = {
         navigate = true;
         light = false;

@@ -3,6 +3,8 @@
 with pkgs; let
   general = [
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
+    obsidian
+    discord
   ];
   dev = [
     unstable.ghostty
@@ -52,6 +54,7 @@ with pkgs; let
     procs # ps
     tlrc # man
     viu # see images in terminal
+    tetex # tex to pdf
 
     # common tools
     git
