@@ -36,7 +36,7 @@
 
     shellInit = ''
       set fish_greeting
-      zoxide init fish | source    
+      zoxide init fish | source
     '';
   };
 

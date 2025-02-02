@@ -54,7 +54,11 @@ with pkgs; let
     procs # ps
     tlrc # man
     viu # see images in terminal
-    tetex # tex to pdf
+
+    # latex utilities
+    (texlive.combine {
+      inherit (pkgs.texlive) scheme-full biblatex csquotes;
+    })
 
     # common tools
     git
