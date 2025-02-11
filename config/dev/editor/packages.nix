@@ -15,8 +15,6 @@ let node = pkgs.unstable.nodePackages_latest; in
     rust-analyzer
     dockerfile-language-server-nodejs
     tailwindcss-language-server
-    stylelint
-    stylelint-lsp
 
     (with nodePackages_latest; [
       yaml-language-server

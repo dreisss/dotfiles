@@ -113,7 +113,7 @@
     {
       name = "css";
       auto-format = true;
-      formatter = { command = "bash"; args = [ "-c" "stylelint --stdin --fix | biome format --stdin-file-path a.css" ]; };
+      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
       language-servers = [ "vscode-css-language-server" "stylelint-lsp" ];
     }
     {

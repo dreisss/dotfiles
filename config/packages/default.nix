@@ -5,6 +5,7 @@ with pkgs; let
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
     obsidian
     discord
+    custom.capacities
   ];
   dev = [
     unstable.ghostty
