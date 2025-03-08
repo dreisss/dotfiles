@@ -6,6 +6,7 @@ with pkgs; let
     discord
     ulauncher
     anytype
+    custom.capacities
   ];
   dev = [
     unstable.ghostty

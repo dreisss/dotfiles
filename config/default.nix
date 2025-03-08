@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -14,7 +14,9 @@
       (self: super: {
         unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
 
-        custom = { };
+        custom = {
+          capacities = import ./packages/capacities.nix;
+        };
       })
     ];
   };

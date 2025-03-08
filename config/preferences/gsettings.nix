@@ -17,7 +17,7 @@
     clock-show-weekday = true;
   };
 
-  "org/gnome/shell".favorite-apps = [ "anytype.desktop" "com.mitchellh.ghostty.desktop" "zen.desktop" "org.gnome.Nautilus.desktop" "discord.desktop" ];
+  "org/gnome/shell".favorite-apps = [ "capacities.desktop" "com.mitchellh.ghostty.desktop" "zen.desktop" "org.gnome.Nautilus.desktop" "discord.desktop" ];
 
   "org/gnome/desktop/background" = {
     color-shading-type = "solid";
