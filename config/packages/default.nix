@@ -3,8 +3,8 @@
 with pkgs; let
   general = [
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
-    obsidian
     discord
+    ulauncher
     anytype
   ];
   dev = [
@@ -80,6 +80,7 @@ with pkgs; let
     neofetch
     license-generator
     live-server
+    clipman
   ];
 in
 {

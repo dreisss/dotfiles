@@ -1,4 +1,5 @@
 {
+  # appearence & tweaks
   "org/gnome/shell/extensions/user-theme".name = "Orchis-Dark";
 
   "org/gnome/mutter".center-new-windows = true;
@@ -16,6 +17,18 @@
     clock-show-weekday = true;
   };
 
+  "org/gnome/shell".favorite-apps = [ "anytype.desktop" "com.mitchellh.ghostty.desktop" "zen.desktop" "org.gnome.Nautilus.desktop" "discord.desktop" ];
+
+  "org/gnome/desktop/background" = {
+    color-shading-type = "solid";
+    picture-options = "zoom";
+    picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/sheet-l.jxl";
+    picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/sheet-d.jxl";
+    primary-color = "#1a5fb4";
+    secondary-color = "#000000";
+  };
+
+  # shortcuts
   "org/gnome/settings-daemon/plugins/media-keys".touchpad-toggle = [ "<Super><Shift>t" ];
 
   "org/gnome/desktop/wm/keybindings" = {
@@ -28,13 +41,16 @@
     switch-to-workspace-left = [ "<Super><Ctrl>Left" "<Super><Ctrl>h" ];
     move-to-workspace-right = [ "<Super><Ctrl><Shift>Right" "<Super><Ctrl><Shift>l" ];
     move-to-workspace-left = [ "<Super><Ctrl><Shift>Left" "<Super><Ctrl><Shift>h" ];
+    switch-input-source = [ "" ];
   };
 
+  "org/gnome/settings-daemon/plugins/media-keys".home = [ "<Super>e" ];
   "org/gnome/shell/keybindings".show-screenshot-ui = [ "<Super><Shift>s" ];
 
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
   ];
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -44,11 +60,18 @@
   };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-    name = "Explorer";
-    command = "nautilus";
-    binding = "<Super>e";
+    name = "Launcher";
+    command = "ulauncher";
+    binding = "<Super>space";
   };
 
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+    name = "Anytype";
+    command = "anytype";
+    binding = "<Super>n";
+  };
+
+  # extensions
   "org/gnome/shell".enabled-extensions = [
     "user-theme@gnome-shell-extensions.gcampax.github.com"
     "dash-to-dock@micxgx.gmail.com"

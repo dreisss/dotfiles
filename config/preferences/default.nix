@@ -1,5 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
+with lib.hm.gvariant;
 {
   gtk = {
     enable = true;
