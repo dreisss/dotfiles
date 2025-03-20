@@ -32,6 +32,8 @@
       clean = "sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot";
       temp = "nix-shell --run fish -p";
       dev = "nix-shell";
+
+      restart = "shutdown -r 0";
     };
 
     shellInit = ''

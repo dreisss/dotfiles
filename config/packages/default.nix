@@ -4,8 +4,8 @@ with pkgs; let
   general = [
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
     discord
-    ulauncher
     unstable.anytype
+    sly
   ];
   dev = [
     unstable.ghostty

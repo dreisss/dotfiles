@@ -1,3 +1,5 @@
+{ mkTuple }:
+
 {
   # appearence & tweaks
   "org/gnome/shell/extensions/user-theme".name = "Orchis-Dark";
@@ -6,6 +8,11 @@
   "org/gnome/mutter".dynamic-workspaces = true;
   "org/gnome/shell/app-switcher".current-workspace-only = true;
   "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
+
+  "org/gnome/desktop/input-sources".sources = [
+    (mkTuple [ "xkb" "br" ])
+    (mkTuple [ "xkb" "us+intl" ])
+  ];
 
   "org/gnome/desktop/peripherals/touchpad" = {
     tap-to-click = true;
@@ -17,7 +24,7 @@
     clock-show-weekday = true;
   };
 
-  "org/gnome/shell".favorite-apps = [ "capacities.desktop" "com.mitchellh.ghostty.desktop" "zen.desktop" "org.gnome.Nautilus.desktop" "discord.desktop" ];
+  "org/gnome/shell".favorite-apps = [ "Anytype.desktop" "com.mitchellh.ghostty.desktop" "zen.desktop" "org.gnome.Nautilus.desktop" "discord.desktop" ];
 
   "org/gnome/desktop/background" = {
     color-shading-type = "solid";
@@ -41,7 +48,7 @@
     switch-to-workspace-left = [ "<Super><Ctrl>Left" "<Super><Ctrl>h" ];
     move-to-workspace-right = [ "<Super><Ctrl><Shift>Right" "<Super><Ctrl><Shift>l" ];
     move-to-workspace-left = [ "<Super><Ctrl><Shift>Left" "<Super><Ctrl><Shift>h" ];
-    switch-input-source = [ "" ];
+    switch-input-source = [ "<Super><Ctrl><Shift>space" ];
   };
 
   "org/gnome/settings-daemon/plugins/media-keys".home = [ "<Super>e" ];
@@ -49,26 +56,12 @@
 
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
-    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
   ];
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
     name = "Terminal";
     command = "ghostty";
     binding = "<Super>t";
-  };
-
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-    name = "Launcher";
-    command = "ulauncher";
-    binding = "<Super>space";
-  };
-
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-    name = "Anytype";
-    command = "anytype";
-    binding = "<Super>n";
   };
 
   # extensions

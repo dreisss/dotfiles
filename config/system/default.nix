@@ -15,8 +15,8 @@ in
   console.keyMap = "br-abnt2";
 
   services.xserver.xkb = {
-    layout = "us,br";
-    options = "compose:ins,";
+    layout = "br,us";
+    variant = ",intl";
   };
 
   system = {
