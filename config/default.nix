@@ -14,7 +14,9 @@
       (self: super: {
         unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
 
-        custom = { };
+        custom = {
+          anytype = import ./packages/anytype.nix;
+        };
       })
     ];
   };

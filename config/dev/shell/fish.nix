@@ -26,6 +26,7 @@
       du = "dust";
       man = "tlrc";
       see = "viu";
+      thumb = "~/.cargo/bin/thumb";
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
@@ -39,6 +40,7 @@
     shellInit = ''
       set fish_greeting
       zoxide init fish | source
+      fish_add_path ~/.cargo/bin/
     '';
   };
 

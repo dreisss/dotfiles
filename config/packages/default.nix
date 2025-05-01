@@ -4,7 +4,7 @@ with pkgs; let
   general = [
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
     discord
-    unstable.anytype
+    custom.anytype
     sly
   ];
   dev = [
@@ -22,7 +22,7 @@ with pkgs; let
       gcc
 
       # go
-      go_1_22
+      go
 
       # js/ts
       nodejs_20
