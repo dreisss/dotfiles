@@ -6,6 +6,8 @@ with pkgs; let
     discord
     custom.anytype
     sly
+
+    smile # emojipicker
   ];
   dev = [
     unstable.ghostty

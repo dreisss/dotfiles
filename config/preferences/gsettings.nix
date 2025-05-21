@@ -63,12 +63,19 @@
 
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
   ];
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
     name = "Terminal";
     command = "ghostty";
     binding = "<Super>t";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+    name = "Emoji Picker";
+    command = "smile";
+    binding = "<Super>semicolon";
   };
 
   # extensions
