@@ -8,7 +8,10 @@
   ];
 
   nixpkgs = {
-    config.allowUnfree = true;
+    config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [ "ventoy-1.1.05" ];
+    };
 
     overlays = [
       (self: super: {

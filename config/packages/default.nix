@@ -5,8 +5,10 @@ with pkgs; let
     (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
     discord
     custom.anytype
-    sly
+    google-chrome
 
+    ventoy-full
+    sly # photoeditor
     smile # emojipicker
   ];
   dev = [
