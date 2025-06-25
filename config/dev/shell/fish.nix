@@ -27,6 +27,7 @@
       man = "tlrc";
       see = "viu";
       thumb = "~/.cargo/bin/thumb";
+      pm = "bun";
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";

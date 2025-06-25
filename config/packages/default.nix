@@ -85,6 +85,7 @@ with pkgs; let
     license-generator
     live-server
     clipman
+    turbo
   ];
 in
 {
