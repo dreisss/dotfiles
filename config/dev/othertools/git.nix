@@ -42,6 +42,8 @@
       td = "rebase --edit-todo";
 
       rt = "restore";
+
+      df = "diff -- ':!*.lock'";
     };
 
     extraConfig = {

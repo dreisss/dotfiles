@@ -28,6 +28,7 @@
       see = "viu";
       thumb = "~/.cargo/bin/thumb";
       pm = "bun";
+      px = "bunx --bun";
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";

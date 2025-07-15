@@ -10,6 +10,9 @@ with pkgs; let
     ventoy-full
     sly # photoeditor
     smile # emojipicker
+    neohtop # system monitor
+
+    logiops
   ];
   dev = [
     unstable.ghostty
@@ -59,6 +62,7 @@ with pkgs; let
     procs # ps
     tlrc # man
     viu # see images in terminal
+    nushell
 
     # latex utilities
     (texlive.combine {
