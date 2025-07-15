@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, config, ... }:
 
 let
   file = builtins.readFile;
@@ -38,6 +38,25 @@ in
   };
 
   time.hardwareClockInLocalTime = true;
+
+  systemd.services.logiops = {
+    description = "Logitech Configuration Daemon";
+    startLimitIntervalSec = 0;
+    after = [ "graphical.target" ];
+    wantedBy = [ "graphical.target" ];
+
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.logiops}/bin/logid";
+      User = "root";
+      Restart = "on-failure";
+      RestartSec = "5s";
+    };
+
+    restartTriggers = [
+      config.environment.etc."logid.cfg".source
+    ];
+  };
 
   environment.etc."logid.cfg".text = ''
     devices: ({
