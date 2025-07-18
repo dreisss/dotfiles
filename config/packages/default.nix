@@ -12,7 +12,7 @@ with pkgs; let
     smile # emojipicker
     neohtop # system monitor
 
-    logiops
+    logiops # MX Master 3S settings
   ];
   dev = [
     unstable.ghostty

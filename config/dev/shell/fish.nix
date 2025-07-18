@@ -37,6 +37,8 @@
       dev = "nix-shell";
 
       restart = "shutdown -r 0";
+      quit = "exit";
+      q = "exit";
     };
 
     shellInit = ''

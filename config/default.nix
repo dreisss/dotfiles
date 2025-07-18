@@ -4,6 +4,7 @@
   imports = [
     ./system
     ./packages
+    ./peripherals
     ./home.nix
   ];
 
