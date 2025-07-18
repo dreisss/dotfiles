@@ -2,6 +2,8 @@
 
 with lib.hm.gvariant;
 {
+  imports = [ ./albert.nix ];
+
   gtk = {
     enable = true;
 

@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./logiops.nix
-  ];
+  imports = [ ./logiops.nix ];
 
   console.keyMap = "br-abnt2";
 

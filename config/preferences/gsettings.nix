@@ -56,6 +56,7 @@
     move-to-workspace-right = [ "<Super><Ctrl><Shift>Right" "<Super><Ctrl><Shift>l" ];
     move-to-workspace-left = [ "<Super><Ctrl><Shift>Left" "<Super><Ctrl><Shift>h" ];
     switch-input-source = [ "<Super><Ctrl><Shift>space" ];
+    toggle-message-tray = [ "<Super>m" ];
   };
 
   "org/gnome/settings-daemon/plugins/media-keys".home = [ "<Super>e" ];
@@ -64,6 +65,8 @@
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
   ];
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -76,6 +79,18 @@
     name = "Emoji Picker";
     command = "smile";
     binding = "<Super>semicolon";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+    name = "Launcher";
+    command = "albert toggle";
+    binding = "<Super>space";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+    name = "Clipboard History";
+    command = "albert show";
+    binding = "<Super>v";
   };
 
   # extensions
