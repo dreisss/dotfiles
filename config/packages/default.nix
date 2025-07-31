@@ -6,6 +6,7 @@ with pkgs; let
     discord
     custom.anytype
     google-chrome
+    vlc
     albert
 
     ventoy-full

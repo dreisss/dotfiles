@@ -64,7 +64,6 @@ let
   gesture = direction: keys: { __toString = self: toString (generalGesture { inherit direction keys; }); };
 in
 {
-
   environment.etc."logid.cfg".text = ''
     devices: ({
     	name: "MX Master 3S";
@@ -88,39 +87,39 @@ in
 
     	buttons: (
         ${button buttons.forward (
-          (gesture directions.none ''[ "KEY_LEFTALT", "KEY_RIGHT" ]'') +
+          (gesture directions.none ''[ "KEY_LEFTALT", "KEY_RIGHT" ]'') + # forward
+          (gesture directions.right ''[ "KEY_LEFTMETA", "KEY_SPACE" ]'') + # launcher
+          (gesture directions.left ''[ "KEY_LEFTMETA" ]'') +
+          (gesture directions.up ''[ "KEY_ENTER" ]'') +
+          (gesture directions.down ''[ "KEY_ESC" ]'') 
+        )}
+        ${button buttons.backward (
+          (gesture directions.none ''[ "KEY_LEFTALT", "KEY_LEFT" ]'') + # backward
           (gesture directions.right ''[]'') +
           (gesture directions.left ''[]'') +
           (gesture directions.up ''[]'') +
           (gesture directions.down ''[]'') 
         )}
-        ${button buttons.backward (
-          (gesture directions.none ''[ "KEY_LEFTALT", "KEY_LEFT" ]'') +
-          (gesture directions.right ''[ "KEY_LEFTMETA", "KEY_RIGHT" ]'') +
-          (gesture directions.left ''[ "KEY_LEFTMETA", "KEY_LEFT"] '') +
-          (gesture directions.up ''[ "KEY_LEFTMETA", "KEY_UP" ]'') +
-          (gesture directions.down ''[ "KEY_LEFTMETA", "KEY_DOWN" ]'') 
-        )}
         ${button buttons.middle (
           (gesture directions.none ''[ "KEY_DELETE" ]'') +
-          (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_RIGHT" ]'') +
-          (gesture directions.left ''[ "KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_LEFT" ]'') +
-          (gesture directions.up ''[ "KEY_LEFTALT", "KEY_TAB" ]'') +
-          (gesture directions.down ''[ "KEY_LEFTMETA", "KEY_D" ]'') 
+          (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_RIGHT" ]'') + # worskpace right
+          (gesture directions.left ''[ "KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_LEFT" ]'') + # worskpace left
+          (gesture directions.up ''[ "KEY_LEFTALT", "KEY_TAB" ]'') + # Switch app
+          (gesture directions.down ''[ "KEY_LEFTMETA", "KEY_D" ]'')  # Desktop
         )}
         ${button buttons.top (
           (gesture directions.none ''[]'') +
-          (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_TAB" ]'') +
-          (gesture directions.left ''[ "LEY_LEFTSHIFT", "KEY_LEFTCTRL", "KEY_TAB" ]'') +
-          (gesture directions.up ''[ "KEY_LEFTCTRL", "KEY_T", "KEY_L" ]'') +
-          (gesture directions.down ''[ "KEY_LEFTCTRL", "KEY_W" ]'')
+          (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_TAB" ]'') + # Next tab
+          (gesture directions.left ''[ "KEY_LEFTCTRL", "LEY_LEFTSHIFT", "KEY_TAB" ]'') + # Previous tab
+          (gesture directions.up ''[ "KEY_LEFTCTRL", "KEY_T", "KEY_L" ]'') + # New tab
+          (gesture directions.down ''[ "KEY_LEFTCTRL", "KEY_W" ]'') # Close tab
         )}
         ${button buttons.thumb (
-          (gesture directions.none ''[ "KEY_ENTER" ]'') +
-          (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_SPACE" ]'') +
-          (gesture directions.left ''[]'') +
-          (gesture directions.up ''[ "KEY_LEFTMETA" ]'') +
-          (gesture directions.down ''[ "KEY_LEFTMETA", "KEY_SPACE" ]'') 
+          (gesture directions.none ''[]'') +
+          (gesture directions.right ''[ "KEY_LEFTMETA", "KEY_RIGHT" ]'') + # Window to right
+          (gesture directions.left ''[ "KEY_LEFTMETA", "KEY_LEFT"] '') + # Window to left
+          (gesture directions.up ''[ "KEY_LEFTMETA", "KEY_UP" ]'') + # Window to up
+          (gesture directions.down ''[ "KEY_LEFTMETA", "KEY_DOWN" ]'') # Window to down
         )}
     	);
     });

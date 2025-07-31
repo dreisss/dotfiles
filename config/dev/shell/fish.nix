@@ -27,7 +27,10 @@
       man = "tlrc";
       see = "viu";
       thumb = "~/.cargo/bin/thumb";
+
+      run = "bun run";
       pm = "bun";
+      pi = "bun i";
       px = "bunx --bun";
 
       rebuild = "sudo nixos-rebuild switch";
