@@ -15,6 +15,7 @@ with pkgs; let
     neohtop # system monitor
 
     logiops # MX Master 3S settings
+    solaar
   ];
   dev = [
     unstable.ghostty

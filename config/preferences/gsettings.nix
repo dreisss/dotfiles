@@ -87,12 +87,6 @@
     binding = "<Super>space";
   };
 
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
-    name = "Clipboard History";
-    command = "albert show";
-    binding = "<Super>v";
-  };
-
   # extensions
   "org/gnome/shell".enabled-extensions = [
     "user-theme@gnome-shell-extensions.gcampax.github.com"

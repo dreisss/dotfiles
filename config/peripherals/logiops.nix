@@ -75,7 +75,7 @@ in
     	};
 
     	hiresscroll: {
-    		hires: false;
+    		hires: true;
     		invert: false;
     		target: false;
     	};
@@ -90,8 +90,8 @@ in
           (gesture directions.none ''[ "KEY_LEFTALT", "KEY_RIGHT" ]'') + # forward
           (gesture directions.right ''[ "KEY_LEFTMETA", "KEY_SPACE" ]'') + # launcher
           (gesture directions.left ''[ "KEY_LEFTMETA" ]'') +
-          (gesture directions.up ''[ "KEY_ENTER" ]'') +
-          (gesture directions.down ''[ "KEY_ESC" ]'') 
+          (gesture directions.up ''[]'') +
+          (gesture directions.down ''[]'') 
         )}
         ${button buttons.backward (
           (gesture directions.none ''[ "KEY_LEFTALT", "KEY_LEFT" ]'') + # backward
@@ -110,12 +110,12 @@ in
         ${button buttons.top (
           (gesture directions.none ''[]'') +
           (gesture directions.right ''[ "KEY_LEFTCTRL", "KEY_TAB" ]'') + # Next tab
-          (gesture directions.left ''[ "KEY_LEFTCTRL", "LEY_LEFTSHIFT", "KEY_TAB" ]'') + # Previous tab
+          (gesture directions.left ''[ "KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_TAB" ]'') + # Previous tab
           (gesture directions.up ''[ "KEY_LEFTCTRL", "KEY_T", "KEY_L" ]'') + # New tab
           (gesture directions.down ''[ "KEY_LEFTCTRL", "KEY_W" ]'') # Close tab
         )}
         ${button buttons.thumb (
-          (gesture directions.none ''[]'') +
+          (gesture directions.none ''[ "KEY_ENTER" ]'') +
           (gesture directions.right ''[ "KEY_LEFTMETA", "KEY_RIGHT" ]'') + # Window to right
           (gesture directions.left ''[ "KEY_LEFTMETA", "KEY_LEFT"] '') + # Window to left
           (gesture directions.up ''[ "KEY_LEFTMETA", "KEY_UP" ]'') + # Window to up

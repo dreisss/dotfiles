@@ -113,31 +113,31 @@
     {
       name = "css";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.css" ]; };
       language-servers = [ "vscode-css-language-server" "stylelint-lsp" ];
     }
     {
       name = "scss";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.css" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.css" ]; };
       language-servers = [ "vscode-css-language-server" ];
     }
     {
       name = "javascript";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.ts" ]; };
       language-servers = [ "typescript-lsp" "biome-lsp" ];
     }
     {
       name = "typescript";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.ts" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.ts" ]; };
       language-servers = [ "typescript-lsp" "biome-lsp" ];
     }
     {
       name = "tsx";
       auto-format = true;
-      formatter = { command = "biome"; args = [ "format" "--stdin-file-path" "a.tsx" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.tsx" ]; };
       language-servers = [ "typescript-lsp" "biome-lsp" "emmet-lsp" "tailwind-lsp" ];
     }
 
