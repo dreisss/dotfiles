@@ -7,7 +7,6 @@ with pkgs; let
     custom.anytype
     google-chrome
     vlc
-    albert
 
     ventoy-full
     sly # photoeditor
@@ -47,6 +46,9 @@ with pkgs; let
         xlsx2csv
         matplotlib
       ]))
+
+      # other
+      cbqn
     ])
   ];
   cli-tools = [

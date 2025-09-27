@@ -2,7 +2,7 @@
 
 {
   home.file.".config/ghostty/config".text = ''
-    theme = tokyonight
+    theme = dark:tokyonight,light:tokyonight-day
     font-size = 16
     font-family = "mononoki"
     cursor-style = underline
