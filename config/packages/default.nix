@@ -49,6 +49,8 @@ with pkgs; let
 
       # other
       cbqn
+
+      android-tools
     ])
   ];
   cli-tools = [

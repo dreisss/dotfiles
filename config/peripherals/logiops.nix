@@ -75,7 +75,7 @@ in
     	};
 
     	hiresscroll: {
-    		hires: false;
+    		hires: true;
     		invert: false;
     		target: false;
     	};
