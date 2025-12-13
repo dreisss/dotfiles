@@ -2,11 +2,11 @@ with import <nixpkgs> { };
 
 let
   pname = "anytype";
-  version = "0.50.5";
+  version = "0.52.4";
 
   src = pkgs.fetchurl {
     url = "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-${version}.AppImage";
-    sha256 = "1xjakfd7l5f35jimyqjcdfpl6gdbg6kswhngkd1jwajs6lag922q";
+    sha256 = "1kz1f1vz3hymy683wfj7lr8gmai7qr43xvafyxcn6crfdfrvdqlj";
   };
 
   appimageContents = pkgs.appimageTools.extract { inherit pname version src; };

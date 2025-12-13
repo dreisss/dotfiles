@@ -9,12 +9,11 @@ with pkgs; let
     vlc
 
     ventoy-full
-    sly # photoeditor
-    smile # emojipicker
+    # sly # photoeditor
     neohtop # system monitor
 
     logiops # MX Master 3S settings
-    solaar
+    # solaar
   ];
   dev = [
     unstable.ghostty
