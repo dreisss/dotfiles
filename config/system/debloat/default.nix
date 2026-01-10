@@ -1,18 +1,23 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   documentation.nixos.enable = false;
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
-  services.xserver.excludePackages = with pkgs.kdePackages; [
-    ark
-    elisa
-    gwenview
-    kate
-    kwallet
-    kwalletmanager
-    okular
-    spectacle
-  ] ++ (with pkgs; [
-    xterm
+  environment.gnome.excludePackages = lib.flatten (with pkgs; [
+    # gnome-console
+    gnome-connections
+    gnome-contacts
+    gnome-logs
+    gnome-maps
+    gnome-text-editor
+    gnome-tour
+    gnome-weather
+
+    pantheon.epiphany
+    simple-scan
+    geary
+    seahorse
+    yelp
   ]);
 }

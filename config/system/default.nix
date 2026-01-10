@@ -17,18 +17,6 @@ in
     autoUpgrade.enable = true;
   };
 
-  services = {
-    xserver.enable = true; # optional
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
-    desktopManager.plasma6.enable = true;
-  };
-
-  hardware.bluetooth = {
-    enable = true;
-    settings.General.Experimental = true;
-  };
-
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
@@ -43,4 +31,6 @@ in
   };
 
   time.hardwareClockInLocalTime = true;
+
+  # environment.etc."xdg/autostart/albert.desktop" = "${pkgs.albert}/share/applications/albert.desktop";
 }
