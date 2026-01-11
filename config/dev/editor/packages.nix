@@ -13,7 +13,7 @@ let node = pkgs.unstable.nodePackages_latest; in
     emmet-ls
     gopls
     # rust-analyzer
-    dockerfile-language-server-nodejs
+    dockerfile-language-server
     tailwindcss-language-server
 
     (with nodePackages_latest; [

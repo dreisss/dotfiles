@@ -81,12 +81,6 @@
     binding = "<Super>semicolon";
   };
 
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
-    name = "Launcher";
-    command = "albert toggle";
-    binding = "<Super>space";
-  };
-
   # extensions
   "org/gnome/shell".enabled-extensions = [
     "user-theme@gnome-shell-extensions.gcampax.github.com"

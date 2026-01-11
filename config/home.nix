@@ -6,7 +6,9 @@ let
   version = trim (file ../nixos-version);
 in
 {
-  imports = [ <home-manager/nixos> ];
+  imports = [
+    <home-manager/nixos>
+  ];
 
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;

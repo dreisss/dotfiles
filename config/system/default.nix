@@ -31,6 +31,4 @@ in
   };
 
   time.hardwareClockInLocalTime = true;
-
-  # environment.etc."xdg/autostart/albert.desktop" = "${pkgs.albert}/share/applications/albert.desktop";
 }

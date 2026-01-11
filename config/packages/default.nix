@@ -65,7 +65,7 @@ with pkgs; let
     fd # find
     sd # sed
     btop # top
-    du-dust # du
+    dust # du
     procs # ps
     tlrc # man
     viu # see images in terminal

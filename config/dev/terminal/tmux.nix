@@ -18,7 +18,9 @@
     shell = "${pkgs.fish}/bin/fish";
 
     plugins = [
-      { plugin = (builtins.getFlake "github:niksingh710/minimal-tmux-status").packages.${pkgs.system}.default; }
+      {
+        plugin = (builtins.getFlake "github:niksingh710/minimal-tmux-status").packages.${pkgs.stdenv.hostPlatform.system}.default;
+      }
     ];
 
     sensibleOnTop = false;
