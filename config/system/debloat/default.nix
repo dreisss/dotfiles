@@ -13,6 +13,7 @@
     gnome-text-editor
     gnome-tour
     gnome-weather
+    gnome-characters
 
     pantheon.epiphany
     simple-scan

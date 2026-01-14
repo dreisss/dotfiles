@@ -41,5 +41,6 @@ with lib.hm.gvariant;
     dash-to-dock
     blur-my-shell
     logo-menu
+    vicinae
   ];
 }

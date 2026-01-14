@@ -1,28 +1,69 @@
 { pkgs, lib, ... }:
 
-with pkgs; let
-  general = [
-    (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.system}".default
-    discord
+{
+  environment.systemPackages = with pkgs; lib.flatten [
+    # utilities
+    custom.zen
     custom.anytype
-    google-chrome
+    vicinae
+    discord
+
+    # secondary utilities
     vlc
-
-    ventoy-full
+    google-chrome
     sly # photoeditor
-    smile # emojipicker
-    neohtop # system monitor
+    ventoy-full
 
+    # system + config
+    neohtop # system monitor
     logiops # MX Master 3S settings
     solaar
-  ];
-  dev = [
+
+    # dev environment
     unstable.ghostty
     tmux
     fish
     starship
     helix
+    git
+    git-lfs
+    license-generator
+    live-server
+    turbo
 
+    # cli environment
+    eza # ls
+    zoxide # cd
+    xcp # cp
+    rm-improved # rm
+    bat # cat
+    ripgrep # grep
+    delta # diff
+    fd # find
+    sd # sed
+    btop # top
+    dust # du
+    procs # ps
+    tlrc # man
+    viu # see images in terminal
+    nushell
+    unzip
+    unrar
+    curl
+    wget
+    httpie
+    jq
+    xclip
+    xsel
+    entr
+    tokei
+    hyperfine
+    grex
+    fzf
+    neofetch
+    clipman
+
+    # programming languages, libraries, ...
     (with unstable; [
       # rust
       rustc
@@ -52,57 +93,10 @@ with pkgs; let
 
       android-tools
     ])
-  ];
-  cli-tools = [
-    # rust replacements
-    eza # ls
-    zoxide # cd
-    xcp # cp
-    rm-improved # rm
-    bat # cat
-    ripgrep # grep
-    delta # diff
-    fd # find
-    sd # sed
-    btop # top
-    dust # du
-    procs # ps
-    tlrc # man
-    viu # see images in terminal
-    nushell
 
-    # latex utilities
+    # latex
     (texlive.combine {
       inherit (pkgs.texlive) scheme-full biblatex csquotes;
     })
-
-    # common tools
-    git
-    git-lfs
-    unzip
-    unrar
-    curl
-    wget
-    httpie
-    jq
-    xclip
-    xsel
-    entr
-    tokei
-    hyperfine
-    grex
-    fzf
-    neofetch
-    license-generator
-    live-server
-    clipman
-    turbo
-  ];
-in
-{
-  environment.systemPackages = lib.flatten [
-    general
-    dev
-    cli-tools
   ];
 }

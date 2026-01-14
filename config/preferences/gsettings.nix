@@ -45,6 +45,7 @@
   # shortcuts
   "org/gnome/settings-daemon/plugins/media-keys".touchpad-toggle = [ "<Super><Shift>t" ];
 
+
   "org/gnome/desktop/wm/keybindings" = {
     show-desktop = [ "<Super>d" ];
     minimize = [ "<Super><Shift>j" ];
@@ -56,11 +57,16 @@
     move-to-workspace-right = [ "<Super><Ctrl><Shift>Right" "<Super><Ctrl><Shift>l" ];
     move-to-workspace-left = [ "<Super><Ctrl><Shift>Left" "<Super><Ctrl><Shift>h" ];
     switch-input-source = [ "<Super><Ctrl><Shift>space" ];
+    activate-window-menu = [ "<Super><Alt>space" ];
+  };
+
+
+  "org/gnome/shell/keybindings" = {
+    show-screenshot-ui = [ "<Super><Shift>s" ];
     toggle-message-tray = [ "<Super>m" ];
   };
 
   "org/gnome/settings-daemon/plugins/media-keys".home = [ "<Super>e" ];
-  "org/gnome/shell/keybindings".show-screenshot-ui = [ "<Super><Shift>s" ];
 
   "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
@@ -76,8 +82,20 @@
   };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
-    name = "Emoji Picker";
-    command = "smile";
+    name = "Vicinae";
+    command = "vicinae toggle";
+    binding = "<Alt>space";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+    name = "Vicinae Clipboard";
+    command = "vicinae vicinae://extensions/vicinae/clipboard/history";
+    binding = "<Super>v";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+    name = "Vicinae Emoji Picker";
+    command = "vicinae vicinae://extensions/vicinae/vicinae/search-emojis";
     binding = "<Super>semicolon";
   };
 
@@ -87,5 +105,6 @@
     "dash-to-dock@micxgx.gmail.com"
     "blur-my-shell@aunetx"
     "logomenu@aryan_k"
+    "vicinae@dagimg-dot"
   ];
 }
