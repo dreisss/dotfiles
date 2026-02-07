@@ -21,6 +21,10 @@
         detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
       };
 
+      crystal = {
+        format = " [\\[cr $version\\]](purple)";
+      };
+
       nodejs = {
         format = "[\\[node $version\\] ]($green)";
         detect_extensions = [ ];

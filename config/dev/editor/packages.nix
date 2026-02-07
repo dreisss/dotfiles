@@ -15,6 +15,8 @@ let node = pkgs.unstable.nodePackages_latest; in
     # rust-analyzer
     dockerfile-language-server
     tailwindcss-language-server
+    crystalline
+    ameba-ls
 
     (with nodePackages_latest; [
       yaml-language-server

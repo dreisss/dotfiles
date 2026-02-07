@@ -75,6 +75,10 @@
       auto-format = true;
     }
     {
+      name = "crystal";
+      auto-format = true;
+    }
+    {
       name = "dockerfile";
       auto-format = true;
     }

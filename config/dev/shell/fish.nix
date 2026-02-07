@@ -33,6 +33,9 @@
       pi = "bun i";
       px = "bunx --bun";
 
+      cr = "crystal";
+      crr = "crystal run";
+
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
       clean = "sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot";

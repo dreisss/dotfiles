@@ -71,6 +71,9 @@
       clippy
       gcc
 
+      # crystal
+      crystal
+
       # go
       go
 
