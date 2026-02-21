@@ -8,11 +8,10 @@
     settings = {
       theme = "dark:TokyoNight,light:TokyoNight Day";
       font-size = 16;
-      font-family = "mononoki";
+      font-family = "Maple Mono";
       cursor-style = "underline";
 
       initial-command = "tmux attach";
-
     };
   };
 }

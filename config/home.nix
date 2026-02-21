@@ -36,7 +36,6 @@ in
         systemd = {
           enable = true;
           autoStart = true;
-
         };
       };
 

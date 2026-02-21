@@ -15,8 +15,8 @@ let node = pkgs.unstable.nodePackages_latest; in
     # rust-analyzer
     dockerfile-language-server
     tailwindcss-language-server
-    crystalline
-    ameba-ls
+    # crystalline # throwing error when build
+    # ameba-ls # throwing error when build
 
     (with nodePackages_latest; [
       yaml-language-server

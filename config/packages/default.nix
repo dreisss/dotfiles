@@ -72,7 +72,7 @@
       gcc
 
       # crystal
-      crystal
+      # crystal # throwing error when building
 
       # go
       go
