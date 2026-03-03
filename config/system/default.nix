@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 let
   file = builtins.readFile;
@@ -31,4 +31,17 @@ in
   };
 
   time.hardwareClockInLocalTime = true;
+
+  users.users.dreisss.linger = true;
+
+  systemd.services.logid = {
+    enable = true;
+    wantedBy = [ "default.target" ];
+
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = lib.getExe pkgs.logiops;
+      Restart = "on-failure";
+    };
+  };
 }
