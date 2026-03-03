@@ -3,8 +3,11 @@
 {
   environment.systemPackages = with pkgs; lib.flatten [
     # utilities
+    (with unstable; [
+      anytype
+    ])
+
     custom.zen
-    custom.anytype
     vicinae
     discord
 
