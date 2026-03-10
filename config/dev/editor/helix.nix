@@ -6,7 +6,7 @@
     package = pkgs.unstable.helix;
 
     settings = {
-      theme = "tokyonight";
+      theme = "rose_pine";
 
       editor = {
         line-number = "relative";

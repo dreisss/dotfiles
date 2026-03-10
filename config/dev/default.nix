@@ -13,6 +13,6 @@
   ];
 
   home.file.".config/eza/theme.yml".text = builtins.readFile (builtins.fetchurl {
-    url = "https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/tokyonight.yml";
+    url = "https://raw.githubusercontent.com/eza-community/eza-themes/refs/heads/main/themes/rose-pine.yml";
   });
 }

@@ -45,6 +45,11 @@
       args = [ "--stdio" ];
       config = { };
     };
+
+    rubocop-lsp = {
+      command = "rubocop";
+      args = [ "--lsp" ];
+    };
   };
 
   language = [
@@ -73,6 +78,11 @@
     {
       name = "rust";
       auto-format = true;
+    }
+    {
+      name = "ruby";
+      auto-format = true;
+      language-servers = [ "ruby-lsp" "solargraph" "rubocop-lsp" ];
     }
     {
       name = "crystal";

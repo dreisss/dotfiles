@@ -13,6 +13,9 @@ let node = pkgs.unstable.nodePackages_latest; in
     emmet-ls
     gopls
     # rust-analyzer
+    ruby-lsp
+    rubocop
+    solargraph
     dockerfile-language-server
     tailwindcss-language-server
     # crystalline # throwing error when build

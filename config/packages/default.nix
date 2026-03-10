@@ -74,7 +74,8 @@
       clippy
       gcc
 
-      # crystal
+      # crystal & ruby
+      ruby
       # crystal # throwing error when building
 
       # go

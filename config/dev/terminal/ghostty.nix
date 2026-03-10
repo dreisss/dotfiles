@@ -6,7 +6,7 @@
     enableFishIntegration = true;
 
     settings = {
-      theme = "dark:TokyoNight,light:TokyoNight Day";
+      theme = "dark:Rose Pine,light:Rose Pine Dawn";
       font-size = 16;
       font-family = "Maple Mono";
       cursor-style = "underline";

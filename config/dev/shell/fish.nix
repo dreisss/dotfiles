@@ -35,6 +35,7 @@
 
       cr = "crystal";
       crr = "crystal run";
+      rb = "ruby";
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
