@@ -48,6 +48,7 @@
     dust # du
     procs # ps
     tlrc # man
+    tailspin # tail
     viu # see images in terminal
     nushell
     unzip

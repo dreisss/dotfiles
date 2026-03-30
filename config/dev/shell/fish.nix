@@ -27,6 +27,7 @@
       man = "tlrc";
       see = "viu";
       thumb = "~/.cargo/bin/thumb";
+      tail = "tspin";
 
       run = "bun run";
       pm = "bun";

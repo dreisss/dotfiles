@@ -12,7 +12,7 @@ let node = pkgs.unstable.nodePackages_latest; in
     tex-fmt
     emmet-ls
     gopls
-    # rust-analyzer
+    rust-analyzer
     ruby-lsp
     rubocop
     solargraph
