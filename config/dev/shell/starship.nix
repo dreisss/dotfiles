@@ -16,13 +16,17 @@
       nix_shell.format = ''[\[$symbol:$name\]](blue) '';
       package.format = "[$version](yellow)";
 
+      crystal = {
+        format = " [\\[cr $version\\]](purple)";
+      };
+
+      python = {
+        format = " [\\[py $version\\]](yellow)";
+      };
+
       bun = {
         format = " [\\[bun $version\\]](red)";
         detect_extensions = [ "js" "mjs" "cjs" "ts" "mts" "cts" ];
-      };
-
-      crystal = {
-        format = " [\\[cr $version\\]](purple)";
       };
 
       nodejs = {

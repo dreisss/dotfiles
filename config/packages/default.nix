@@ -84,7 +84,7 @@
 
       # js/ts
       nodejs_20
-      nodePackages_latest.pnpm
+      pnpm
       bun
 
       # python
