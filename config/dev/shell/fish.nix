@@ -28,6 +28,7 @@
       see = "viu";
       thumb = "~/.cargo/bin/thumb";
       tail = "tspin";
+      fs = "yazi";
 
       run = "bun run";
       pm = "bun";
@@ -58,6 +59,13 @@
 
   # fix cursor on exit helix
   home.file = {
+    ".config/fish/functions/texpdf.fish".text = ''
+      function texpdf
+        papers "$argv.pdf" &
+        ls "$argv.tex" "references.bib" | entr -s "biber $argv; pdflatex -interaction=nonstopmode $argv.tex"
+      end  
+    '';
+
     ".config/fish/functions/hx.fish".text = ''
       function hx
         command hx $argv

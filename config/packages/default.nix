@@ -7,12 +7,13 @@
       anytype
     ])
 
+    # spacedrive # global filesystem
     custom.zen
     vicinae
-    discord
+    # discord
 
     # secondary utilities
-    vlc
+    # vlc
     google-chrome
     sly # photoeditor
     ventoy-full
@@ -66,6 +67,7 @@
     fzf
     neofetch
     clipman
+    yazi
 
     # programming languages, libraries, ...
     (with unstable; [
@@ -97,9 +99,9 @@
       ]))
 
       # other
-      cbqn
+      # cbqn
 
-      android-tools
+      # android-tools
     ])
 
     # latex

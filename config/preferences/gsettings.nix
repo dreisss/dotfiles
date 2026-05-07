@@ -26,10 +26,9 @@
 
   "org/gnome/shell".favorite-apps = [
     "anytype.desktop"
-    "zen-beta.desktop"
+    "google-chrome.desktop"
     "com.mitchellh.ghostty.desktop"
     "org.gnome.Nautilus.desktop"
-    "discord.desktop"
   ];
 
 
