@@ -3,18 +3,19 @@
 {
   environment.systemPackages = with pkgs; lib.flatten [
     # utilities
-    (with unstable; [
-      anytype
-    ])
+    custom.anytype
+    # (with unstable; [
+    #   anytype
+    # ])
 
     # spacedrive # global filesystem
-    custom.zen
+    # custom.zen
+    google-chrome
     vicinae
     # discord
 
     # secondary utilities
     # vlc
-    google-chrome
     sly # photoeditor
     ventoy-full
 
@@ -85,7 +86,7 @@
       go
 
       # js/ts
-      nodejs_20
+      nodejs
       pnpm
       bun
 

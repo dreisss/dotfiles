@@ -7,6 +7,7 @@
       maple-mono.truetype
 
       geist-font
+      times-newer-roman
     ];
   };
 }

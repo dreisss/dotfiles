@@ -72,6 +72,7 @@
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/"
     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/"
+    "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/"
   ];
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -81,18 +82,24 @@
   };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+    name = "Anytype";
+    command = "anytype";
+    binding = "<Super>b";
+  };
+
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
     name = "Vicinae";
     command = "vicinae toggle";
     binding = "<Alt>space";
   };
 
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
     name = "Vicinae Clipboard";
     command = "vicinae vicinae://extensions/vicinae/clipboard/history";
     binding = "<Super>v";
   };
 
-  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+  "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
     name = "Vicinae Emoji Picker";
     command = "vicinae vicinae://extensions/vicinae/vicinae/search-emojis";
     binding = "<Super>semicolon";
