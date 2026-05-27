@@ -41,7 +41,8 @@
 
       rebuild = "sudo nixos-rebuild switch";
       update = "sudo nix-channel --update";
-      clean = "sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot";
+      clean = "sudo nix-collect-garbage; sudo nix-collect-garbage -d; sudo /run/current-system/bin/switch-to-configuration boot; sudo nix store optimise";
+      full = "clean && update && rebuild --upgrade && clean";
       temp = "nix-shell --run fish -p";
       dev = "nix-shell";
 
