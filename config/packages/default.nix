@@ -66,7 +66,7 @@
     hyperfine
     grex
     fzf
-    neofetch
+    fastfetch
     clipman
     yazi
 
@@ -97,6 +97,10 @@
         # polars
         xlsx2csv
         matplotlib
+
+        pip
+        scienceplots
+        ipython
       ]))
 
       # other
