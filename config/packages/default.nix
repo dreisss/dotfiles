@@ -92,18 +92,22 @@
 
       # python
       (python3.withPackages (ps: with ps; [
+        pip
+
         numpy
         pandas
         # polars
         xlsx2csv
         matplotlib
 
-        pip
+        manim
         scienceplots
         ipython
       ]))
 
       # other
+      ffmpeg
+      manim
       # cbqn
 
       # android-tools

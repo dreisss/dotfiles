@@ -121,8 +121,8 @@
     {
       name = "html";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "html" ]; };
-      language-servers = [ "emmet-lsp" "vscode-html-language-server" ];
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.html" ]; };
+      language-servers = [ "emmet-lsp" "vscode-html-language-server" "tailwind-lsp" ];
     }
     {
       name = "css";

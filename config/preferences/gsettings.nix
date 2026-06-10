@@ -90,18 +90,18 @@
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
     name = "Vicinae";
     command = "vicinae toggle";
-    binding = "<Alt>space";
+    binding = "<Super>space";
   };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
     name = "Vicinae Clipboard";
-    command = "vicinae vicinae://extensions/vicinae/clipboard/history";
+    command = "vicinae vicinae://launch/clipboard/history";
     binding = "<Super>v";
   };
 
   "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
     name = "Vicinae Emoji Picker";
-    command = "vicinae vicinae://extensions/vicinae/vicinae/search-emojis";
+    command = "vicinae vicinae://launch/core/search-emojis";
     binding = "<Super>semicolon";
   };
 
