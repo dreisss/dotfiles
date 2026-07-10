@@ -7,6 +7,7 @@
   "org/gnome/mutter".center-new-windows = true;
   "org/gnome/mutter".dynamic-workspaces = true;
   "org/gnome/shell/app-switcher".current-workspace-only = true;
+  "org/gnome/desktop/session".idle-delay = 0;
   "org/gnome/desktop/wm/preferences".button-layout = "close,minimize,maximize:appmenu";
 
   "org/gnome/desktop/input-sources".sources = [
@@ -44,7 +45,6 @@
   # shortcuts
   "org/gnome/settings-daemon/plugins/media-keys".touchpad-toggle = [ "<Super><Shift>t" ];
 
-
   "org/gnome/desktop/wm/keybindings" = {
     show-desktop = [ "<Super>d" ];
     minimize = [ "<Super><Shift>j" ];
@@ -58,7 +58,6 @@
     switch-input-source = [ "<Super><Ctrl><Shift>space" ];
     activate-window-menu = [ "<Super><Alt>space" ];
   };
-
 
   "org/gnome/shell/keybindings" = {
     show-screenshot-ui = [ "<Super><Shift>s" ];
