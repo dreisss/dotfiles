@@ -8,6 +8,8 @@
 
       geist-font
       times-newer-roman
+
+      libertine
     ];
   };
 }

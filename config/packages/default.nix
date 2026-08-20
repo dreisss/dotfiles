@@ -30,6 +30,7 @@
     fish
     starship
     helix
+    vscode
     git
     git-lfs
     license-generator
@@ -53,6 +54,7 @@
     tailspin # tail
     viu # see images in terminal
     nushell
+    zip
     unzip
     unrar
     curl
@@ -101,7 +103,7 @@
         matplotlib
 
         manim
-        scienceplots
+        # scienceplots
         ipython
       ]))
 
@@ -111,6 +113,9 @@
       # cbqn
 
       # android-tools
+
+      # qgis
+      # qgis-ltr
     ])
 
     # latex
