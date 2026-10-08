@@ -116,6 +116,9 @@
 
       # qgis
       # qgis-ltr
+
+      # game dev
+      aseprite
     ])
 
     # latex
@@ -123,4 +126,6 @@
       inherit (pkgs.texlive) scheme-full biblatex csquotes;
     })
   ];
+
+  programs.steam.enable = true;
 }

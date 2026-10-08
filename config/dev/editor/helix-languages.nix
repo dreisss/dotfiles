@@ -159,7 +159,7 @@
     {
       name = "astro";
       auto-format = true;
-      formatter = { command = "prettier"; args = [ "--parser" "astro" ]; };
+      formatter = { command = "biome"; args = [ "check" "--fix" "--stdin-file-path" "a.astro" ]; };
       language-servers = [ "astro-lsp" "biome-lsp" "tailwind-lsp" ];
     }
   ];
