@@ -9,13 +9,12 @@
     # ])
 
     # spacedrive # global filesystem
-    # custom.zen
     google-chrome
     vicinae
     # discord
 
     # secondary utilities
-    # vlc
+    vlc
     sly # photoeditor
     ventoy-full
 
@@ -112,13 +111,18 @@
       manim
       # cbqn
 
-      # android-tools
-
-      # qgis
+      # data related
       # qgis-ltr
 
       # game dev
       aseprite
+
+      # ai
+      gemini-cli
+      antigravity-ide
+      antigravity-cli
+      codex
+      claude-code
     ])
 
     # latex

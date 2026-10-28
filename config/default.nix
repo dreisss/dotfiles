@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports = [
@@ -12,11 +12,14 @@
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [ "ventoy-1.1.12" ];
+      allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "steam" "steam-unwrapped" ];
     };
 
     overlays = [
       (self: super: {
-        unstable = import <nixpkgs-unstable> { config.allowUnfree = true; };
+        unstable = import <nixpkgs-unstable> {
+          config.allowUnfree = true;
+        };
 
         custom = {
           zen = (builtins.getFlake "github:0xc000022070/zen-browser-flake").packages."${pkgs.stdenv.hostPlatform.system}".default;
